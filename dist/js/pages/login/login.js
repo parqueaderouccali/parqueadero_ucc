@@ -18,7 +18,8 @@ var login = function () {
     var password = $('#_contrasena').val(); 
 
     firebase.auth().signInWithEmailAndPassword(email, password)
-    .then(function (data){                                  
+    .then(function (data){  
+        console.log(data)                                 
         $(location).attr('href','../../pages/login/principal.html')         
     })
     .catch(function (error) {        

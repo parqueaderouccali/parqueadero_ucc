@@ -19,7 +19,8 @@ var createuser = function () {
         alertify.error(("Ingrese la confirmación de la contraseña"));
     }else{
         firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(function (data) {                                    
+        .then(function (data) {             
+            console.log(data)                                   
             alertify.success("Usuario " + nombre.toUpperCase() + ' ' + apellido.toUpperCase() + " Registrado");            
             guardarUsuariofirebase(nombre,apellido,email); 
             limpiarCampos();

@@ -1,0 +1,32 @@
+#parqueadero1 {
+    position:absolute;
+    left: 300px;
+    bottom:633px;
+}
+
+#parqueadero2 {
+    position:absolute;
+    left: 356px;
+    bottom:633px;
+}
+
+#parqueadero3 {
+    position:absolute;
+    left: 300px;
+    bottom:610px;
+}
+
+#parqueadero4 {
+    position:absolute;
+    left: 356px;
+    bottom:610px;
+}
+
+#ejemplo {
+    position:absolute;
+    left: 50%;
+}
+
+#imagenParqueaderosCarro{
+    float: left;
+}

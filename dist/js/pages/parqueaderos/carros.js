@@ -43,7 +43,7 @@ var logout = function () {
 
 }
 
-// metodo para asignar un carro al sitio de parqueo indicado
+// metodo para asignar un vehiculo en un espacio disponible
 var btnAsignar = function () {
 
     var numero_parqueadero = $("#numero_parqueadero").val();
@@ -68,8 +68,8 @@ var btnAsignar = function () {
                     disponibilidad: 1
                 }
 
-                db.update(parqueadero);
-
+                db.update(parqueadero);                
+                $('#exampleModalCenter').modal('hide')
             }
 
         }
@@ -82,6 +82,7 @@ var btnAsignar = function () {
 
 }
 
+// metodo para desocupar un espacio ocupado por un vehiculo
 var btnDesocupar = function () {
 
     var numero_parqueadero = $("#numero_parqueadero").val();
@@ -108,8 +109,8 @@ var btnDesocupar = function () {
                     disponibilidad: 0
                 }
 
-                db.update(parqueadero);
-
+                db.update(parqueadero);                           
+                $('#exampleModalCenter').modal('hide')
             }
 
         }
@@ -120,6 +121,7 @@ var btnDesocupar = function () {
 
 }
 
+// metodo para inhabilitar un espacio en el parqueadero
 var btnInhabilitar = function () {
 
     var numero_parqueadero = $("#numero_parqueadero").val();
@@ -147,7 +149,7 @@ var btnInhabilitar = function () {
                 }
 
                 db.update(parqueadero);
-
+                $('#exampleModalCenter').modal('hide')
             }
 
         }
@@ -158,6 +160,7 @@ var btnInhabilitar = function () {
 
 }
 
+// metodo para habilitar un espacio en el parqueadero
 var btnHabilitar = function () {
 
     var numero_parqueadero = $("#numero_parqueadero").val();
@@ -185,7 +188,7 @@ var btnHabilitar = function () {
                 }
 
                 db.update(parqueadero);
-
+                $('#exampleModalCenter').modal('hide')
             }
 
         }
@@ -197,13 +200,46 @@ var btnHabilitar = function () {
 }
 
 var numeroParqueo = function (){
+    $("#numero_parqueadero").empty();
     $("#numero_parqueadero").val($("#num_parqueadero1").text());
     $("#numero_parqueadero").css("font-weight", "bolder");
-    
+}
+
+var numeroParqueo2 = function () {        
+    $("#numero_parqueadero").empty();
     $("#numero_parqueadero").val($("#num_parqueadero2").text());
     $("#numero_parqueadero").css("font-weight", "bolder");
 }
 
+var cargarCarros = function () {
 
-numeroParqueo();
+    var db = firebase.database().ref('parqueaderos/');
+
+    db.on('value', function(snapshot){        
+       
+        var parqueaderos = snapshot.val();  
+        
+            for(parqueo in parqueaderos){
+                
+                console.log(parqueaderos[parqueo].disponibilidad)
+                console.log(parqueaderos[parqueo].num_parqueadero)
+    
+                if(parqueaderos[parqueo].disponibilidad == 0){
+                    $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).hide();
+                }else{
+                    $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).show();
+                }
+
+            }  
+
+    },function(error){
+        
+    })
+
+}
+
+cargarCarros();
+
+
+
 getUser();

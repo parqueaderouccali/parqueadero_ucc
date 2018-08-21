@@ -206,13 +206,15 @@
             <div class="row">
               <div class="dibujo-canvas" width="1120" height="600">
                 <img id="imagenParqueaderosCarro" src="../../dist/img/parqueaderos/ucc_carros.png" alt="">
-                <a href="" id="parqueadero1" class="text-red" data-toggle="modal" data-target="#exampleModalCenter">
-                  <b>Asignar # </b>
-                  <b id="num_parqueadero1">1</b>
+                
+                <a href="" id="parqueadero1" class="text-red" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo()">                 
+                  <img id="imagenCarro1" src="../../dist/img/parqueaderos/carro1.PNG" alt="" hidden>
+                  <b id="num_parqueadero1" >1</b>
                 </a>
-                <a href="" id="parqueadero2" class="text-red" data-toggle="modal" data-target="#exampleModalCenter">
-                  <b>Asignar # </b>
-                  <b id="num_parqueadero2">2</b>
+                
+                <a href="" id="parqueadero2" class="text-red" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo2()">
+                  <b id="num_parqueadero2" >2</b>
+                  <img id="imagenCarro2" src="../../dist/img/parqueaderos/carro2.PNG" alt="" hidden>                  
                 </a>
               </div>
             </div>
@@ -265,9 +267,9 @@
           <div class="form-group row">
             <div class="col-sm-12">
               <button id="btn_asignar" class="btn btn-block btn-success btn-lg" onclick="btnAsignar()">Asignar</button>
-              <button id="btn_desocupar" class="btn btn-block btn-warning btn-lg" onclick="btnDesocupar()">Desocupar</button>
-              <button id="btn_inhabilitar" class="btn btn-block btn-danger btn-lg" onclick="btnInhabilitar()">Inhabilitar</button>
+              <button id="btn_desocupar" class="btn btn-block btn-warning btn-lg" onclick="btnDesocupar()">Desocupar</button>              
               <button id="btn_habilitar" class="btn btn-block btn-info btn-lg" onclick="btnHabilitar()">Habilitar</button>
+              <button id="btn_inhabilitar" class="btn btn-block btn-danger btn-lg" onclick="btnInhabilitar()">Inhabilitar</button>
             </div>
           </div>
 

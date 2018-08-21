@@ -6,25 +6,8 @@
 
 #parqueadero2 {
     position:absolute;
-    left: 385px;
-    bottom:634px;
-}
-
-#parqueadero3 {
-    position:absolute;
-    left: 300px;
-    bottom:610px;
-}
-
-#parqueadero4 {
-    position:absolute;
-    left: 356px;
-    bottom:610px;
-}
-
-#ejemplo {
-    position:absolute;
-    left: 50%;
+    left: 402px;
+    bottom:633px;
 }
 
 #imagenParqueaderosCarro{

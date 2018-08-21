@@ -238,6 +238,22 @@ var cargarCarros = function () {
 
 }
 
+var acordeon = function () {
+    
+    var numero;
+    
+    numero++;
+
+    console.log(numero)
+
+    //if(numero % 2 == 0){        
+    //    alert('cerrado' + numero)
+    //}else{    
+    //    alert('abierto' + numero)
+    //}
+
+}
+
 cargarCarros();
 
 

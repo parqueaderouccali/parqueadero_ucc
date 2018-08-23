@@ -230,6 +230,12 @@ var cargarCarros = function () {
                     $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).show();
                 }
 
+                if(parqueaderos[parqueo].estado == 0){
+                    $('#imagenInhabilitado'+parqueaderos[parqueo].num_parqueadero).show();
+                }else{
+                    $('#imagenInhabilitado'+parqueaderos[parqueo].num_parqueadero).hide();
+                }
+
             }  
 
     },function(error){

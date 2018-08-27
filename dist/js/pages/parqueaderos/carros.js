@@ -121,8 +121,8 @@ var btnDesocupar = function () {
 
 }
 
-// metodo para inhabilitar un espacio en el parqueadero
-var btnInhabilitar = function () {
+// metodo para habilitar un espacio en el parqueadero
+var btnHabilitar = function () {
 
     var numero_parqueadero = $("#numero_parqueadero").val();
 
@@ -160,8 +160,8 @@ var btnInhabilitar = function () {
 
 }
 
-// metodo para habilitar un espacio en el parqueadero
-var btnHabilitar = function () {
+// metodo para inhabilitar un espacio en el parqueadero
+var btnInhabilitar = function () {
 
     var numero_parqueadero = $("#numero_parqueadero").val();
 
@@ -188,6 +188,7 @@ var btnHabilitar = function () {
                 }
 
                 db.update(parqueadero);
+                btnDesocupar();
                 $('#exampleModalCenter').modal('hide')
             }
 
@@ -199,17 +200,20 @@ var btnHabilitar = function () {
 
 }
 
+
 var numeroParqueo = function (){
     $("#numero_parqueadero").empty();
     $("#numero_parqueadero").val($("#num_parqueadero1").text());
     $("#numero_parqueadero").css("font-weight", "bolder");
 }
 
+
 var numeroParqueo2 = function () {        
     $("#numero_parqueadero").empty();
     $("#numero_parqueadero").val($("#num_parqueadero2").text());
     $("#numero_parqueadero").css("font-weight", "bolder");
 }
+
 
 var cargarCarros = function () {
 
@@ -224,16 +228,26 @@ var cargarCarros = function () {
                 console.log(parqueaderos[parqueo].disponibilidad)
                 console.log(parqueaderos[parqueo].num_parqueadero)
     
-                if(parqueaderos[parqueo].disponibilidad == 0){
+                
+                if(parqueaderos[parqueo].estado == 1){
+                    // btnDesocupar();
                     $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).hide();
+                    $('#imagenInhabilitado'+parqueaderos[parqueo].num_parqueadero).show();                    
+                    console.log('estado 1');                               
                 }else{
-                    $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).show();
-                }
+                    // btnDesocupar();                                                            
+                    console.log('estado 0');
 
-                if(parqueaderos[parqueo].estado == 0){
-                    $('#imagenInhabilitado'+parqueaderos[parqueo].num_parqueadero).show();
-                }else{
-                    $('#imagenInhabilitado'+parqueaderos[parqueo].num_parqueadero).hide();
+                    if(parqueaderos[parqueo].disponibilidad == 1){                 
+                        console.log('disponibilidad 1');                         
+                        $('#imagenInhabilitado'+parqueaderos[parqueo].num_parqueadero).hide();
+                        $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).show();
+                    }else{                   
+                        console.log('disponibilidad 0');     
+                        $('#imagenInhabilitado'+parqueaderos[parqueo].num_parqueadero).hide();
+                        $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).hide();
+
+                    }
                 }
 
             }  
@@ -243,6 +257,7 @@ var cargarCarros = function () {
     })
 
 }
+
 
 var acordeon = function () {
     
@@ -260,8 +275,7 @@ var acordeon = function () {
 
 }
 
+
+// metodos que se cargan cuando la aplicacion load().
 cargarCarros();
-
-
-
 getUser();

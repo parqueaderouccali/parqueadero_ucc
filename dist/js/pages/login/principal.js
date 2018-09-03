@@ -1,35 +1,20 @@
 // instancia de firebase que apunta al nodo usuarios
 var db = firebase.database().ref('usuarios/');
+var contador = 0;
 
 // inspecciona si un usuario esta logeado o no
 var getUser = function () {
 
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {        
+                       
             
-            db.equalTo(user.uid).on('value',function(snapshot){
-                
-                var nombreUsuario = snapshot.val();   
-                
-                for(nombre in nombreUsuario) {
-                    console.log(nombreUsuario[nombre].nombre)
-                }
-                
-
-            },function (error) {
-                console.log(error);
-            })
-
-
-            db.on('value',function(snapshot){
-
+            db.on('value',function(snapshot){                
                 var nombreUsuario = snapshot.val();                
-                console.log(user.uid)
                 
                  for(nombre in nombreUsuario) {
                     
-                    if(user.uid === nombreUsuario[nombre].uid){   
-                        console.log(nombreUsuario[nombre].nombre + ' ' + nombreUsuario[nombre].apellido)                     
+                    if(user.uid === nombreUsuario[nombre].uid){                      
                         $('.nombresApellidos').html(' ' + nombreUsuario[nombre].nombre + ' ' + nombreUsuario[nombre].apellido)
                     }
                                         
@@ -60,3 +45,21 @@ var logout = function () {
 }
 
 getUser();
+
+var agregarParking = function() {
+
+    contador = contador + 1;
+
+    var db = firebase.database().ref('parqueaderos/parqueadero_'+ contador)
+
+    var parqueadero = {
+        disponibilidad: 0,
+        estado: 0,
+        num_parqueadero: contador    
+    }
+
+    db.set(parqueadero);
+
+}
+
+

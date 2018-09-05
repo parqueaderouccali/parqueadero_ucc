@@ -1,575 +1,451 @@
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+    
+    #imagenCarro1,#imagenCarro2,#imagenCarro3,#imagenCarro4,#imagenCarro5,#imagenCarro6,#imagenCarro7,#imagenCarro8,
+    #imagenCarro9,#imagenCarro10,#imagenCarro11,#imagenCarro12,#imagenCarro13,#imagenCarro14,#imagenCarro15,
+    #imagenCarro16,#imagenCarro17,#imagenCarro18,#imagenCarro19,#imagenCarro20,#imagenCarro21,#imagenCarro22,
+    #imagenCarro23,#imagenCarro24,#imagenCarro25,#imagenCarro26,#imagenCarro27,#imagenCarro28,#imagenCarro29,
+    #imagenCarro30,#imagenCarro31,#imagenCarro32,#imagenCarro33,#imagenCarro34,#imagenCarro35,#imagenCarro36,
+    #imagenCarro37,#imagenCarro38,#imagenCarro39,#imagenCarro40,#imagenCarro41,#imagenCarro42,#imagenCarro43,
+    #imagenCarro44,#imagenCarro45,#imagenCarro46,#imagenCarro47,#imagenCarro48,#imagenCarro49,#imagenCarro50,
+    #imagenCarro51,#imagenCarro52,#imagenCarro53,#imagenCarro54,#imagenCarro55,#imagenCarro56,#imagenCarro57,
+    #imagenCarro58,#imagenCarro59,#imagenCarro60,#imagenCarro61,#imagenCarro62,#imagenCarro63,#imagenCarro64,
+    #imagenCarro65,#imagenCarro66,#imagenCarro67,#imagenCarro68,#imagenCarro69,#imagenCarro70,#imagenCarro71,
+    #imagenCarro72,#imagenCarro73,#imagenCarro74,#imagenCarro75,#imagenCarro76,#imagenCarro77,#imagenCarro78,
+    #imagenCarro79,#imagenCarro80,#imagenCarro81,#imagenCarro82,#imagenCarro83,#imagenCarro84,#imagenCarro85,
+    #imagenCarro86,#imagenCarro87,#imagenCarro88,#imagenCarro89,#imagenCarro90,#imagenCarro91,#imagenCarro92,
+    #imagenCarro93,#imagenCarro94,#imagenCarro95 {        
+        width:60px;
+        height: 26px;
+    }
+
+    #num_parqueadero1, #num_parqueadero2, #num_parqueadero3, #num_parqueadero4, #num_parqueadero5, #num_parqueadero6, #num_parqueadero7, 
+    #num_parqueadero8, #num_parqueadero9, #num_parqueadero10, #num_parqueadero11, #num_parqueadero12, #num_parqueadero13, #num_parqueadero14,
+    #num_parqueadero15, #num_parqueadero16,#num_parqueadero17, #num_parqueadero18, #num_parqueadero19, #num_parqueadero20, #num_parqueadero21,
+    #num_parqueadero22, #num_parqueadero23, #num_parqueadero24, #num_parqueadero25, #num_parqueadero26, #num_parqueadero27, #num_parqueadero28,
+    #num_parqueadero29, #num_parqueadero30, #num_parqueadero31, #num_parqueadero32, #num_parqueadero33, #num_parqueadero34, #num_parqueadero35,
+    #num_parqueadero36, #num_parqueadero37, #num_parqueadero38, #num_parqueadero39, #num_parqueadero40, #num_parqueadero41, #num_parqueadero42,
+    #num_parqueadero43, #num_parqueadero44, #num_parqueadero45, #num_parqueadero46, #num_parqueadero47, #num_parqueadero48, #num_parqueadero49, 
+    #num_parqueadero50, #num_parqueadero51, #num_parqueadero52, #num_parqueadero53, #num_parqueadero54, #num_parqueadero55, #num_parqueadero56, 
+    #num_parqueadero57, #num_parqueadero58, #num_parqueadero59, #num_parqueadero60, #num_parqueadero61, #num_parqueadero62, #num_parqueadero63, 
+    #num_parqueadero64, #num_parqueadero65, #num_parqueadero66, #num_parqueadero67, #num_parqueadero68, #num_parqueadero69, #num_parqueadero70, 
+    #num_parqueadero71, #num_parqueadero72, #num_parqueadero73, #num_parqueadero74, #num_parqueadero75, #num_parqueadero76, #num_parqueadero77,
+    #num_parqueadero78, #num_parqueadero79, #num_parqueadero80, #num_parqueadero81, #num_parqueadero82, #num_parqueadero83, #num_parqueadero84,
+    #num_parqueadero85, #num_parqueadero86, #num_parqueadero87, #num_parqueadero88, #num_parqueadero89, #num_parqueadero90, #num_parqueadero91, 
+    #num_parqueadero92, #num_parqueadero93, #num_parqueadero94, #num_parqueadero95
+{
+    font-size: 130%;
+}
+/*Fila #1 - 26 vehiculos */
+#parqueadero1 {position:absolute;left: 1.8%;bottom:812.0px;}
+#parqueadero2 {position:absolute;left: 1.8%;bottom:780.4px;}
+#parqueadero3 {position:absolute;left: 1.8%;bottom:748.8px;}
+#parqueadero4 {position:absolute;left: 1.8%;bottom:717.1999999999999px;}
+#parqueadero5 {position:absolute;left: 1.8%;bottom:685.5999999999999px;}
+#parqueadero6 {position:absolute;left: 1.8%;bottom:653.9999999999999px;}
+#parqueadero7 {position:absolute;left: 1.8%;bottom:622.3999999999999px;}
+#parqueadero8 {position:absolute;left: 1.8%;bottom:590.7999999999998px;}
+#parqueadero9 {position:absolute;left: 1.8%;bottom:559.1999999999998px;}
+#parqueadero10 {position:absolute;left: 1.8%;bottom:527.5999999999998px;}
+#parqueadero11 {position:absolute;left: 1.8%;bottom:495.9999999999998px;}
+#parqueadero12 {position:absolute;left: 1.8%;bottom:464.39999999999975px;}
+#parqueadero13 {position:absolute;left: 1.8%;bottom:432.7999999999997px;}
+#parqueadero14 {position:absolute;left: 1.8%;bottom:401.1999999999997px;}
+#parqueadero15 {position:absolute;left: 1.8%;bottom:369.5999999999997px;}
+#parqueadero16 {position:absolute;left: 1.8%;bottom:337.99999999999966px;}
+#parqueadero17 {position:absolute;left: 1.8%;bottom:306.39999999999964px;}
+#parqueadero18 {position:absolute;left: 1.8%;bottom:274.7999999999996px;}
+#parqueadero19 {position:absolute;left: 1.8%;bottom:243.19999999999962px;}
+#parqueadero20 {position:absolute;left: 1.8%;bottom:211.59999999999962px;}
+#parqueadero21 {position:absolute;left: 1.8%;bottom:179.99999999999963px;}
+#parqueadero22 {position:absolute;left: 1.8%;bottom:148.39999999999964px;}
+#parqueadero23 {position:absolute;left: 1.8%;bottom:116.79999999999964px;}
+#parqueadero24 {position:absolute;left: 1.8%;bottom:85.19999999999965px;}
+#parqueadero25 {position:absolute;left: 1.8%;bottom:53.599999999999646px;}
+#parqueadero26 {position:absolute;left: 1.8%;bottom:21.999999999999645px;}
+
+/*Fila #2 - 7 vehiculos */
+#parqueadero27 {position:absolute;left: 14.3%;bottom:812.0px;}
+#parqueadero28 {position:absolute;left: 14.3%;bottom:780.4px;}
+#parqueadero29 {position:absolute;left: 14.3%;bottom:748.8px;}
+#parqueadero30 {position:absolute;left: 14.3%;bottom:717.1999999999999px;}
+#parqueadero31 {position:absolute;left: 14.3%;bottom:685.5999999999999px;}
+#parqueadero32 {position:absolute;left: 14.3%;bottom:653.9999999999999px;}
+#parqueadero33 {position:absolute;left: 14.3%;bottom:622.3999999999999px;}
+
+/*Fila #2 - 14 vehiculos */
+#parqueadero34 {position:absolute;left: 14.3%;bottom:432.7px;}
+#parqueadero35 {position:absolute;left: 14.3%;bottom:401.09999999999997px;}
+#parqueadero36 {position:absolute;left: 14.3%;bottom:369.49999999999994px;}
+#parqueadero37 {position:absolute;left: 14.3%;bottom:337.8999999999999px;}
+#parqueadero38 {position:absolute;left: 14.3%;bottom:306.2999999999999px;}
+#parqueadero39 {position:absolute;left: 14.3%;bottom:274.6999999999999px;}
+#parqueadero40 {position:absolute;left: 14.3%;bottom:243.09999999999988px;}
+#parqueadero41 {position:absolute;left: 14.3%;bottom:211.4999999999999px;}
+#parqueadero42 {position:absolute;left: 14.3%;bottom:179.8999999999999px;}
+#parqueadero43 {position:absolute;left: 14.3%;bottom:148.2999999999999px;}
+#parqueadero44 {position:absolute;left: 14.3%;bottom:116.6999999999999px;}
+#parqueadero45 {position:absolute;left: 14.3%;bottom:85.09999999999991px;}
+#parqueadero46 {position:absolute;left: 14.3%;bottom:53.49999999999991px;}
+#parqueadero47 {position:absolute;left: 14.3%;bottom:21.899999999999906px;}
+
+/*Fila #3 - 7 vehiculos */
+#parqueadero48 {position:absolute;left: 22.9%;bottom:812.0px;}
+#parqueadero49 {position:absolute;left: 22.9%;bottom:780.4px;}
+#parqueadero50 {position:absolute;left: 22.9%;bottom:748.8px;}
+#parqueadero51 {position:absolute;left: 22.9%;bottom:717.1999999999999px;}
+#parqueadero52 {position:absolute;left: 22.9%;bottom:685.5999999999999px;}
+#parqueadero53 {position:absolute;left: 22.9%;bottom:653.9999999999999px;}
+#parqueadero54 {position:absolute;left: 22.9%;bottom:622.3999999999999px;}
+
+/*Fila #4 - 6 vehiculos */
+#parqueadero55 {position:absolute;left: 36%;bottom:780.4px;}
+#parqueadero56 {position:absolute;left: 36%;bottom:748.8px;}
+#parqueadero57 {position:absolute;left: 36%;bottom:717.1999999999999px;}
+#parqueadero58 {position:absolute;left: 36%;bottom:685.5999999999999px;}
+#parqueadero59 {position:absolute;left: 36%;bottom:653.9999999999999px;}
+#parqueadero60 {position:absolute;left: 36%;bottom:622.3999999999999px;}
+
+/*Fila #5 - 5 vehiculos */
+#parqueadero61 {position:absolute;left: 57%;bottom:748.0px;}
+#parqueadero62 {position:absolute;left: 57%;bottom:716.4px;}
+#parqueadero63 {position:absolute;left: 57%;bottom:684.8px;}
+#parqueadero64 {position:absolute;left: 57%;bottom:653.1999999999999px;}
+#parqueadero65 {position:absolute;left: 57%;bottom:621.5999999999999px;}  
+
+/*Fila #6 - 6 vehiculos */
+#parqueadero66 {position:absolute;left: 70.7%;bottom:780.4px;}
+#parqueadero67 {position:absolute;left: 70.7%;bottom:748.8px;}
+#parqueadero68 {position:absolute;left: 70.7%;bottom:717.1999999999999px;}
+#parqueadero69 {position:absolute;left: 70.7%;bottom:685.5999999999999px;}
+#parqueadero70 {position:absolute;left: 70.7%;bottom:653.9999999999999px;}
+#parqueadero71 {position:absolute;left: 70.7%;bottom:622.3999999999999px;}
+    
+/*Fila #7 - 6 vehiculos */
+#parqueadero72 {position:absolute;left: 79%;bottom:780.4px;}
+#parqueadero73 {position:absolute;left: 79%;bottom:748.8px;}
+#parqueadero74 {position:absolute;left: 79%;bottom:717.1999999999999px;}
+#parqueadero75 {position:absolute;left: 79%;bottom:685.5999999999999px;}
+#parqueadero76 {position:absolute;left: 79%;bottom:653.9999999999999px;}
+#parqueadero77 {position:absolute;left: 79%;bottom:622.3999999999999px;}
+
+/*Fila #8 - 9 vehiculos */
+#parqueadero78 {position:absolute;left: 92.4%;bottom:717.1px;}
+#parqueadero79 {position:absolute;left: 92.4%;bottom:685.5px;}
+#parqueadero80 {position:absolute;left: 92.4%;bottom:653.9px;}
+#parqueadero81 {position:absolute;left: 92.4%;bottom:622.3px;}
+#parqueadero82 {position:absolute;left: 92.4%;bottom:590.6999999999999px;}
+#parqueadero83 {position:absolute;left: 92.4%;bottom:559.0999999999999px;}
+#parqueadero84 {position:absolute;left: 92.4%;bottom:527.4999999999999px;}
+#parqueadero85 {position:absolute;left: 92.4%;bottom:495.89999999999986px;}
+#parqueadero86 {position:absolute;left: 92.4%;bottom:464.29999999999984px;}
+
+/*Fila abajo izq - 4 vehiculos */
+#parqueadero87 {position:absolute;left: 22.8%;bottom:464px;}
+#parqueadero88 {position:absolute;left: 28%;bottom:464px;}
+#parqueadero89 {position:absolute;left: 33%;bottom:464px;}    
+#parqueadero90 {position:absolute;left: 38.8%;bottom:464px;}
+
+/*Fila abajo der - 5 vehiculos */
+#parqueadero91 {position:absolute;left: 57%;bottom:464px;}
+#parqueadero92 {position:absolute;left: 62.1%;bottom:464px;}
+#parqueadero93 {position:absolute;left: 67.4%;bottom:464px;}
+#parqueadero94 {position:absolute;left: 72.4%;bottom:464px;}    
+#parqueadero95 {position:absolute;left: 78.3%;bottom:464px;}    
+
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1680px) {
+    
+    #imagenCarro1,#imagenCarro2,#imagenCarro3,#imagenCarro4,#imagenCarro5,#imagenCarro6,#imagenCarro7,#imagenCarro8,
+    #imagenCarro9,#imagenCarro10,#imagenCarro11,#imagenCarro12,#imagenCarro13,#imagenCarro14,#imagenCarro15,
+    #imagenCarro16,#imagenCarro17,#imagenCarro18,#imagenCarro19,#imagenCarro20,#imagenCarro21,#imagenCarro22,
+    #imagenCarro23,#imagenCarro24,#imagenCarro25,#imagenCarro26,#imagenCarro27,#imagenCarro28,#imagenCarro29,
+    #imagenCarro30,#imagenCarro31,#imagenCarro32,#imagenCarro33,#imagenCarro34,#imagenCarro35,#imagenCarro36,
+    #imagenCarro37,#imagenCarro38,#imagenCarro39,#imagenCarro40,#imagenCarro41,#imagenCarro42,#imagenCarro43,
+    #imagenCarro44,#imagenCarro45,#imagenCarro46,#imagenCarro47,#imagenCarro48,#imagenCarro49,#imagenCarro50,
+    #imagenCarro51,#imagenCarro52,#imagenCarro53,#imagenCarro54,#imagenCarro55,#imagenCarro56,#imagenCarro57,
+    #imagenCarro58,#imagenCarro59,#imagenCarro60,#imagenCarro61,#imagenCarro62,#imagenCarro63,#imagenCarro64,
+    #imagenCarro65,#imagenCarro66,#imagenCarro67,#imagenCarro68,#imagenCarro69,#imagenCarro70,#imagenCarro71,
+    #imagenCarro72,#imagenCarro73,#imagenCarro74,#imagenCarro75,#imagenCarro76,#imagenCarro77,#imagenCarro78,
+    #imagenCarro79,#imagenCarro80,#imagenCarro81,#imagenCarro82,#imagenCarro83,#imagenCarro84,#imagenCarro85,
+    #imagenCarro86,#imagenCarro87,#imagenCarro88,#imagenCarro89,#imagenCarro90,#imagenCarro91,#imagenCarro92,
+    #imagenCarro93,#imagenCarro94,#imagenCarro95 {        
+        width:50px;
+        height: 21px;
+    }
+
+    #num_parqueadero1, #num_parqueadero2, #num_parqueadero3, #num_parqueadero4, #num_parqueadero5, #num_parqueadero6, #num_parqueadero7, 
+    #num_parqueadero8, #num_parqueadero9, #num_parqueadero10, #num_parqueadero11, #num_parqueadero12, #num_parqueadero13, #num_parqueadero14,
+    #num_parqueadero15, #num_parqueadero16,#num_parqueadero17, #num_parqueadero18, #num_parqueadero19, #num_parqueadero20, #num_parqueadero21,
+    #num_parqueadero22, #num_parqueadero23, #num_parqueadero24, #num_parqueadero25, #num_parqueadero26, #num_parqueadero27, #num_parqueadero28,
+    #num_parqueadero29, #num_parqueadero30, #num_parqueadero31, #num_parqueadero32, #num_parqueadero33, #num_parqueadero34, #num_parqueadero35,
+    #num_parqueadero36, #num_parqueadero37, #num_parqueadero38, #num_parqueadero39, #num_parqueadero40, #num_parqueadero41, #num_parqueadero42,
+    #num_parqueadero43, #num_parqueadero44, #num_parqueadero45, #num_parqueadero46, #num_parqueadero47, #num_parqueadero48, #num_parqueadero49, 
+    #num_parqueadero50, #num_parqueadero51, #num_parqueadero52, #num_parqueadero53, #num_parqueadero54, #num_parqueadero55, #num_parqueadero56, 
+    #num_parqueadero57, #num_parqueadero58, #num_parqueadero59, #num_parqueadero60, #num_parqueadero61, #num_parqueadero62, #num_parqueadero63, 
+    #num_parqueadero64, #num_parqueadero65, #num_parqueadero66, #num_parqueadero67, #num_parqueadero68, #num_parqueadero69, #num_parqueadero70, 
+    #num_parqueadero71, #num_parqueadero72, #num_parqueadero73, #num_parqueadero74, #num_parqueadero75, #num_parqueadero76, #num_parqueadero77,
+    #num_parqueadero78, #num_parqueadero79, #num_parqueadero80, #num_parqueadero81, #num_parqueadero82, #num_parqueadero83, #num_parqueadero84,
+    #num_parqueadero85, #num_parqueadero86, #num_parqueadero87, #num_parqueadero88, #num_parqueadero89, #num_parqueadero90, #num_parqueadero91, 
+    #num_parqueadero92, #num_parqueadero93, #num_parqueadero94, #num_parqueadero95
+{
+    font-size: 130%;
+}
+/*Fila #1 - 26 vehiculos */
+#parqueadero1 {position:absolute;left: 1.8%;bottom:705.0px;}
+#parqueadero2 {position:absolute;left: 1.8%;bottom:677.5px;}
+#parqueadero3 {position:absolute;left: 1.8%;bottom:650.0px;}
+#parqueadero4 {position:absolute;left: 1.8%;bottom:622.5px;}
+#parqueadero5 {position:absolute;left: 1.8%;bottom:595.0px;}
+#parqueadero6 {position:absolute;left: 1.8%;bottom:567.5px;}
+#parqueadero7 {position:absolute;left: 1.8%;bottom:540.0px;}
+#parqueadero8 {position:absolute;left: 1.8%;bottom:512.5px;}
+#parqueadero9 {position:absolute;left: 1.8%;bottom:485.0px;}
+#parqueadero10 {position:absolute;left: 1.8%;bottom:457.5px;}
+#parqueadero11 {position:absolute;left: 1.8%;bottom:430.0px;}
+#parqueadero12 {position:absolute;left: 1.8%;bottom:402.5px;}
+#parqueadero13 {position:absolute;left: 1.8%;bottom:375.0px;}
+#parqueadero14 {position:absolute;left: 1.8%;bottom:347.5px;}
+#parqueadero15 {position:absolute;left: 1.8%;bottom:320.0px;}
+#parqueadero16 {position:absolute;left: 1.8%;bottom:292.5px;}
+#parqueadero17 {position:absolute;left: 1.8%;bottom:265.0px;}
+#parqueadero18 {position:absolute;left: 1.8%;bottom:237.5px;}
+#parqueadero19 {position:absolute;left: 1.8%;bottom:210.0px;}
+#parqueadero20 {position:absolute;left: 1.8%;bottom:182.5px;}
+#parqueadero21 {position:absolute;left: 1.8%;bottom:155.0px;}
+#parqueadero22 {position:absolute;left: 1.8%;bottom:127.5px;}
+#parqueadero23 {position:absolute;left: 1.8%;bottom:100.0px;}
+#parqueadero24 {position:absolute;left: 1.8%;bottom:72.5px;}
+#parqueadero25 {position:absolute;left: 1.8%;bottom:45.0px;}
+#parqueadero26 {position:absolute;left: 1.8%;bottom:17.5px;}
+
+/*Fila #2 - 7 vehiculos */
+#parqueadero27 {position:absolute;left: 14.1%;bottom:705.0px;}
+#parqueadero28 {position:absolute;left: 14.1%;bottom:677.5px;}
+#parqueadero29 {position:absolute;left: 14.1%;bottom:650.0px;}
+#parqueadero30 {position:absolute;left: 14.1%;bottom:622.5px;}
+#parqueadero31 {position:absolute;left: 14.1%;bottom:595.0px;}
+#parqueadero32 {position:absolute;left: 14.1%;bottom:567.5px;}
+#parqueadero33 {position:absolute;left: 14.1%;bottom:540.0px;}
+
+/*Fila #2 - 14 vehiculos */
+#parqueadero34 {position:absolute;left: 14.1%;bottom:375.0px;}
+#parqueadero35 {position:absolute;left: 14.1%;bottom:347.5px;}
+#parqueadero36 {position:absolute;left: 14.1%;bottom:320.0px;}
+#parqueadero37 {position:absolute;left: 14.1%;bottom:292.5px;}
+#parqueadero38 {position:absolute;left: 14.1%;bottom:265.0px;}
+#parqueadero39 {position:absolute;left: 14.1%;bottom:237.5px;}
+#parqueadero40 {position:absolute;left: 14.1%;bottom:210.0px;}
+#parqueadero41 {position:absolute;left: 14.1%;bottom:182.5px;}
+#parqueadero42 {position:absolute;left: 14.1%;bottom:155.0px;}
+#parqueadero43 {position:absolute;left: 14.1%;bottom:127.5px;}
+#parqueadero44 {position:absolute;left: 14.1%;bottom:100.0px;}
+#parqueadero45 {position:absolute;left: 14.1%;bottom:72.5px;}
+#parqueadero46 {position:absolute;left: 14.1%;bottom:45.0px;}
+#parqueadero47 {position:absolute;left: 14.1%;bottom:17.5px;}
+
+/*Fila #3 - 7 vehiculos */
+#parqueadero48 {position:absolute;left: 22.9%;bottom:705.0px;}
+#parqueadero49 {position:absolute;left: 22.9%;bottom:677.5px;}
+#parqueadero50 {position:absolute;left: 22.9%;bottom:650.0px;}
+#parqueadero51 {position:absolute;left: 22.9%;bottom:622.5px;}
+#parqueadero52 {position:absolute;left: 22.9%;bottom:595.0px;}
+#parqueadero53 {position:absolute;left: 22.9%;bottom:567.5px;}
+#parqueadero54 {position:absolute;left: 22.9%;bottom:540.0px;}
+
+/*Fila #4 - 6 vehiculos */
+#parqueadero55 {position:absolute;left: 36.5%;bottom:677.5px;}
+#parqueadero56 {position:absolute;left: 36.5%;bottom:650.0px;}
+#parqueadero57 {position:absolute;left: 36.5%;bottom:622.5px;}
+#parqueadero58 {position:absolute;left: 36.5%;bottom:595.0px;}
+#parqueadero59 {position:absolute;left: 36.5%;bottom:567.5px;}
+#parqueadero60 {position:absolute;left: 36.5%;bottom:540.0px;}
+    
+/*Fila #5 - 5 vehiculos */
+#parqueadero61 {position:absolute;left: 57%;bottom:650.0px;}
+#parqueadero62 {position:absolute;left: 57%;bottom:622.5px;}
+#parqueadero63 {position:absolute;left: 57%;bottom:595.0px;}
+#parqueadero64 {position:absolute;left: 57%;bottom:567.5px;}
+#parqueadero65 {position:absolute;left: 57%;bottom:540.0px;}   
+
+/*Fila #6 - 6 vehiculos */
+#parqueadero66 {position:absolute;left: 70.5%;bottom:677.5px;}
+#parqueadero67 {position:absolute;left: 70.5%;bottom:650.0px;}
+#parqueadero68 {position:absolute;left: 70.5%;bottom:622.5px;}
+#parqueadero69 {position:absolute;left: 70.5%;bottom:595.0px;}
+#parqueadero70 {position:absolute;left: 70.5%;bottom:567.5px;}
+#parqueadero71 {position:absolute;left: 70.5%;bottom:540.0px;}
+    
+/*Fila #7 - 6 vehiculos */
+#parqueadero72 {position:absolute;left: 79%;bottom:677.5px;}
+#parqueadero73 {position:absolute;left: 79%;bottom:650.0px;}
+#parqueadero74 {position:absolute;left: 79%;bottom:622.5px;}
+#parqueadero75 {position:absolute;left: 79%;bottom:595.0px;}
+#parqueadero76 {position:absolute;left: 79%;bottom:567.5px;}
+#parqueadero77 {position:absolute;left: 79%;bottom:540.0px;}
+
+/*Fila #8 - 9 vehiculos */
+#parqueadero78 {position:absolute;left: 92.5%;bottom:622.5px;}
+#parqueadero79 {position:absolute;left: 92.5%;bottom:595.0px;}
+#parqueadero80 {position:absolute;left: 92.5%;bottom:567.5px;}
+#parqueadero81 {position:absolute;left: 92.5%;bottom:540.0px;}
+#parqueadero82 {position:absolute;left: 92.5%;bottom:512.5px;}
+#parqueadero83 {position:absolute;left: 92.5%;bottom:485.0px;}
+#parqueadero84 {position:absolute;left: 92.5%;bottom:457.5px;}
+#parqueadero85 {position:absolute;left: 92.5%;bottom:430.0px;}
+#parqueadero86 {position:absolute;left: 92.5%;bottom:402.5px;}
+
+/*Fila abajo izq - 4 vehiculos */
+#parqueadero87 {position:absolute;left: 22.8%;bottom:403px;}
+#parqueadero88 {position:absolute;left: 28%;bottom:403px;}
+#parqueadero89 {position:absolute;left: 33%;bottom:403px;}    
+#parqueadero90 {position:absolute;left: 38.8%;bottom:403px;}
+
+/*Fila abajo der - 5 vehiculos */
+#parqueadero91 {position:absolute;left: 57%;bottom:403px;}
+#parqueadero92 {position:absolute;left: 62.1%;bottom:403px;}
+#parqueadero93 {position:absolute;left: 67.4%;bottom:403px;}
+#parqueadero94 {position:absolute;left: 72.4%;bottom:403px;}    
+#parqueadero95 {position:absolute;left: 78.3%;bottom:403px;}    
+
+}
 
 @media screen and (min-width: 900px) and (max-width: 1600px) {    
     
-    #parqueadero1 {
-        position:absolute;
-        left: 1.8%;
-        bottom:656px;     
+    #num_parqueadero1, #num_parqueadero2, #num_parqueadero3, #num_parqueadero4, #num_parqueadero5, #num_parqueadero6, #num_parqueadero7, 
+    #num_parqueadero8, #num_parqueadero9, #num_parqueadero10, #num_parqueadero11, #num_parqueadero12, #num_parqueadero13, #num_parqueadero14,
+    #num_parqueadero15, #num_parqueadero16,#num_parqueadero17, #num_parqueadero18, #num_parqueadero19, #num_parqueadero20, #num_parqueadero21,
+    #num_parqueadero22, #num_parqueadero23, #num_parqueadero24, #num_parqueadero25, #num_parqueadero26, #num_parqueadero27, #num_parqueadero28,
+    #num_parqueadero29, #num_parqueadero30, #num_parqueadero31, #num_parqueadero32, #num_parqueadero33, #num_parqueadero34, #num_parqueadero35,
+    #num_parqueadero36, #num_parqueadero37, #num_parqueadero38, #num_parqueadero39, #num_parqueadero40, #num_parqueadero41, #num_parqueadero42,
+    #num_parqueadero43, #num_parqueadero44, #num_parqueadero45, #num_parqueadero46, #num_parqueadero47, #num_parqueadero48, #num_parqueadero49, 
+    #num_parqueadero50, #num_parqueadero51, #num_parqueadero52, #num_parqueadero53, #num_parqueadero54, #num_parqueadero55, #num_parqueadero56, 
+    #num_parqueadero57, #num_parqueadero58, #num_parqueadero59, #num_parqueadero60, #num_parqueadero61, #num_parqueadero62, #num_parqueadero63, 
+    #num_parqueadero64, #num_parqueadero65, #num_parqueadero66, #num_parqueadero67, #num_parqueadero68, #num_parqueadero69, #num_parqueadero70, 
+    #num_parqueadero71, #num_parqueadero72, #num_parqueadero73, #num_parqueadero74, #num_parqueadero75, #num_parqueadero76, #num_parqueadero77,
+    #num_parqueadero78, #num_parqueadero79, #num_parqueadero80, #num_parqueadero81, #num_parqueadero82, #num_parqueadero83, #num_parqueadero84,
+    #num_parqueadero85, #num_parqueadero86, #num_parqueadero87, #num_parqueadero88, #num_parqueadero89, #num_parqueadero90, #num_parqueadero91, 
+    #num_parqueadero92, #num_parqueadero93, #num_parqueadero94, #num_parqueadero95
+    {
+        font-size: 140%;
     }
 
-    #parqueadero2 {
-        position:absolute;
-        left: 1.8%;
-        bottom:631px;
-    }
-    
-    #parqueadero3 {
-        position:absolute;
-        left: 1.8%;
-        bottom:605px;
-    }
-    
-    #parqueadero4 {
-        position:absolute;
-        left: 1.8%;
-        bottom:579px;
-    }
-    
-    #parqueadero5 {
-        position:absolute;
-        left: 1.8%;
-        bottom:554px;
-    }
-    
-    #parqueadero6 {
-        position:absolute;
-        left: 1.8%;
-        bottom:528px;
-    }
-    
-    #parqueadero7 {
-        position:absolute;
-        left: 1.8%;
-        bottom:503px;
-    }
-    
-    #parqueadero8 {
-        position:absolute;
-        left: 1.8%;
-        bottom:477px;
-    }
-    
-    #parqueadero9 {
-        position:absolute;
-        left: 1.8%;
-        bottom:452px;
-    }
-    
-    #parqueadero10 {
-        position:absolute;
-        left: 1.8%;
-        bottom:426px;
-    }
-    
-    #parqueadero11 {
-        position:absolute;
-        left: 1.8%;
-        bottom:401px;
-    }
-    
-    #parqueadero12 {
-        position:absolute;
-        left: 1.8%;
-        bottom:376px;
-    }
-    
-    #parqueadero13 {
-        position:absolute;
-        left: 1.8%;
-        bottom:350px;
-    }
-    
-    #parqueadero14 {
-        position:absolute;
-        left: 1.8%;
-        bottom:324px;
-    }
-    
-    #parqueadero15 {
-        position:absolute;
-        left: 1.8%;
-        bottom:299px;
-    }
-    
-    #parqueadero16 {
-        position:absolute;
-        left: 1.8%;
-        bottom:273px;
-    }
-    
-    #parqueadero17 {
-        position:absolute;
-        left: 1.8%;
-        bottom:248px;
-    }
-    
-    #parqueadero18 {
-        position:absolute;
-        left: 1.8%;
-        bottom:222px;
-    }
-    
-    #parqueadero19 {
-        position:absolute;
-        left: 1.8%;
-        bottom:196px;
-    }
-    
-    #parqueadero20 {
-        position:absolute;
-        left: 1.8%;
-        bottom:170px;
-    }
-    
-    #parqueadero21 {
-        position:absolute;
-        left: 1.8%;
-        bottom:145px;
-    }
-    
-    #parqueadero22 {
-        position:absolute;
-        left: 1.8%;
-        bottom:120px;
-    }
-    
-    #parqueadero23 {
-        position:absolute;
-        left: 1.8%;
-        bottom:94px;
-    }
-    
-    #parqueadero24 {
-        position:absolute;
-        left: 1.8%;
-        bottom:68px;
-    }
-    
-    #parqueadero25 {
-        position:absolute;
-        left: 1.8%;
-        bottom:43px;
-    }
-    
-    #parqueadero26 {
-        position:absolute;
-        left: 1.8%;
-        bottom:17px;
-    }
-    
-    #parqueadero27 {
-        position:absolute;
-        left: 14.1%;
-        bottom:657px;
-    }
-    
-    #parqueadero28 {
-        position:absolute;
-        left: 14.1%;
-        bottom:631px;
-    }
-    
-    #parqueadero29 {
-        position:absolute;
-        left: 14.1%;
-        bottom:605px;
-    }
-    
-    #parqueadero30 {
-        position:absolute;
-        left: 14.1%;
-        bottom:579px;
-    }
-    
-    #parqueadero31 {
-        position:absolute;
-        left: 14.1%;
-        bottom:554px;
-    }
-    
-    #parqueadero32 {
-        position:absolute;
-        left: 14.1%;
-        bottom:528px;
-    }
-    
-    #parqueadero33 {
-        position:absolute;
-        left: 14.1%;
-        bottom:503px;
-    }
-    
-    #parqueadero34 {
-        position:absolute;
-        left: 14.1%;
-        bottom:350px;
-    }
-    
-    #parqueadero35 {
-        position:absolute;
-        left: 14.1%;
-        bottom:324px;
-    }
-    
-    #parqueadero36 {
-        position:absolute;
-        left: 14.1%;
-        bottom:299px;
-    }
-    
-    #parqueadero37 {
-        position:absolute;
-        left: 14.1%;
-        bottom:273px;
-    }
-    
-    #parqueadero38 {
-        position:absolute;
-        left: 14.1%;
-        bottom:248px;
-    }
-    
-    #parqueadero39 {
-        position:absolute;
-        left: 14.1%;
-        bottom:222px;
-    }
-    
-    #parqueadero40 {
-        position:absolute;
-        left: 14.1%;
-        bottom:196px;
-    }
-    
-    #parqueadero41 {
-        position:absolute;
-        left: 14.1%;
-        bottom:170px;
-    }
-    
-    #parqueadero42 {
-        position:absolute;
-        left: 14.1%;
-        bottom:145px;
-    }
-    
-    #parqueadero43 {
-        position:absolute;
-        left: 14.1%;
-        bottom:120px;
-    }
-    
-    #parqueadero44 {
-        position:absolute;
-        left: 14.1%;
-        bottom:94px;
-    }
-    
-    #parqueadero45 {
-        position:absolute;
-        left: 14.1%;
-        bottom:68px;
-    }
-    
-    #parqueadero46 {
-        position:absolute;
-        left: 14.1%;
-        bottom:43px;
-    }
-    
-    #parqueadero47 {
-        position:absolute;
-        left: 14.1%;
-        bottom:17px;
-    }
-    
-    #parqueadero48 {
-        position:absolute;
-        left: 605px;
-        bottom:877px;
-    }
-    
-    #parqueadero49 {
-        position:absolute;
-        left: 605px;
-        bottom:845px;
-    }
-    
-    #parqueadero50 {
-        position:absolute;
-        left: 605px;
-        bottom:813px;
-    }
-    
-    #parqueadero51 {
-        position:absolute;
-        left: 605px;
-        bottom:781px;
-    }
-    
-    #parqueadero52 {
-        position:absolute;
-        left: 605px;
-        bottom:749px;
-    }
-    
-    #parqueadero53 {
-        position:absolute;
-        left: 605px;
-        bottom:717px;
-    }
-    
-    #parqueadero54 {
-        position:absolute;
-        left: 605px;
-        bottom:685px;
-    }
-    
-    #parqueadero55 {
-        position:absolute;
-        left: 840px;
-        bottom:845px;
-    }
-    
-    #parqueadero56 {
-        position:absolute;
-        left: 840px;
-        bottom:813px;
-    }
-    
-    #parqueadero57 {
-        position:absolute;
-        left: 840px;
-        bottom:781px;
-    }
-    
-    #parqueadero58 {
-        position:absolute;
-        left: 840px;
-        bottom:749px;
-    }
-    
-    #parqueadero59 {
-        position:absolute;
-        left: 840px;
-        bottom:717px;
-    }
-    
-    #parqueadero60 {
-        position:absolute;
-        left: 840px;
-        bottom:687px;
-    }
-    
-    #parqueadero61 {
-        position:absolute;
-        left: 1175px;
-        bottom:813px;
-    }
-    
-    #parqueadero62 {
-        position:absolute;
-        left: 1175px;
-        bottom:781px;
-    }
-    
-    #parqueadero63 {
-        position:absolute;
-        left: 1175px;
-        bottom:749px;
-    }
-    
-    #parqueadero64 {
-        position:absolute;
-        left: 1175px;
-        bottom:717px;
-    }
-    
-    #parqueadero65 {
-        position:absolute;
-        left: 1175px;
-        bottom:685px;
-    }
-    
-    #parqueadero66 {
-        position:absolute;
-        left: 1415px;
-        bottom:845px;
-    }
-    
-    #parqueadero67 {
-        position:absolute;
-        left: 1415px;
-        bottom:813px;
-    }
-    
-    #parqueadero68 {
-        position:absolute;
-        left: 1415px;
-        bottom:781px;
-    }
-    
-    #parqueadero69 {
-        position:absolute;
-        left: 1415px;
-        bottom:749px;
-    }
-    
-    #parqueadero70 {
-        position:absolute;
-        left: 1415px;
-        bottom:717px;
-    }
-    
-    #parqueadero71 {
-        position:absolute;
-        left: 1415px;
-        bottom:685px;
-    }
-    
-    #parqueadero72 {
-        position:absolute;
-        left: 1544px;
-        bottom:845px;
-    }
-    
-    #parqueadero73 {
-        position:absolute;
-        left: 1544px;
-        bottom:813px;
-    }
-    
-    #parqueadero74 {
-        position:absolute;
-        left: 1544px;
-        bottom:781px;
-    }
-    
-    #parqueadero75 {
-        position:absolute;
-        left: 1544px;
-        bottom:749px;
-    }
-    
-    #parqueadero76 {
-        position:absolute;
-        left: 1544px;
-        bottom:717px;
-    }
-    
-    #parqueadero77 {
-        position:absolute;
-        left: 1544px;
-        bottom:685px;
-    }
-    
-    #parqueadero78 {
-        position:absolute;
-        left: 1775px;
-        bottom:781px;
-    }
-    
-    #parqueadero79 {
-        position:absolute;
-        left: 1775px;
-        bottom:749px;
-    }
-    
-    #parqueadero80 {
-        position:absolute;
-        left: 1775px;
-        bottom:717px;
-    }
-    
-    #parqueadero81 {
-        position:absolute;
-        left: 1775px;
-        bottom:685px;
-    }
-    
-    #parqueadero82 {
-        position:absolute;
-        left: 1775px;
-        bottom:655px;
-    }
-    
-    #parqueadero83 {
-        position:absolute;
-        left: 1775px;
-        bottom:624px;
-    }
-    
-    #parqueadero84 {
-        position:absolute;
-        left: 1775px;
-        bottom:592px;
-    }
-    
-    #parqueadero85 {
-        position:absolute;
-        left: 1775px;
-        bottom:560px;
-    }
-    
-    #parqueadero86 {
-        position:absolute;
-        left: 1775px;
-        bottom:529px;
-    }
-    
-    #parqueadero87 {
-        position:absolute;
-        left: 605px;
-        bottom:529px;
-    }
-    
-    #parqueadero88 {
-        position:absolute;
-        left: 690px;
-        bottom:529px;
-    }
-    
-    #parqueadero89 {
-        position:absolute;
-        left: 778px;
-        bottom:529px;
-    }
-    
-    #parqueadero90 {
-        position:absolute;
-        left: 868px;
-        bottom:529px;
-    }
-    
-    #parqueadero91 {
-        position:absolute;
-        left: 1175px;
-        bottom:529px;
-    }
-    
-    #parqueadero92 {
-        position:absolute;
-        left: 1260px;
-        bottom:529px;
-    }
-    
-    #parqueadero93 {
-        position:absolute;
-        left: 1350px;
-        bottom:529px;
-    }
-    
-    #parqueadero94 {
-        position:absolute;
-        left: 1435px;
-        bottom:529px;
-    }
-    
-    #parqueadero95 {
-        position:absolute;
-        left: 1525px;
-        bottom:529px;
-    }
+/*Fila #1 - 26 vehiculos */
+#parqueadero1 {position:absolute;left:1.8%;bottom:656px;}
+#parqueadero2 {position:absolute;left: 1.8%;bottom:631px;}
+#parqueadero3 {position:absolute;left: 1.8%;bottom:605px;}
+#parqueadero4 {position:absolute;left: 1.8%;bottom:579px;}
+#parqueadero5 {position:absolute;left: 1.8%;bottom:554px;}
+#parqueadero6 {position:absolute;left: 1.8%;bottom:528px;}
+#parqueadero7 {position:absolute;left: 1.8%;bottom:503px;}
+#parqueadero8 {position:absolute;left: 1.8%;bottom:477px;}
+#parqueadero9 {position:absolute;left: 1.8%;bottom:452px;}
+#parqueadero10 {position:absolute;left: 1.8%;bottom:426px;}    
+#parqueadero11 {position:absolute;left: 1.8%;bottom:401px;}
+#parqueadero12 {position:absolute;left: 1.8%;bottom:376px;}
+#parqueadero13 {position:absolute;left: 1.8%;bottom:350px;}
+#parqueadero14 {position:absolute;left: 1.8%;bottom:324px;}
+#parqueadero15 {position:absolute;left: 1.8%;bottom:299px;}
+#parqueadero16 {position:absolute;left: 1.8%;bottom:273px;}
+#parqueadero17 {position:absolute;left: 1.8%;bottom:248px;}
+#parqueadero18 {position:absolute;left: 1.8%;bottom:222px;}
+#parqueadero19 {position:absolute;left: 1.8%;bottom:196px;}
+#parqueadero20 {position:absolute;left: 1.8%;bottom:170px;}
+#parqueadero21 {position:absolute;left: 1.8%;bottom:145px;}
+#parqueadero22 {position:absolute;left: 1.8%;bottom:120px;}
+#parqueadero23 {position:absolute;left: 1.8%;bottom:94px;}
+#parqueadero24 {position:absolute;left: 1.8%;bottom:68px;}
+#parqueadero25 {position:absolute;left: 1.8%;bottom:43px;}
+#parqueadero26 {position:absolute;left: 1.8%;bottom:17px;}
+
+ /*Fila #2 - 26 vehiculos */
+ #parqueadero27 {position:absolute;left: 14.1%;bottom:657px;}    
+ #parqueadero28 {position:absolute;left: 14.1%;bottom:631px;}
+ #parqueadero29 {position:absolute;left: 14.1%;bottom:605px;}
+ #parqueadero30 {position:absolute;left: 14.1%;bottom:579px;}
+ #parqueadero31 {position:absolute;left: 14.1%;bottom:554px;}
+ #parqueadero32 {position:absolute;left: 14.1%;bottom:528px;}
+ #parqueadero33 {position:absolute;left: 14.1%;bottom:503px;}
+    
+    /*Fila #2 - 14 vehiculos */
+#parqueadero34 {position:absolute;left: 14.1%;bottom:350px;}
+#parqueadero35 {position:absolute;left: 14.1%;bottom:324px;}
+#parqueadero36 {position:absolute;left: 14.1%;bottom:299px;}
+#parqueadero37 {position:absolute;left: 14.1%;bottom:273px;}    
+#parqueadero38 {position:absolute;left: 14.1%;bottom:248px;}
+#parqueadero39 {position:absolute;left: 14.1%;bottom:222px;}
+#parqueadero40 {position:absolute;left: 14.1%;bottom:196px;}
+#parqueadero41 {position:absolute;left: 14.1%;bottom:170px;}
+#parqueadero42 {position:absolute;left: 14.1%;bottom:145px;}
+#parqueadero43 {position:absolute;left: 14.1%;bottom:120px;}
+#parqueadero44 {position:absolute;left: 14.1%;bottom:94px;}
+#parqueadero45 {position:absolute;left: 14.1%;bottom:68px;}
+#parqueadero46 {position:absolute;left: 14.1%;bottom:43px;}
+#parqueadero47 {position:absolute;left: 14.1%;bottom:17px;}
+    
+/*Fila #3 - 7 vehiculos */
+#parqueadero48 {position:absolute;left: 22.9%;bottom:657px;}
+#parqueadero49 {position:absolute;left: 22.9%;bottom:631px;}
+#parqueadero50 {position:absolute;left: 22.9%;bottom:605px;}
+#parqueadero51 {position:absolute;left: 22.9%;bottom:580px;}
+#parqueadero52 {position:absolute;left: 22.9%;bottom:555px;}
+#parqueadero53 {position:absolute;left: 22.9%;bottom:529px;}
+#parqueadero54 {position:absolute;left: 22.9%;bottom:503px;}
+
+/*Fila #4 - 6 vehiculos */
+#parqueadero55 {position:absolute;left: 36%;bottom:631px;}
+#parqueadero56 {position:absolute;left: 36%;bottom:605px;}
+#parqueadero57 {position:absolute;left: 36%;bottom:579px;}
+#parqueadero58 {position:absolute;left: 36%;bottom:555px;}
+#parqueadero59 {position:absolute;left: 36%;bottom:529px;}
+#parqueadero60 {position:absolute;left: 36%;bottom:503px;}
+    
+/*Fila #5 - 5 vehiculos */
+#parqueadero61 {position:absolute;left: 57%;bottom:605px;}
+#parqueadero62 {position:absolute;left: 57%;bottom:579px;}
+#parqueadero63 {position:absolute;left: 57%;bottom:555px;}
+#parqueadero64 {position:absolute;left: 57%;bottom:529px;}
+#parqueadero65 {position:absolute;left: 57%;bottom:503px;}   
+
+/*Fila #6 - 6 vehiculos */
+#parqueadero66 {position:absolute;left: 70.3%;bottom:631px;}
+#parqueadero67 {position:absolute;left: 70.3%;bottom:605px;}
+#parqueadero68 {position:absolute;left: 70.3%;bottom:580px;}
+#parqueadero69 {position:absolute;left: 70.3%;bottom:555px;}
+#parqueadero70 {position:absolute;left: 70.3%;bottom:529px;}
+#parqueadero71 {position:absolute;left: 70.3%;bottom:503px;}
+    
+/*Fila #7 - 6 vehiculos */
+#parqueadero72 {position:absolute;left: 79%;bottom:631px;}
+#parqueadero73 {position:absolute;left: 79%;bottom:605px;}
+#parqueadero74 {position:absolute;left: 79%;bottom:579px;}
+#parqueadero75 {position:absolute;left: 79%;bottom:553px;}
+#parqueadero76 {position:absolute;left: 79%;bottom:527px;}
+#parqueadero77 {position:absolute;left: 79%;bottom:501px;}
+
+/*Fila #8 - 9 vehiculos */
+#parqueadero78 {position:absolute;left: 91.8%;bottom:579.0px;}
+#parqueadero79 {position:absolute;left: 91.8%;bottom:553.5px;}
+#parqueadero80 {position:absolute;left: 91.8%;bottom:528.0px;}
+#parqueadero81 {position:absolute;left: 91.8%;bottom:502.5px;}
+#parqueadero82 {position:absolute;left: 91.8%;bottom:477.0px;}
+#parqueadero83 {position:absolute;left: 91.8%;bottom:451.5px;}
+#parqueadero84 {position:absolute;left: 91.8%;bottom:426.0px;}
+#parqueadero85 {position:absolute;left: 91.8%;bottom:400.5px;}
+#parqueadero86 {position:absolute;left: 91.8%;bottom:375.0px;}
+
+/*Fila abajo izq - 4 vehiculos */
+#parqueadero87 {position:absolute;left: 22.8%;bottom:375px;}
+#parqueadero88 {position:absolute;left: 28%;bottom:375px;}
+#parqueadero89 {position:absolute;left: 33%;bottom:375px;}    
+#parqueadero90 {position:absolute;left: 38.8%;bottom:375px;}
+
+/*Fila abajo der - 5 vehiculos */
+#parqueadero91 {position:absolute;left: 57%;bottom:375px;}
+#parqueadero92 {position:absolute;left: 62.1%;bottom:375px;}
+#parqueadero93 {position:absolute;left: 67.4%;bottom:375px;}
+#parqueadero94 {position:absolute;left: 72.4%;bottom:375px;}    
+#parqueadero95 {position:absolute;left: 78.3%;bottom:375px;} 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1366px) {
@@ -587,31 +463,299 @@
     #imagenCarro72,#imagenCarro73,#imagenCarro74,#imagenCarro75,#imagenCarro76,#imagenCarro77,#imagenCarro78,
     #imagenCarro79,#imagenCarro80,#imagenCarro81,#imagenCarro82,#imagenCarro83,#imagenCarro84,#imagenCarro85,
     #imagenCarro86,#imagenCarro87,#imagenCarro88,#imagenCarro89,#imagenCarro90,#imagenCarro91,#imagenCarro92,
-    #imagenCarro93,#imagenCarro94,#imagenCarro95{
-        width: 60%;
+    #imagenCarro93,#imagenCarro94,#imagenCarro95 {        
+        width:42px;
+        height: 18px;
     }
-   
-    #parqueadero1 {
-        position:absolute;
-        left: 1.8%;
-        bottom:541px;
-    }
+
+    #num_parqueadero1, #num_parqueadero2, #num_parqueadero3, #num_parqueadero4, #num_parqueadero5, #num_parqueadero6, #num_parqueadero7, 
+    #num_parqueadero8, #num_parqueadero9, #num_parqueadero10, #num_parqueadero11, #num_parqueadero12, #num_parqueadero13, #num_parqueadero14,
+    #num_parqueadero15, #num_parqueadero16,#num_parqueadero17, #num_parqueadero18, #num_parqueadero19, #num_parqueadero20, #num_parqueadero21,
+    #num_parqueadero22, #num_parqueadero23, #num_parqueadero24, #num_parqueadero25, #num_parqueadero26, #num_parqueadero27, #num_parqueadero28,
+    #num_parqueadero29, #num_parqueadero30, #num_parqueadero31, #num_parqueadero32, #num_parqueadero33, #num_parqueadero34, #num_parqueadero35,
+    #num_parqueadero36, #num_parqueadero37, #num_parqueadero38, #num_parqueadero39, #num_parqueadero40, #num_parqueadero41, #num_parqueadero42,
+    #num_parqueadero43, #num_parqueadero44, #num_parqueadero45, #num_parqueadero46, #num_parqueadero47, #num_parqueadero48, #num_parqueadero49, 
+    #num_parqueadero50, #num_parqueadero51, #num_parqueadero52, #num_parqueadero53, #num_parqueadero54, #num_parqueadero55, #num_parqueadero56, 
+    #num_parqueadero57, #num_parqueadero58, #num_parqueadero59, #num_parqueadero60, #num_parqueadero61, #num_parqueadero62, #num_parqueadero63, 
+    #num_parqueadero64, #num_parqueadero65, #num_parqueadero66, #num_parqueadero67, #num_parqueadero68, #num_parqueadero69, #num_parqueadero70, 
+    #num_parqueadero71, #num_parqueadero72, #num_parqueadero73, #num_parqueadero74, #num_parqueadero75, #num_parqueadero76, #num_parqueadero77,
+    #num_parqueadero78, #num_parqueadero79, #num_parqueadero80, #num_parqueadero81, #num_parqueadero82, #num_parqueadero83, #num_parqueadero84,
+    #num_parqueadero85, #num_parqueadero86, #num_parqueadero87, #num_parqueadero88, #num_parqueadero89, #num_parqueadero90, #num_parqueadero91, 
+    #num_parqueadero92, #num_parqueadero93, #num_parqueadero94, #num_parqueadero95
+{
+    font-size: 120%;
+}
+/*Fila #1 - 26 vehiculos */
+#parqueadero1 {position:absolute;left: 1.8%;bottom:542px;}
+#parqueadero2 {position:absolute;left: 1.8%;bottom:521px;}
+#parqueadero3 {position:absolute;left: 1.8%;bottom:500px;}
+#parqueadero4 {position:absolute;left: 1.8%;bottom:479px;}
+#parqueadero5 {position:absolute;left: 1.8%;bottom:458px;}
+#parqueadero6 {position:absolute;left: 1.8%;bottom:437px;}
+#parqueadero7 {position:absolute;left: 1.8%;bottom:416px;}
+#parqueadero8 {position:absolute;left: 1.8%;bottom:395px;}
+#parqueadero9 {position:absolute;left: 1.8%;bottom:374px;}
+#parqueadero10 {position:absolute;left: 1.8%;bottom:353px;}
+#parqueadero11 {position:absolute;left: 1.8%;bottom:332px;}
+#parqueadero12 {position:absolute;left: 1.8%;bottom:311.0px;}
+#parqueadero13 {position:absolute;left: 1.8%;bottom:289.8px;}
+#parqueadero14 {position:absolute;left: 1.8%;bottom:268.6px;}
+#parqueadero15 {position:absolute;left: 1.8%;bottom:247.4px;}
+#parqueadero16 {position:absolute;left: 1.8%;bottom:226.2px;}
+#parqueadero17 {position:absolute;left: 1.8%;bottom:205.0px;}
+#parqueadero18 {position:absolute;left: 1.8%;bottom:183.8px;}
+#parqueadero19 {position:absolute;left: 1.8%;bottom:162.6px;}
+#parqueadero20 {position:absolute;left: 1.8%;bottom:141.4px;}
+#parqueadero21 {position:absolute;left: 1.8%;bottom:120.2px;}
+#parqueadero22 {position:absolute;left: 1.8%;bottom:99.0px;}
+#parqueadero23 {position:absolute;left: 1.8%;bottom:77.8px;}
+#parqueadero24 {position:absolute;left: 1.8%;bottom:56.6px;}
+#parqueadero25 {position:absolute;left: 1.8%;bottom:35.4px;}
+#parqueadero26 {position:absolute;left: 1.8%;bottom:14.2px;}
+
+/*Fila #2 - 7 vehiculos */
+#parqueadero27 {position:absolute;left: 14.1%;bottom:542px;}
+#parqueadero28 {position:absolute;left: 14.1%;bottom:521px;}
+#parqueadero29 {position:absolute;left: 14.1%;bottom:500px;}
+#parqueadero30 {position:absolute;left: 14.1%;bottom:479px;}
+#parqueadero31 {position:absolute;left: 14.1%;bottom:458px;}
+#parqueadero32 {position:absolute;left: 14.1%;bottom:437px;}
+#parqueadero33 {position:absolute;left: 14.1%;bottom:416px;}
+
+/*Fila #2 - 14 vehiculos */
+#parqueadero34 {position:absolute;left: 14.1%;bottom:287px;}
+#parqueadero35 {position:absolute;left: 14.1%;bottom:266px;}
+#parqueadero36 {position:absolute;left: 14.1%;bottom:245px;}
+#parqueadero37 {position:absolute;left: 14.1%;bottom:224px;}
+#parqueadero38 {position:absolute;left: 14.1%;bottom:203px;}
+#parqueadero39 {position:absolute;left: 14.1%;bottom:182px;}
+#parqueadero40 {position:absolute;left: 14.1%;bottom:161px;}
+#parqueadero41 {position:absolute;left: 14.1%;bottom:140px;}
+#parqueadero42 {position:absolute;left: 14.1%;bottom:119px;}
+#parqueadero43 {position:absolute;left: 14.1%;bottom:98px;}
+#parqueadero44 {position:absolute;left: 14.1%;bottom:77px;}
+#parqueadero45 {position:absolute;left: 14.1%;bottom:56px;}
+#parqueadero46 {position:absolute;left: 14.1%;bottom:35px;}
+#parqueadero47 {position:absolute;left: 14.1%;bottom:14px;}
+
+/*Fila #3 - 7 vehiculos */
+#parqueadero48 {position:absolute;left: 22.9%;bottom:543px;}
+#parqueadero49 {position:absolute;left: 22.9%;bottom:522px;}
+#parqueadero50 {position:absolute;left: 22.9%;bottom:501px;}
+#parqueadero51 {position:absolute;left: 22.9%;bottom:480px;}
+#parqueadero52 {position:absolute;left: 22.9%;bottom:459px;}
+#parqueadero53 {position:absolute;left: 22.9%;bottom:438px;}
+#parqueadero54 {position:absolute;left: 22.9%;bottom:417px;}
+
+/*Fila #4 - 6 vehiculos */
+#parqueadero55 {position:absolute;left: 36%;bottom:522px;}
+#parqueadero56 {position:absolute;left: 36%;bottom:501px;}
+#parqueadero57 {position:absolute;left: 36%;bottom:480px;}
+#parqueadero58 {position:absolute;left: 36%;bottom:459px;}
+#parqueadero59 {position:absolute;left: 36%;bottom:438px;}
+#parqueadero60 {position:absolute;left: 36%;bottom:417px;}
+    
+/*Fila #5 - 5 vehiculos */
+#parqueadero61 {position:absolute;left: 57%;bottom:501px;}
+#parqueadero62 {position:absolute;left: 57%;bottom:480px;}
+#parqueadero63 {position:absolute;left: 57%;bottom:459px;}
+#parqueadero64 {position:absolute;left: 57%;bottom:438px;}
+#parqueadero65 {position:absolute;left: 57%;bottom:417px;}    
+
+/*Fila #6 - 6 vehiculos */
+#parqueadero66 {position:absolute;left: 70.3%;bottom:522px;}
+#parqueadero67 {position:absolute;left: 70.3%;bottom:501px;}
+#parqueadero68 {position:absolute;left: 70.3%;bottom:480px;}
+#parqueadero69 {position:absolute;left: 70.3%;bottom:459px;}
+#parqueadero70 {position:absolute;left: 70.3%;bottom:438px;}
+#parqueadero71 {position:absolute;left: 70.3%;bottom:417px;}
+    
+/*Fila #7 - 6 vehiculos */
+#parqueadero72 {position:absolute;left: 79%;bottom:522px;}
+#parqueadero73 {position:absolute;left: 79%;bottom:501px;}
+#parqueadero74 {position:absolute;left: 79%;bottom:480px;}
+#parqueadero75 {position:absolute;left: 79%;bottom:458px;}
+#parqueadero76 {position:absolute;left: 79%;bottom:437px;}
+#parqueadero77 {position:absolute;left: 79%;bottom:416px;}
+
+/*Fila #8 - 9 vehiculos */
+#parqueadero78 {position:absolute;left: 91.8%;bottom:480px;}
+#parqueadero79 {position:absolute;left: 91.8%;bottom:459px;}
+#parqueadero80 {position:absolute;left: 91.8%;bottom:438px;}
+#parqueadero81 {position:absolute;left: 91.8%;bottom:417px;}
+#parqueadero82 {position:absolute;left: 91.8%;bottom:396px;}
+#parqueadero83 {position:absolute;left: 91.8%;bottom:375px;}
+#parqueadero84 {position:absolute;left: 91.8%;bottom:353px;}
+#parqueadero85 {position:absolute;left: 91.8%;bottom:332px;}
+#parqueadero86 {position:absolute;left: 91.8%;bottom:311px;}
+
+/*Fila abajo izq - 4 vehiculos */
+#parqueadero87 {position:absolute;left: 22.8%;bottom:310px;}
+#parqueadero88 {position:absolute;left: 28%;bottom:310px;}
+#parqueadero89 {position:absolute;left: 33%;bottom:310px;}    
+#parqueadero90 {position:absolute;left: 38.8%;bottom:310px;}
+
+/*Fila abajo der - 5 vehiculos */
+#parqueadero91 {position:absolute;left: 57%;bottom:310px;}
+#parqueadero92 {position:absolute;left: 62.1%;bottom:310px;}
+#parqueadero93 {position:absolute;left: 67.4%;bottom:310px;}
+#parqueadero94 {position:absolute;left: 72.4%;bottom:310px;}    
+#parqueadero95 {position:absolute;left: 78.3%;bottom:310px;}    
+
 }
 
-#num_parqueadero1, #num_parqueadero2, #num_parqueadero3, #num_parqueadero4, #num_parqueadero5, #num_parqueadero6, #num_parqueadero7, 
-#num_parqueadero8, #num_parqueadero9, #num_parqueadero10, #num_parqueadero11, #num_parqueadero12, #num_parqueadero13, #num_parqueadero14,
-#num_parqueadero15, #num_parqueadero16,#num_parqueadero17, #num_parqueadero18, #num_parqueadero19, #num_parqueadero20, #num_parqueadero21,
-#num_parqueadero22, #num_parqueadero23, #num_parqueadero24, #num_parqueadero25, #num_parqueadero26, #num_parqueadero27, #num_parqueadero28,
-#num_parqueadero29, #num_parqueadero30, #num_parqueadero31, #num_parqueadero32, #num_parqueadero33, #num_parqueadero34, #num_parqueadero35,
-#num_parqueadero36, #num_parqueadero37, #num_parqueadero38, #num_parqueadero39, #num_parqueadero40, #num_parqueadero41, #num_parqueadero42,
-#num_parqueadero43, #num_parqueadero44, #num_parqueadero45, #num_parqueadero46, #num_parqueadero47, #num_parqueadero48, #num_parqueadero49, 
-#num_parqueadero50, #num_parqueadero51, #num_parqueadero52, #num_parqueadero53, #num_parqueadero54, #num_parqueadero55, #num_parqueadero56, 
-#num_parqueadero57, #num_parqueadero58, #num_parqueadero59, #num_parqueadero60, #num_parqueadero61, #num_parqueadero62, #num_parqueadero63, 
-#num_parqueadero64, #num_parqueadero65, #num_parqueadero66, #num_parqueadero67, #num_parqueadero68, #num_parqueadero69, #num_parqueadero70, 
-#num_parqueadero71, #num_parqueadero72, #num_parqueadero73, #num_parqueadero74, #num_parqueadero75, #num_parqueadero76, #num_parqueadero77,
-#num_parqueadero78, #num_parqueadero79, #num_parqueadero80, #num_parqueadero81, #num_parqueadero82, #num_parqueadero83, #num_parqueadero84,
-#num_parqueadero85, #num_parqueadero86, #num_parqueadero87, #num_parqueadero88, #num_parqueadero89, #num_parqueadero90, #num_parqueadero91, 
-#num_parqueadero92, #num_parqueadero93, #num_parqueadero94, #num_parqueadero95
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    
+    #imagenCarro1,#imagenCarro2,#imagenCarro3,#imagenCarro4,#imagenCarro5,#imagenCarro6,#imagenCarro7,#imagenCarro8,
+    #imagenCarro9,#imagenCarro10,#imagenCarro11,#imagenCarro12,#imagenCarro13,#imagenCarro14,#imagenCarro15,
+    #imagenCarro16,#imagenCarro17,#imagenCarro18,#imagenCarro19,#imagenCarro20,#imagenCarro21,#imagenCarro22,
+    #imagenCarro23,#imagenCarro24,#imagenCarro25,#imagenCarro26,#imagenCarro27,#imagenCarro28,#imagenCarro29,
+    #imagenCarro30,#imagenCarro31,#imagenCarro32,#imagenCarro33,#imagenCarro34,#imagenCarro35,#imagenCarro36,
+    #imagenCarro37,#imagenCarro38,#imagenCarro39,#imagenCarro40,#imagenCarro41,#imagenCarro42,#imagenCarro43,
+    #imagenCarro44,#imagenCarro45,#imagenCarro46,#imagenCarro47,#imagenCarro48,#imagenCarro49,#imagenCarro50,
+    #imagenCarro51,#imagenCarro52,#imagenCarro53,#imagenCarro54,#imagenCarro55,#imagenCarro56,#imagenCarro57,
+    #imagenCarro58,#imagenCarro59,#imagenCarro60,#imagenCarro61,#imagenCarro62,#imagenCarro63,#imagenCarro64,
+    #imagenCarro65,#imagenCarro66,#imagenCarro67,#imagenCarro68,#imagenCarro69,#imagenCarro70,#imagenCarro71,
+    #imagenCarro72,#imagenCarro73,#imagenCarro74,#imagenCarro75,#imagenCarro76,#imagenCarro77,#imagenCarro78,
+    #imagenCarro79,#imagenCarro80,#imagenCarro81,#imagenCarro82,#imagenCarro83,#imagenCarro84,#imagenCarro85,
+    #imagenCarro86,#imagenCarro87,#imagenCarro88,#imagenCarro89,#imagenCarro90,#imagenCarro91,#imagenCarro92,
+    #imagenCarro93,#imagenCarro94,#imagenCarro95 {        
+        width:45px;
+        height: 16px;
+    }
+
+    #num_parqueadero1, #num_parqueadero2, #num_parqueadero3, #num_parqueadero4, #num_parqueadero5, #num_parqueadero6, #num_parqueadero7, 
+    #num_parqueadero8, #num_parqueadero9, #num_parqueadero10, #num_parqueadero11, #num_parqueadero12, #num_parqueadero13, #num_parqueadero14,
+    #num_parqueadero15, #num_parqueadero16,#num_parqueadero17, #num_parqueadero18, #num_parqueadero19, #num_parqueadero20, #num_parqueadero21,
+    #num_parqueadero22, #num_parqueadero23, #num_parqueadero24, #num_parqueadero25, #num_parqueadero26, #num_parqueadero27, #num_parqueadero28,
+    #num_parqueadero29, #num_parqueadero30, #num_parqueadero31, #num_parqueadero32, #num_parqueadero33, #num_parqueadero34, #num_parqueadero35,
+    #num_parqueadero36, #num_parqueadero37, #num_parqueadero38, #num_parqueadero39, #num_parqueadero40, #num_parqueadero41, #num_parqueadero42,
+    #num_parqueadero43, #num_parqueadero44, #num_parqueadero45, #num_parqueadero46, #num_parqueadero47, #num_parqueadero48, #num_parqueadero49, 
+    #num_parqueadero50, #num_parqueadero51, #num_parqueadero52, #num_parqueadero53, #num_parqueadero54, #num_parqueadero55, #num_parqueadero56, 
+    #num_parqueadero57, #num_parqueadero58, #num_parqueadero59, #num_parqueadero60, #num_parqueadero61, #num_parqueadero62, #num_parqueadero63, 
+    #num_parqueadero64, #num_parqueadero65, #num_parqueadero66, #num_parqueadero67, #num_parqueadero68, #num_parqueadero69, #num_parqueadero70, 
+    #num_parqueadero71, #num_parqueadero72, #num_parqueadero73, #num_parqueadero74, #num_parqueadero75, #num_parqueadero76, #num_parqueadero77,
+    #num_parqueadero78, #num_parqueadero79, #num_parqueadero80, #num_parqueadero81, #num_parqueadero82, #num_parqueadero83, #num_parqueadero84,
+    #num_parqueadero85, #num_parqueadero86, #num_parqueadero87, #num_parqueadero88, #num_parqueadero89, #num_parqueadero90, #num_parqueadero91, 
+    #num_parqueadero92, #num_parqueadero93, #num_parqueadero94, #num_parqueadero95
 {
-    font-size: 140%;
+    font-size: 100%;
+}
+/*Fila #1 - 26 vehiculos */
+#parqueadero1 {position:absolute;left: 1.8%;bottom:502.0px;}
+#parqueadero2 {position:absolute;left: 1.8%;bottom:482.4px;}
+#parqueadero3 {position:absolute;left: 1.8%;bottom:462.79999999999995px;}
+#parqueadero4 {position:absolute;left: 1.8%;bottom:443.19999999999993px;}
+#parqueadero5 {position:absolute;left: 1.8%;bottom:423.5999999999999px;}
+#parqueadero6 {position:absolute;left: 1.8%;bottom:403.9999999999999px;}
+#parqueadero7 {position:absolute;left: 1.8%;bottom:384.39999999999986px;}
+#parqueadero8 {position:absolute;left: 1.8%;bottom:364.79999999999984px;}
+#parqueadero9 {position:absolute;left: 1.8%;bottom:345.1999999999998px;}
+#parqueadero10 {position:absolute;left: 1.8%;bottom:325.5999999999998px;}
+#parqueadero11 {position:absolute;left: 1.8%;bottom:305.9999999999998px;}
+#parqueadero12 {position:absolute;left: 1.8%;bottom:286.39999999999975px;}
+#parqueadero13 {position:absolute;left: 1.8%;bottom:266.7999999999997px;}
+#parqueadero14 {position:absolute;left: 1.8%;bottom:247.19999999999973px;}
+#parqueadero15 {position:absolute;left: 1.8%;bottom:227.59999999999974px;}
+#parqueadero16 {position:absolute;left: 1.8%;bottom:207.99999999999974px;}
+#parqueadero17 {position:absolute;left: 1.8%;bottom:188.39999999999975px;}
+#parqueadero18 {position:absolute;left: 1.8%;bottom:168.79999999999976px;}
+#parqueadero19 {position:absolute;left: 1.8%;bottom:149.19999999999976px;}
+#parqueadero20 {position:absolute;left: 1.8%;bottom:129.59999999999977px;}
+#parqueadero21 {position:absolute;left: 1.8%;bottom:109.99999999999977px;}
+#parqueadero22 {position:absolute;left: 1.8%;bottom:90.39999999999978px;}
+#parqueadero23 {position:absolute;left: 1.8%;bottom:70.79999999999978px;}
+#parqueadero24 {position:absolute;left: 1.8%;bottom:51.19999999999978px;}
+#parqueadero25 {position:absolute;left: 1.8%;bottom:31.59999999999978px;}
+#parqueadero26 {position:absolute;left: 1.8%;bottom:11.99999999999978px;}
+
+/*Fila #2 - 7 vehiculos */
+#parqueadero27 {position:absolute;left: 14.1%;bottom:502.0px;}
+#parqueadero28 {position:absolute;left: 14.1%;bottom:482.4px;}
+#parqueadero29 {position:absolute;left: 14.1%;bottom:462.79999999999995px;}
+#parqueadero30 {position:absolute;left: 14.1%;bottom:443.19999999999993px;}
+#parqueadero31 {position:absolute;left: 14.1%;bottom:423.5999999999999px;}
+#parqueadero32 {position:absolute;left: 14.1%;bottom:403.9999999999999px;}
+#parqueadero33 {position:absolute;left: 14.1%;bottom:384.39999999999986px;}
+
+/*Fila #2 - 14 vehiculos */
+#parqueadero34 {position:absolute;left: 14.1%;bottom:266.7px;}
+#parqueadero35 {position:absolute;left: 14.1%;bottom:247.1px;}
+#parqueadero36 {position:absolute;left: 14.1%;bottom:227.5px;}
+#parqueadero37 {position:absolute;left: 14.1%;bottom:207.9px;}
+#parqueadero38 {position:absolute;left: 14.1%;bottom:188.3px;}
+#parqueadero39 {position:absolute;left: 14.1%;bottom:168.70000000000002px;}
+#parqueadero40 {position:absolute;left: 14.1%;bottom:149.10000000000002px;}
+#parqueadero41 {position:absolute;left: 14.1%;bottom:129.50000000000003px;}
+#parqueadero42 {position:absolute;left: 14.1%;bottom:109.90000000000003px;}
+#parqueadero43 {position:absolute;left: 14.1%;bottom:90.30000000000004px;}
+#parqueadero44 {position:absolute;left: 14.1%;bottom:70.70000000000005px;}
+#parqueadero45 {position:absolute;left: 14.1%;bottom:51.100000000000044px;}
+#parqueadero46 {position:absolute;left: 14.1%;bottom:31.500000000000043px;}
+#parqueadero47 {position:absolute;left: 14.1%;bottom:11.900000000000041px;}
+
+/*Fila #3 - 7 vehiculos */
+#parqueadero48 {position:absolute;left: 22.9%;bottom:502.0px;}
+#parqueadero49 {position:absolute;left: 22.9%;bottom:482.4px;}
+#parqueadero50 {position:absolute;left: 22.9%;bottom:462.79999999999995px;}
+#parqueadero51 {position:absolute;left: 22.9%;bottom:443.19999999999993px;}
+#parqueadero52 {position:absolute;left: 22.9%;bottom:423.5999999999999px;}
+#parqueadero53 {position:absolute;left: 22.9%;bottom:403.9999999999999px;}
+#parqueadero54 {position:absolute;left: 22.9%;bottom:384.39999999999986px;}
+
+/*Fila #4 - 6 vehiculos */
+#parqueadero55 {position:absolute;left: 36%;bottom:482.4px;}
+#parqueadero56 {position:absolute;left: 36%;bottom:462.79999999999995px;}
+#parqueadero57 {position:absolute;left: 36%;bottom:443.19999999999993px;}
+#parqueadero58 {position:absolute;left: 36%;bottom:423.5999999999999px;}
+#parqueadero59 {position:absolute;left: 36%;bottom:403.9999999999999px;}
+#parqueadero60 {position:absolute;left: 36%;bottom:384.39999999999986px;}
+    
+/*Fila #5 - 5 vehiculos */
+#parqueadero61 {position:absolute;left: 57%;bottom:462.7px;}
+#parqueadero62 {position:absolute;left: 57%;bottom:443.09999999999997px;}
+#parqueadero63 {position:absolute;left: 57%;bottom:423.49999999999994px;}
+#parqueadero64 {position:absolute;left: 57%;bottom:403.8999999999999px;}
+#parqueadero65 {position:absolute;left: 57%;bottom:384.2999999999999px;}  
+
+/*Fila #6 - 6 vehiculos */
+#parqueadero66 {position:absolute;left: 70.5%;bottom:482.4px;}
+#parqueadero67 {position:absolute;left: 70.5%;bottom:462.79999999999995px;}
+#parqueadero68 {position:absolute;left: 70.5%;bottom:443.19999999999993px;}
+#parqueadero69 {position:absolute;left: 70.5%;bottom:423.5999999999999px;}
+#parqueadero70 {position:absolute;left: 70.5%;bottom:403.9999999999999px;}
+#parqueadero71 {position:absolute;left: 70.5%;bottom:384.39999999999986px;}
+    
+/*Fila #7 - 6 vehiculos */
+#parqueadero72 {position:absolute;left: 79%;bottom:482.4px;}
+#parqueadero73 {position:absolute;left: 79%;bottom:462.79999999999995px;}
+#parqueadero74 {position:absolute;left: 79%;bottom:443.19999999999993px;}
+#parqueadero75 {position:absolute;left: 79%;bottom:423.5999999999999px;}
+#parqueadero76 {position:absolute;left: 79%;bottom:403.9999999999999px;}
+#parqueadero77 {position:absolute;left: 79%;bottom:384.39999999999986px;}
+
+/*Fila #8 - 9 vehiculos */
+#parqueadero78 {position:absolute;left: 91.8%;bottom:443.1px;}
+#parqueadero79 {position:absolute;left: 91.8%;bottom:423.5px;}
+#parqueadero80 {position:absolute;left: 91.8%;bottom:403.9px;}
+#parqueadero81 {position:absolute;left: 91.8%;bottom:384.29999999999995px;}
+#parqueadero82 {position:absolute;left: 91.8%;bottom:364.69999999999993px;}
+#parqueadero83 {position:absolute;left: 91.8%;bottom:345.0999999999999px;}
+#parqueadero84 {position:absolute;left: 91.8%;bottom:325.4999999999999px;}
+#parqueadero85 {position:absolute;left: 91.8%;bottom:305.89999999999986px;}
+#parqueadero86 {position:absolute;left: 91.8%;bottom:286.29999999999984px;}
+
+/*Fila abajo izq - 4 vehiculos */
+#parqueadero87 {position:absolute;left: 22.5%;bottom:287px;}
+#parqueadero88 {position:absolute;left: 27.8%;bottom:287px;}
+#parqueadero89 {position:absolute;left: 32.9%;bottom:287px;}    
+#parqueadero90 {position:absolute;left: 38.8%;bottom:287px;}
+
+/*Fila abajo der - 5 vehiculos */
+#parqueadero91 {position:absolute;left: 56.6%;bottom:287px;}
+#parqueadero92 {position:absolute;left: 61.9%;bottom:287px;}
+#parqueadero93 {position:absolute;left: 67%;bottom:287px;}
+#parqueadero94 {position:absolute;left: 72.2%;bottom:287px;}    
+#parqueadero95 {position:absolute;left: 78%;bottom:287px;}    
+
 }

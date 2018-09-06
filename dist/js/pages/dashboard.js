@@ -120,8 +120,13 @@ $(function () {
   $('#calendar').datepicker();
 
   // SLIMSCROLL FOR CHAT WIDGET
-  $('#chat-box').slimScroll({
-    height: '250px'
+  $('#chat-box1').slimScroll({
+    height: '300px'
+  });
+
+   // SLIMSCROLL FOR CHAT WIDGET
+   $('#chat-box2').slimScroll({
+    height: '330px'
   });
 
   /* Morris.js Charts */

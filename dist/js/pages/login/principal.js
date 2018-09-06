@@ -44,8 +44,7 @@ var logout = function () {
 
 }
 
-getUser();
-
+// permite crear un nuevo parqueadero en firebase
 var agregarParking = function() {
 
     contador = contador + 1;
@@ -62,4 +61,50 @@ var agregarParking = function() {
 
 }
 
+var dataRealTime = function (){
 
+    var db = firebase.database().ref('parqueaderos/');
+    
+    var contadorHabilitados = 0;
+    var contadorOcupados = 0;
+    var contadorBloqueados = 0;
+
+    db.on('value', function(snapshot){        
+       
+        var parqueaderos = snapshot.val();  
+        
+            for(parqueo in parqueaderos){    
+                
+                if(parqueaderos[parqueo].estado == 1){
+                    
+                    contadorBloqueados = contadorBloqueados + 1;
+                }else{
+
+                    if(parqueaderos[parqueo].disponibilidad == 1){                                                                  
+                        
+                        contadorOcupados = contadorOcupados + 1;                                              
+
+                    }else{                 
+                        
+                        contadorHabilitados = contadorHabilitados + 1;  
+                       
+                    }
+                }
+
+                $('#cantidadPuestos').html(contadorHabilitados);
+                $('#cantidadOcupada').html(contadorOcupados);
+                $('#cantidadInhabilitados').html(contadorBloqueados);
+
+            }
+            contadorHabilitados = 0;  
+            contadorOcupados = 0; 
+            contadorBloqueados = 0; 
+
+    },function(error){
+        console.log(error);
+    })
+
+}
+
+dataRealTime();
+getUser();

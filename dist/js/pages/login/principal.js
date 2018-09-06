@@ -1,5 +1,7 @@
 // instancia de firebase que apunta al nodo usuarios
 var db = firebase.database().ref('usuarios/');
+var dbNovedadesUCC = firebase.database().ref('novedades/UCC/');
+var dbNovedadesEstudiantes = firebase.database().ref('novedades/Estudiantes/');
 var contador = 0;
 
 // inspecciona si un usuario esta logeado o no
@@ -61,6 +63,65 @@ var agregarParking = function() {
 
 }
 
+// permite crear una nueva novedad UCC en firebase
+var NovedadUCC = function(novedad) {
+
+    var fecha = new Date();
+
+    var mes = fecha.getMonth() + 1;
+    var dia = fecha.getDay();
+    var ano = fecha.getFullYear();
+
+    var hora = fecha.getHours();
+    var minutos = fecha.getMinutes();
+    var segundo = fecha.getSeconds();
+
+    var novedades = {
+        nombre: 'UCC',
+        descripcion: novedad,        
+        fechas: '' + dia + '/' + mes + '/' + ano,
+        horas: '' + hora + ':' + minutos + ':' + segundo
+    }
+
+    dbNovedadesUCC.push().set(novedades);
+
+}
+
+var NovedadEstidiantes = function() {
+
+    var fecha = new Date();
+
+    var mes = fecha.getMonth() + 1;
+    var dia = fecha.getDay();
+    var ano = fecha.getFullYear();
+
+    var hora = fecha.getHours();
+    var minutos = fecha.getMinutes();
+    var segundo = fecha.getSeconds();
+
+    var novedades = {
+        nombre: "Christian Rodriguez",
+        descripcion: "",        
+        fechas: '' + dia + '/' + mes + '/' + ano,
+        horas: '' + hora + ':' + minutos + ':' + segundo
+    }
+
+    dbNovedadesEstudiantes.push().set(novedades);
+
+}
+
+var agregarNovedadUCC = function (){
+
+    var novedad = $('#txtnovedadUCC').val();
+
+    if(novedad === ''){
+        alert('Ingrese una novedad');
+    }else{
+        NovedadUCC(novedad);
+    }
+
+}
+
 var dataRealTime = function (){
 
     var db = firebase.database().ref('parqueaderos/');
@@ -105,6 +166,70 @@ var dataRealTime = function (){
     })
 
 }
+
+// Metodos para Novedades UCC donde se Inspecciona todos los cambios en la tabla y la actualiza 
+dbNovedadesUCC.on('value', function (snapshot) {
+
+    var novedades = snapshot.val();
+
+    $(".limpiarTabla").empty();
+
+    var row = "";
+    var numero = 0;
+
+    for (novedad in novedades) {
+
+        row += '<div id='+ novedad + ' class="item">' +
+                    '<img src="../../dist/img/iconos/logo-ucc-chat.png" alt="user image" class="online">' +
+                    '<p class="message">' +
+                         '<a href="#" class="name">' +                         
+                         '<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> '+ novedades[novedad].fechas + ' ' + novedades[novedad].horas + '</small> ' +                
+                            novedades[novedad].nombre +
+                            '</a>'
+                            + novedades[novedad].descripcion +
+                    '</p>' +          
+                '</div>';
+    }
+
+    $(".item-chats").append(row);
+    row = "";
+    $('#txtnovedadUCC').val("");
+    
+}, function (error) {
+    console.log(error);
+});
+
+// Metodos para Novedades UCC donde se Inspecciona todos los cambios en la tabla y la actualiza 
+dbNovedadesEstudiantes.on('value', function (snapshot) {
+
+    var novedades = snapshot.val();
+    var nombre = $(".nombresApellidos").val();
+
+    $(".limpiarTabla-2").empty();
+
+    var row = "";
+    var numero = 0;
+
+    for (novedad in novedades) {
+
+        row += '<div id='+ novedad + ' class="item">' +
+                    '<img src="../../dist/img/avatar5.png" alt="user image" class="online">' +
+                    '<p class="message">' +
+                         '<a href="#" class="name">' +                         
+                            '<small class="text-muted pull-right"><i class="fa fa-clock-o"></i> '+ novedades[novedad].fechas + ' ' + novedades[novedad].horas + '</small> ' +                
+                                novedades[novedad].nombre +
+                         '</a>'
+                            + novedades[novedad].descripcion +
+                    '</p>' +          
+                '</div>';
+    }
+
+    $(".item-chats-2").append(row);
+    row = "";
+    
+}, function (error) {
+    console.log(error);
+});
 
 dataRealTime();
 getUser();

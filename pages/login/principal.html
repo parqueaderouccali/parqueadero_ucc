@@ -6,6 +6,8 @@
   <title>Parking UCC</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Favicon icon -->
+  <link rel="shortcut icon" href="../../dist/img/iconos/favicon.ico" type="image/x-icon">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../dist/css/personalizado.css">
@@ -15,8 +17,7 @@
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
+  <!-- AdminLTE Skins. Choose a skin from the css/skins" -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
   <!-- Morris chart -->
   <link rel="stylesheet" href="../../bower_components/morris.js/morris.css">
@@ -44,7 +45,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="../../index2.html" class="logo">
      <!-- mini logo for sidebar mini 50x50 pixels -->
      <span class="logo-mini"><b>A</b>LT</span>
      <!-- logo for regular state and mobile devices -->
@@ -319,71 +320,18 @@
                    
                     </div>
 
-                    <div class="box-body chat pre-scrollable" id="chat-box1">
-                      <!-- chat item -->
-                      <div class="item">
-                        <img src="../../dist/img/iconos/logo-ucc-chat.png" alt="user image" class="online">
-        
-                        <p class="message">
-                          <a href="#" class="name">
-                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                            UCC
-                          </a>
-                          Tener encuenta el evento deportivo en la universidad, no tenemos disponibilidad de motos
-                        </p>
-                        <!-- /.attachment -->
-                      </div>
-
-                      <div class="item">
-                          <img src="../../dist/img/iconos/logo-ucc-chat.png" alt="user image" class="online">
-          
-                          <p class="message">
-                            <a href="#" class="name">
-                              <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                              UCC
-                            </a>
-                            I would like to meet you to discuss the latest news about
-                            the arrival of the new theme. They say it is going to be one the
-                            best themes on the market
-                          </p>
-                          <!-- /.attachment -->
-                        </div>
-
-                        <div class="item">
-                            <img src="../../dist/img/iconos/logo-ucc-chat.png" alt="user image" class="online">
-            
-                            <p class="message">
-                              <a href="#" class="name">
-                                <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                                UCC
-                              </a>
-                              I would like to meet you to discuss the latest news about the arrival of the new theme. They say it is going to be one the best themes on the market
-                            </p>
-                            <!-- /.attachment -->
-                        </div>
-
-                          <div class="item">
-                              <img src="../../dist/img/iconos/logo-ucc-chat.png" alt="user image" class="online">
-              
-                              <p class="message">
-                                <a href="#" class="name">
-                                  <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                                  UCC
-                                </a>
-                                I would like to meet you to discuss the latest news about
-                                the arrival of the new theme. They say it is going to be one the
-                                best themes on the market
-                              </p>
-                              <!-- /.attachment -->
-                            </div>
+                    <div class="box-body chat pre-scrollable limpiarTabla item-chats" id="chat-box1">
+                    
+                      <!-- Item de Chats Creado por Javascript -->
+                                                               
                     </div>
                    
                     <div class="box-footer">
                       <div class="input-group">
-                        <input class="form-control" placeholder="Type message...">
+                        <input id="txtnovedadUCC" class="form-control" placeholder="Ingresar novedad .... ">
         
                         <div class="input-group-btn">
-                          <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+                          <button type="button" class="btn btn-success" onclick="agregarNovedadUCC()"><i class="fa fa-plus"></i></button>
                         </div>
                       </div>
                     </div>
@@ -401,48 +349,10 @@
                       <h3 class="box-title">Estudiantes</h3>
                    
                     </div>
-                    <div class="box-body chat pre-scrollable" id="chat-box2">
+                    <div class="box-body chat pre-scrollable limpiarTabla-2 item-chats-2" id="chat-box2">
+                      
                       <!-- chat item -->
-
-                      <div class="item">
-                          <img src="../../dist/img/avatar5.png" alt="user image" class="">
-          
-                          <p class="message">
-                            <a href="#" class="name">
-                              <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
-                              Christian Rodriguez
-                            </a>
-                            Se presento accidente en la avenida 5ta tomar vias alternas.
-                          </p>
-                          <!-- /.attachment -->
-                     </div>
-
-                     <div class="item">
-                        <img src="../../dist/img/avatar.png" alt="user image" class="">
-        
-                        <p class="message">
-                          <a href="#" class="name">
-                            <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:30</small>
-                            Andres Gaviria
-                          </a>
-                          Trancón en autopista suroriental.
-                        </p>
-                        <!-- /.attachment -->
-                   </div>
-
-                   <div class="item">
-                      <img src="../../dist/img/avatar04.png" alt="user image" class="">
-      
-                      <p class="message">
-                        <a href="#" class="name">
-                          <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:40</small>
-                          Yeison Cuartas
-                        </a>
-                        La clase de voleibol se adelanto por favor quienes participan llegar 5:00pm.
-                      </p>
-                      <!-- /.attachment -->
-                 </div>
-                              
+                             
                     </div>
                    
                     <div class="box-footer">
@@ -452,8 +362,7 @@
                   <!-- /.box (chat box) -->
               </section>
           </div>
-        </div>
-
+      </div>
       
       <!-- /.row (main row) -->
     </section>

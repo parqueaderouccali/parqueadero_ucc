@@ -163,25 +163,35 @@ var btnModalPopup = function () {
 
 }
 
-var filtro = function () {
-    // Declare variables 
-    var input, filter, table, tr, td, i;
-    input = document.getElementById("#entradaFiltro");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("#example1");
-    tr = table.getElementsByTagName("tr");
+
+$('#btnBuscadorUser').click(function(){
   
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      } 
-    }
-}
+    /* var search = $('#txtBuscadorUser').val();
+   
+    var query = db
+                .orderByChild('correo')
+                .equalTo('luisa@hotmail.com')
+                .limitToFirst(3);
+                
+    console.log(query); */
+
+
+    db.on('value', snap =>  {
+        
+        var datos = snap.val();
+
+        console.log(datos);    
+
+    });
+
+
+});
+
+
+
+  
+
+
+
 
 getUser();

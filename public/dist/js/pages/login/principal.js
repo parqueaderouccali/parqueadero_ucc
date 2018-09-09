@@ -167,6 +167,16 @@ var dataRealTime = function (){
 
 }
 
+$('#EsperaVehiculos').click(function(){
+    alert('Hola')
+});
+
+    /* var cantidad = $('#vehiculosEspera').val();
+
+    $('#cantidadEnespera').val(cantidadEnespera);
+    $('#exampleModalCenter1').hide(); */
+
+
 // Metodos para Novedades UCC donde se Inspecciona todos los cambios en la tabla y la actualiza 
 dbNovedadesUCC.on('value', function (snapshot) {
 

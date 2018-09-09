@@ -194,7 +194,7 @@
             <div class="icon">
               <i class="ion ion-checkmark-circled"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Detalle <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -208,7 +208,7 @@
             <div class="icon">
               <i class="ion ion-android-lock"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Detalle <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -222,7 +222,7 @@
             <div class="icon">
               <i class="ion ion-android-time"></i>
             </div>
-            <a href="#" class="small-box-footer">Modificar <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer" data-toggle="modal" data-target="#exampleModalCenter1">Modificar <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -236,7 +236,7 @@
             <div class="icon">
               <i class="ion ion-alert-circled"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">Detalle <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -263,7 +263,7 @@
               <div class="icon">
                 <i class="ion ion-checkmark-circled"></i>
               </div>
-              <a href="#" class="small-box-footer">Modificar <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer" data-toggle="modal" data-target="#exampleModalCenter2">Modificar <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -368,6 +368,8 @@
     </section>
     <!-- /.content -->
   </div>
+
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
       <div class="pull-right hidden-xs">
@@ -377,14 +379,62 @@
         <a href="">Universidad Cooperativa de Colombia sede cali</a>.</strong> All rights reserved.
     </footer>
 
-  <!-- Control Sidebar -->
 
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
+
+<!-- popup de modificacion de vehiculos en espera-->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Vehiculos en Espera</h3>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
+          <div class="col-sm-12">
+            <input id="vehiculosEspera" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+        <button type="button" class="btn btn-primary" id="EsperaVehiculos">Editar</button>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- ./wrapper -->
+
+
+<!-- popup de modificacion del total de capacidad-->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Capacidad de Espacios para Moto</h3>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
+          <div class="col-sm-12">
+            <input id="vehiculosEspera" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+        <button type="button" class="btn btn-primary" id="btnModal" onclick="btnModalPopup()">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- jQuery 3 -->
 <script src="../../bower_components/jquery/dist/jquery.min.js"></script>

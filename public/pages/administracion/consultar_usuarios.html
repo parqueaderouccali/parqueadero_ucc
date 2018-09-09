@@ -200,7 +200,7 @@
             <a href="#">
               <i class="fa fa-dashboard"></i> Principal</a>
           </li>
-          <li class="active">Usuarios</li>
+          <li class="active" >Usuarios</li>
         </ol>
       </section>
 
@@ -215,19 +215,20 @@
               </div>
               <div class="col-sm-10">
                 <div class="box-tools">
+                  
+                  <select id="selector-tipo" class="form-control">
+                    <option value="nombre">Nombre</option>
+                    <option value="apellido">Apellido</option>
+                    <option value="correo">Email</option>
+                  </select>
+                  
                   <div class="input-group input-group-sm" style="width: 400px;">
                     <input id="txtBuscadorUser" type="text" name="table_search" class="form-control pull-right" placeholder="Search" >
                     <div class="input-group-btn">
-                      <button id="btnBuscadorUser" class="btn btn-default"><i class="fa fa-search" ></i></button>                      
+                      <button id="" class="btn btn-default" onclick="getFilterUser()"><i class="fa fa-search" ></i></button>                      
                     </div>
-                  </div>  
-                  <select class="form-control">
-                    <option>option 1</option>
-                    <option>option 2</option>
-                    <option>option 3</option>
-                    <option>option 4</option>
-                    <option>option 5</option>
-                  </select>                
+                  </div> 
+
                 </div>
                 
               </div>
@@ -235,24 +236,25 @@
             <br>
             <div class="row">
               <div class="col-sm-12">
+               
                 <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                   <thead>
                     <tr role="row">
                       <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"
-                        style="width: 100px;">
+                        style="width: 100px; font-size:20px">
                         #
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
-                        style="width: 160px;">
+                        style="width: 160px; font-size:20px">
                         Nombre
                       </th>
                       <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                        style="width: 108px;">
+                        style="width: 128px; font-size:20px">
                         Apellido
                       </th>
-                      <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                        style="width: 200px;">
-                        Correo
+                      <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="2" aria-label="Engine version: activate to sort column ascending"
+                        style="width: 200px; font-size:20px">
+                        Email
                       </th>
 
                     </tr>
@@ -304,7 +306,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title titulo" id="exampleModalLongTitle"></h5>
+          <h1 class="modal-title titulo text-center" id="exampleModalLongTitle"></h1>
           </button>
         </div>
         <div class="modal-body">

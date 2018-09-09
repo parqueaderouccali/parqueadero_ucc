@@ -5,43 +5,43 @@ var db = firebase.database().ref('usuarios/');
 var getUser = function () {
 
     firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {        
-            
-            db.equalTo(user.uid).on('value',function(snapshot){
-                
-                var nombreUsuario = snapshot.val();   
-                
-                for(nombre in nombreUsuario) {
+        if (user) {
+
+            db.equalTo(user.uid).on('value', function (snapshot) {
+
+                var nombreUsuario = snapshot.val();
+
+                for (nombre in nombreUsuario) {
                     console.log(nombreUsuario[nombre].nombre)
                 }
-                
 
-            },function (error) {
+
+            }, function (error) {
                 console.log(error);
             })
 
 
-            db.on('value',function(snapshot){
+            db.on('value', function (snapshot) {
 
-                var nombreUsuario = snapshot.val();                
+                var nombreUsuario = snapshot.val();
                 console.log(user.uid)
-                
-                 for(nombre in nombreUsuario) {
-                    
-                    if(user.uid === nombreUsuario[nombre].uid){   
-                        console.log(nombreUsuario[nombre].nombre + ' ' + nombreUsuario[nombre].apellido)                     
+
+                for (nombre in nombreUsuario) {
+
+                    if (user.uid === nombreUsuario[nombre].uid) {
+                        console.log(nombreUsuario[nombre].nombre + ' ' + nombreUsuario[nombre].apellido)
                         $('.nombresApellidos').html(' ' + nombreUsuario[nombre].nombre + ' ' + nombreUsuario[nombre].apellido)
                     }
-                                        
-                 }
-        
-            },function (error) {
+
+                }
+
+            }, function (error) {
                 console.log(error);
             })
-            
-           
+
+
         } else {
-           $(location).attr('href', '../../index.html');
+            $(location).attr('href', '../../index.html');
         }
     })
 }
@@ -52,10 +52,41 @@ var logout = function () {
     firebase.auth().signOut()
         .then(function () {
             console.log('Sesión Finalizada')
-             $(location).attr('href', '../../index.html');
+            $(location).attr('href', '../../index.html');
         }, function (error) {
             console.log(error);
         })
+
+}
+
+// Permite editar o eliminar un usuario cargado en la ventana modal
+var btnModalPopup = function () {
+
+    var valor = $('#btnModal').text()
+
+    if (valor === 'Editar') {
+
+        var usuarioID = $('#UID_dato').val();
+
+        db.child(usuarioID).update({
+            nombre: $("#nombre_usuario").val(),
+            apellido: $("#apellido_usuario").val(),
+            correo: $("#correo_usuario").val()
+        }, function () {
+            $('#exampleModalCenter').modal('hide')
+            firebase.database().goOffline();
+            firebase.database().goOnline();
+        })
+
+    } else {
+        var usuarioID = $('#UID_dato').val();
+        db.child(usuarioID).remove();
+        $('#exampleModalCenter').modal('hide')
+
+        firebase.database().goOffline();
+        firebase.database().goOnline();
+
+    }
 
 }
 
@@ -132,66 +163,85 @@ db.on('value', function (snapshot) {
     console.log(error);
 })
 
-// Permite editar o eliminar un usuario cargado en la ventana modal
-var btnModalPopup = function () {
 
-    var valor = $('#btnModal').text()
+$('#btnBuscadorUser').click(function () {
 
-    if (valor === 'Editar') {
+    var dbUser = firebase.database().ref();
 
-        var usuarioID = $('#UID_dato').val();
+    var search = $('#txtBuscadorUser').val();
 
-        db.child(usuarioID).update({
-            nombre: $("#nombre_usuario").val(),
-            apellido: $("#apellido_usuario").val(),
-            correo: $("#correo_usuario").val()
-        }, function () {
-            $('#exampleModalCenter').modal('hide')
-            firebase.database().goOffline();
-            firebase.database().goOnline();
+    var query = dbUser.child('usuarios').orderByChild('nombre').startAt(search).endAt(search + '\uf8ff');
+
+    query.on('value', snap => {
+
+        var usuarios = snap.val();
+
+        $(".limpiarTabla").empty();
+
+        var row = "";
+        var numero = 0;
+
+        for (usuario in usuarios) {
+            numero = numero + 1;
+
+            row += '<tr class="UID" id="' + usuario + '">' +
+                '<td class="contador">' + numero + '</td>' +
+                '<td class="nombres">' + usuarios[usuario].nombre + '</td>' +
+                '<td class="apellidos">' + usuarios[usuario].apellido + '</td>' +
+                '<td class="correos">' + usuarios[usuario].correo + '</td>' +
+                '<td class="derecha"> <button type="button" class="btnEdit btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit form-control-feedback"></i> Editar</td>' +
+                '<td class="derecha"> <button type="button" class="btnDelete btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-times form-control-feedback"> </i> Eliminar</td>' +
+                '</tr>';
+        }
+
+        $("tbody").append(row);
+        row = "";
+        $(".paginas").html('Registros generados en total : ' + numero);
+        numero = 0;
+
+        // permite cargar la informacion para ser editada
+        $('.btnEdit').click(function () {
+
+            var usuarioID = $(this).closest('tr').attr('id');
+
+            $("#UID_dato").val(usuarioID);
+            $("#nombre_usuario").val($('#' + usuarioID).find(".nombres").text());
+            $("#apellido_usuario").val($('#' + usuarioID).find(".apellidos").text());
+            $("#correo_usuario").val($('#' + usuarioID).find(".correos").text());
+
+            $("#nombre_usuario").removeAttr("disabled");
+            $("#apellido_usuario").removeAttr("disabled");
+            $("#correo_usuario").removeAttr("disabled");
+
+            $(".cambioEstado").text("Editar").removeClass("btn-warning").addClass("btn-danger");
+
+            $(".titulo").text("Actualizar Usuario");
         })
 
-    } else {
-        var usuarioID = $('#UID_dato').val();
-        db.child(usuarioID).remove();
-        $('#exampleModalCenter').modal('hide')
+        // permite cargar la informacion para ser eliminada
+        $('.btnDelete').click(function () {
 
-        firebase.database().goOffline();
-        firebase.database().goOnline();
+            var usuarioID = $(this).closest('tr').attr('id');
 
-    }
+            $("#UID_dato").val(usuarioID);
+            $("#nombre_usuario").val($('#' + usuarioID).find(".nombres").text());
+            $("#apellido_usuario").val($('#' + usuarioID).find(".apellidos").text());
+            $("#correo_usuario").val($('#' + usuarioID).find(".correos").text());
 
-}
+            $("#nombre_usuario").attr('disabled', 'disabled');
+            $("#apellido_usuario").attr('disabled', 'disabled');
+            $("#correo_usuario").attr('disabled', 'disabled');
 
+            $(".cambioEstado").text("Eliminar").removeClass("btn-danger").addClass("btn-warning");
 
-$('#btnBuscadorUser').click(function(){
-  
-    /* var search = $('#txtBuscadorUser').val();
-   
-    var query = db
-                .orderByChild('correo')
-                .equalTo('luisa@hotmail.com')
-                .limitToFirst(3);
-                
-    console.log(query); */
-
-
-    db.on('value', snap =>  {
-        
-        var datos = snap.val();
-
-        console.log(datos);    
+            $(".titulo").text("Eliminar Usuario");
+        })
 
     });
 
 
+
+
 });
-
-
-
-  
-
-
-
 
 getUser();

@@ -1,5 +1,5 @@
 // instancia de firebase que apunta al nodo usuarios
-var db = firebase.database().ref('usuarios/');
+var db = firebase.database().ref('pico_placa/');
 
 // inspecciona si un usuario esta logeado o no
 var getUser = function () {
@@ -91,119 +91,29 @@ var btnModalPopup = function () {
 
 }
 
-// filtro para obtener el usuario  
-var getFilterUser = function(){
-   
-    var dbUser = firebase.database().ref();
-
-    var search = $('#txtBuscadorUser').val();
-    var tipo = $('#selector-tipo').val();
-
-    var query = dbUser.child('usuarios').orderByChild(tipo).startAt(search).endAt(search + '\uf8ff');
-
-    query.on('value', snap => {
-
-        var usuarios = snap.val();
-
-        $(".limpiarTabla").empty();
-
-        var row = "";
-        var numero = 0;
-
-        for (usuario in usuarios) {
-            numero = numero + 1;
-
-            row += '<tr class="UID" id="' + usuario + '">' +
-            '<td class="contador" style="font-size:17px">' + numero + '</td>' +
-            '<td class="nombres" style="font-size:17px">' + usuarios[usuario].nombre + '</td>' +
-            '<td class="apellidos" style="font-size:17px">' + usuarios[usuario].apellido + '</td>' +
-            '<td class="correos" style="font-size:17px">' + usuarios[usuario].correo + '</td>' +
-            '<td class="derecha" > <button type="button" class="btnEdit btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit form-control-feedback"></i> Editar</td>' +
-            '<td class="derecha"> <button type="button" class="btnDelete btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-times form-control-feedback"> </i> Eliminar</td>' +
-            '</tr>';
-        }
-
-        $("tbody").append(row);
-        row = "";
-        $(".paginas").html('Registros generados en total : ' + numero);
-        numero = 0;
-
-        // permite cargar la informacion para ser editada
-        $('.btnEdit').click(function () {
-
-            var usuarioID = $(this).closest('tr').attr('id');
-
-            $("#UID_dato").val(usuarioID);
-            $("#nombre_usuario").val($('#' + usuarioID).find(".nombres").text());
-            $("#apellido_usuario").val($('#' + usuarioID).find(".apellidos").text());
-            $("#correo_usuario").val($('#' + usuarioID).find(".correos").text());
-
-            $("#nombre_usuario").removeAttr("disabled");
-            $("#apellido_usuario").removeAttr("disabled");
-            $("#correo_usuario").removeAttr("disabled");
-
-            $(".cambioEstado").text("Editar").removeClass("btn-warning").addClass("btn-danger");
-
-            $(".titulo").text("Actualizar Usuario");
-        })
-
-        // permite cargar la informacion para ser eliminada
-        $('.btnDelete').click(function () {
-
-            var usuarioID = $(this).closest('tr').attr('id');
-
-            $("#UID_dato").val(usuarioID);
-            $("#nombre_usuario").val($('#' + usuarioID).find(".nombres").text());
-            $("#apellido_usuario").val($('#' + usuarioID).find(".apellidos").text());
-            $("#correo_usuario").val($('#' + usuarioID).find(".correos").text());
-
-            $("#nombre_usuario").attr('disabled', 'disabled');
-            $("#apellido_usuario").attr('disabled', 'disabled');
-            $("#correo_usuario").attr('disabled', 'disabled');
-
-            $(".cambioEstado").text("Eliminar").removeClass("btn-danger").addClass("btn-warning");
-
-            $(".titulo").text("Eliminar Usuario");
-        })
-
-    });
-
-
-
-}
-
-/* var deleteUser = function (user){
-
-    var user = firebase.auth().currentUser;
-
-    user.delete(user).then(function() {
-       
-      }).catch(function(error) {
-        // An error happened.
-      });
-
-} */
-
 // Inspecciona todos los cambios en la tabla y la actualiza
-db.on('value', function (snapshot) {
+var dbUser = firebase.database().ref();
+var query = dbUser.child('pico_placa').orderByChild('orden');
+console.log(query);
 
-    var usuarios = snapshot.val();
+query.on('value', function (snapshot) {
+
+    var picos_placas = snapshot.val();
 
     $(".limpiarTabla").empty();
 
     var row = "";
     var numero = 0;
 
-    for (usuario in usuarios) {
+    for (pico in picos_placas) {
         numero = numero + 1;
 
-        row += '<tr class="UID" id="' + usuario + '">' +
+        row += '<tr class="UID size" id="' + pico + '">' +
             '<td class="contador" style="font-size:17px">' + numero + '</td>' +
-            '<td class="nombres" style="font-size:17px">' + usuarios[usuario].nombre + '</td>' +
-            '<td class="apellidos" style="font-size:17px">' + usuarios[usuario].apellido + '</td>' +
-            '<td class="correos" style="font-size:17px">' + usuarios[usuario].correo + '</td>' +
-            '<td class="derecha" > <button type="button" class="btnEdit btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit form-control-feedback"></i> Editar</td>' +
-            '<td class="derecha"> <button type="button" class="btnDelete btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-times form-control-feedback"> </i> Eliminar</td>' +
+            '<td class="nombres" style="font-size:17px">' + pico + '</td>' +
+            '<td class="apellidos" style="font-size:17px">' + picos_placas[pico].digito2 + '</td>' +
+            '<td class="correos" style="font-size:17px">' + picos_placas[pico].digito2 + '</td>' +
+            '<td class="derecha" > <button type="button" class="btnEdit btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit form-control-feedback"></i> Editar</td>' +            
             '</tr>';
     }
 
@@ -257,5 +167,13 @@ db.on('value', function (snapshot) {
 }, function (error) {
     console.log(error);
 });
+
+
+$('#GenerarPlacas').click(function(){
+
+
+    
+});
+
 
 getUser();

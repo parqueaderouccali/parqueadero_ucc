@@ -137,7 +137,7 @@
             <ul class="treeview-menu">
               <li><a href="../../pages/administracion/consultar_usuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
               <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Novedades</a></li>
-              <li><a href="../../pages/administracion/AdminPlacas.html"><i class="fa fa-circle-o"></i> Pico y Placa</a></li>
+              <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Pico y Placa</a></li>
               <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternativos</a></li>
               <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Cambio de Jornada</a></li>            
             </ul>
@@ -164,238 +164,121 @@
 
     <!-- Main content -->
     <section class="content">
-      <!-- Small boxes (Stat box) -->
-      
+
+
       <div class="row">
         <div class="col-lg-12 col-ms-6 col-xs-12">
           <h1  class="picoPlacaCss">
-            Pico y Placa: <b id="picoPlaca"> 0 y 9 <b> ( Lunes )</b></b>
+           <b id="picoPlaca"> Administrador de pico y placa</b>
           </h1>
         </div>      
       </div>
       
-      <!-- Inicio Estadisticas Carros -->
-      <div class="row">
-        <div class="col-lg-12 col-xs-6">
-          <h1>
-            Estadisticas Carros
-          </h1>
-        </div>      
-      </div>
-      
-      <div class="row">
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <h3 id="cantidadPuestos">0</h3>
-              <p><b>Dispobibles</b></p>            
-            </div>
-            <div class="icon">
-              <i class="ion ion-checkmark-circled"></i>
-            </div>
-            <a href="#" class="small-box-footer">Detalle <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3 id="cantidadOcupada">0</h3>
-              <p><b>Ocupados</b></p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-android-lock"></i>
-            </div>
-            <a href="#" class="small-box-footer">Detalle <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-yellow">
-            <div class="inner">
-              <h3 id="cantidadEnespera">0</h3>
-              <p><b>En Espera</b></p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-android-time"></i>
-            </div>
-            <a href="#" class="small-box-footer" data-toggle="modal" data-target="#exampleModalCenter1">Modificar <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box bg-red">
-            <div class="inner">
-              <h3 id="cantidadInhabilitados">0</h3>
-              <p><b>Inhabilitados</b></p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-alert-circled"></i>
-            </div>
-            <a href="#" class="small-box-footer">Detalle <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-      </div>
-
       <br>
-      <!-- Inicio Estadisticas Motos -->
-      <div class="row">
-          <div class="col-lg-12 col-xs-6">
-            <h1>
-              Estadisticas Motos
-            </h1>
-          </div>      
-        </div>
-        
-        <div class="row">
-          <div class="col-lg-4 col-xs-6">
-            <!-- small box -->
-            <div class="small-box bg-aqua">
-              <div class="inner">
-                <h3 id="cantidadTotalesMoto">0</h3>
-                <p><b>Total Espacios</b></p>            
-              </div>
-              <div class="icon">
-                <i class="ion ion-checkmark-circled"></i>
-              </div>
-              <a href="#" class="small-box-footer" data-toggle="modal" data-target="#exampleModalCenter2">Modificar <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-4 col-xs-6">
-            <!-- small box -->
-            <div class="small-box bg-green">
-              <div class="inner">
-                <h3 id="cantidadOcupadaMoto">0</h3>
-                <p><b>Motos Entrantes</b></p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-arrow-return-right"></i>
-              </div>
-              <a href="#" class="small-box-footer">Detalle <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>          
-          <!-- ./col -->          
-          <div class="col-lg-4 col-xs-6">
-            <!-- small box -->
-            <div class="small-box bg-red">
-              <div class="inner">
-                <h3 id="cantidadInhabilitadosMoto">0</h3>
-                <p><b>Motos Salientes</b></p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-arrow-return-left"></i>
-              </div>
-              <a href="#" class="small-box-footer">Detalle <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-        </div>
-      <!-- /.row -->
+
       
-      <!-- Inicio Novedades -->
-      <div class="row">
-          <div class="col-lg-12 col-xs-6">
-            <h1>
-              Novedades
-            </h1>
-          </div>      
-        </div>
 
-
-      <div class="row ">
-          <div class="col-lg-6 ">
-              <section class="col-lg-12 connectedSortable">
-                  <!-- Chat box -->
-                  <div class="box box-success">
-                    <div class="box-header">
-                      <i class="fa fa-comments-o"></i>
+      <div class="col-lg-12">
         
-                      <h3 class="box-title">Universidad Cooperativa de Colombia</h3>
-                   
-                    </div>
+        <section class="col-lg-12 ">
+                               
+            <div class="box box-primary">
+                        
+              <div class="box-header">
+                                
+                <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2">Cambio de Dígito</button>
 
-                    <div class="box-body chat pre-scrollable limpiarTabla item-chats" id="chat-box1">
-                    
-                      <!-- Item de Chats Creado por Javascript -->
-                                                               
-                    </div>
-                   
-                    <div class="box-footer">
-                      <div class="input-group">
-                        <input id="txtnovedadUCC" class="form-control" placeholder="Ingresar novedad .... ">
+                <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+
+                  <br>
+                  <div class="row">
+                    <div class="col-lg-12">
+
+                      <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                        <thead>
+                          <tr role="row">
+                            <th class="sorting_asc size" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"
+                              style=" font-size:15px">
+                              #
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
+                              style=" font-size:15px">
+                              Dia de la Semana
+                            </th>
+                            <th class="sorting " tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                              style=" font-size:15px">
+                              Digito 1
+                            </th>
+                            <th class="sorting " tabindex="0" aria-controls="example1" rowspan="1" colspan="2" aria-label="Engine version: activate to sort column ascending"
+                              style=" font-size:15px">
+                              Digito 2
+                            </th>
+                         
         
-                        <div class="input-group-btn">
-                          <button type="button" class="btn btn-success" onclick="agregarNovedadUCC()"><i class="fa fa-plus"></i></button>
-                        </div>
+                          </tr>
+                        </thead>
+                        
+                        <tbody class="limpiarTabla">
+                        </tbody>
+                        
+                        <tfoot>
+        
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <div class="dataTables_info paginas" id="example1_info" role="status" aria-live="polite">
+        
                       </div>
                     </div>
-                  </div>          
-                  <!-- /.box (chat box) -->
-              </section>
-          </div>
-          <div class="col-lg-6 ">
-              <section class="col-lg-12 connectedSortable">
-                  <!-- Chat box -->
-                  <div class="box box-success">
-                    <div class="box-header">
-                      <i class="fa fa-comments-o"></i>
-        
-                      <h3 class="box-title">Estudiantes</h3>
-                   
-                    </div>
-                    <div class="box-body chat pre-scrollable limpiarTabla-2 item-chats-2" id="chat-box2">
-                      
-                      <!-- chat item -->
-                             
-                    </div>
-                   
-                    <div class="box-footer">
-                      
-                    </div>
-                  </div>          
-                  <!-- /.box (chat box) -->
-              </section>
-          </div>
+                  </div>
+                </div>
+
+
+             
+              <div class="box-footer">
+                
+              </div>
+            </div>          
+            <!-- /.box (chat box) -->
+        </section>
+    </div>
+
+
+
+
+      <div class="box-body">
+       
       </div>
-      
-      <!-- /.row (main row) -->
+           
     </section>
-    <!-- /.content -->
+
+        <!-- /.content-wrapper -->
   </div>
 
-
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-      <div class="pull-right hidden-xs">
-        <b>Version</b> 1.0.0
-      </div>
-      <strong>Copyright &copy; 2018
-        <a href="">Universidad Cooperativa de Colombia sede cali</a>.</strong> All rights reserved.
-    </footer>
-
-
-
-<!-- popup de modificacion de vehiculos en espera-->
-<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- popup de actualizacion individual de dias de la semana-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Vehiculos en Espera</h3>
+        <h3 class="modal-title text-center" id="exampleModalLongTitle">Actualizar Pico y placa</h3>
         </button>
       </div>
       <div class="modal-body">
 
         <div class="form-group row">
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Digito 1:</label>
           <div class="col-sm-12">
-            <input id="vehiculosEspera" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+            <input id="digito1Placa" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
           </div>
+
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Digito 2:</label>
+          <div class="col-sm-12">
+            <input id="digito2Placa" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+          </div>
+
         </div>
 
       </div>
@@ -408,32 +291,104 @@
 </div>
 
 
-<!-- popup de modificacion del total de capacidad-->
+<!-- Cambio de placas automatico -->
 <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-sm" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Capacidad de Espacios para Moto</h3>
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle"><b>Actualizacion y Generacion de secuencia pico y placa</b></h3>
         </button>
       </div>
       <div class="modal-body">
 
-        <div class="form-group row">
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
-          <div class="col-sm-12">
-            <input id="vehiculosEspera" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
-          </div>
-        </div>
 
+<div class="row">
+
+  <div class="col-lg-4">
+    <div class="form-group row">
+      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Lunes</b></h3></label>
+      <div class="col-sm-3">
+        <input id="digito1Lunes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+        <br>
+        <input id="digito2Lunes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
       </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="form-group row">
+      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Martes</b></h3></label>
+      <div class="col-sm-3">
+        <input id="digito1Martes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+        <br>
+        <input id="digito2Martes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="form-group row">
+      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Miercoles</b></h3></label>
+      <div class="col-sm-3">
+        <input id="digito1Miercoles" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+        <br>
+        <input id="digito2Miercoles" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<br>
+<br>
+
+<div class="row">
+
+  <div class="col-lg-4">
+    <div class="form-group row">
+      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Jueves</b></h3></label>
+      <div class="col-sm-3">
+        <input id="digito1Jueves" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+        <br>
+        <input id="digito2Jueves" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="form-group row">
+      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Viernes</b></h3></label>
+      <div class="col-sm-3">
+        <input id="digito1Viernes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+        <br>
+        <input id="digito2Viernes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+
+  </div>
+
+</div>
+       
+      </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-        <button type="button" class="btn btn-primary" id="btnModal" onclick="btnModalPopup()">Editar</button>
+        <button type="button" class="btn btn-primary" id="EditarPlacas">Editar</button>
+        <button type="button" class="btn btn-danger" id="GenerarPlacas">Generar Automatico</button>
       </div>
+
     </div>
   </div>
 </div>
 
+
+<footer class="main-footer">
+  <div class="pull-right hidden-xs">
+    <b>Version</b> 1.0.0
+  </div>
+  <strong>Copyright &copy; 2018
+    <a href="">Universidad Cooperativa de Colombia sede cali</a>.</strong> All rights reserved.
+</footer>
+ 
 
 
 <!-- jQuery 3 -->
@@ -487,7 +442,7 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="../../dist/js/pages/login/principal.js"></script>
+<script src="../../dist/js/pages/administracion/placas.js"></script>
 
 
 </body>

@@ -191,92 +191,111 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          Usuarios
-        </h1>
-        <ol class="breadcrumb">
-          <li>
-            <a href="#">
-              <i class="fa fa-dashboard"></i> Principal</a>
-          </li>
-          <li class="active" >Usuarios</li>
-        </ol>
-      </section>
+
 
       <!-- Main content -->
       <section class="content">
-        <div class="box-body">
-          <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="dataTables_length" id="example1_length">
-                </div>
-              </div>
-              <div class="col-sm-10">
-                <div class="box-tools">
-                  
-                  <select id="selector-tipo" class="form-control">
-                    <option value="nombre">Nombre</option>
-                    <option value="apellido">Apellido</option>
-                    <option value="correo">Email</option>
-                  </select>
-                  
-                  <div class="input-group input-group-sm" style="width: 400px;">
-                    <input id="txtBuscadorUser" type="text" name="table_search" class="form-control pull-right" placeholder="Search" >
-                    <div class="input-group-btn">
-                      <button id="" class="btn btn-default" onclick="getFilterUser()"><i class="fa fa-search" ></i></button>                      
-                    </div>
-                  </div> 
 
-                </div>
-                
-              </div>
+          <div class="row">
+              <div class="col-lg-12 col-ms-6 col-xs-12">
+                <h1  class="picoPlacaCss">
+                 <b id="picoPlaca"> Mantenimiento de Usuarios</b>
+                </h1>
+              </div>      
             </div>
+
             <br>
-            <div class="row">
-              <div class="col-sm-12">
-               
-                <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-                  <thead>
-                    <tr role="row">
-                      <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"
-                        style="width: 100px; font-size:20px">
-                        #
-                      </th>
-                      <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
-                        style="width: 160px; font-size:20px">
-                        Nombre
-                      </th>
-                      <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                        style="width: 128px; font-size:20px">
-                        Apellido
-                      </th>
-                      <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="2" aria-label="Engine version: activate to sort column ascending"
-                        style="width: 200px; font-size:20px">
-                        Email
-                      </th>
 
-                    </tr>
-                  </thead>
+            <div class="col-lg-12 ">
+              <section class="col-lg-12 ">
                   
-                  <tbody class="limpiarTabla">
-                  </tbody>
+                  <div class="box box-primary">
+                    <div class="box-header">
+         
+                      <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="dataTables_length" id="example1_length">
+                            </div>
+                          </div>
+                          <div class="col-sm-10">
+                            <div class="box-tools">
+                              
+                              <select id="selector-tipo" class="form-control">
+                                <option value="nombre">Nombre</option>
+                                <option value="apellido">Apellido</option>
+                                <option value="correo">Email</option>
+                              </select>
+                              
+                              <div class="input-group input-group-sm" style="width: 400px;">
+                                <input id="txtBuscadorUser" type="text" name="table_search" class="form-control pull-right" placeholder="Search" >
+                                <div class="input-group-btn">
+                                  <button id="" class="btn btn-default" onclick="getFilterUser()"><i class="fa fa-search" ></i></button>                      
+                                </div>
+                              </div> 
+            
+                            </div>                            
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-sm-12">
+                           
+                            <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                              <thead>
+                                <tr role="row">
+                                  <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"
+                                    style="width: 100px; font-size:20px">
+                                    #
+                                  </th>
+                                  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
+                                    style="width: 200px; font-size:20px">
+                                    Nombre
+                                  </th>
+                                  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                                    style="width: 128px; font-size:20px">
+                                    Apellido
+                                  </th>
+                                  <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="2" aria-label="Engine version: activate to sort column ascending"
+                                    style="width: 200px; font-size:20px">
+                                    Email
+                                  </th>
+            
+                                </tr>
+                              </thead>
+                              
+                              <tbody class="limpiarTabla">
+                              </tbody>
+                              
+                              <tfoot>
+            
+                              </tfoot>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-5">
+                            <div class="dataTables_info paginas" id="example1_info" role="status" aria-live="polite">
+            
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                   
-                  <tfoot>
-
-                  </tfoot>
-                </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-5">
-                <div class="dataTables_info paginas" id="example1_info" role="status" aria-live="polite">
-
-                </div>
-              </div>
-            </div>
+                   
+                    </div>
+                   
+                    <div class="box-footer">
+                      
+                    </div>
+                  </div>          
+                  <!-- /.box (chat box) -->
+              </section>
           </div>
+
+
+        <div class="box-body">
+  
         </div>
         <div class="row">
 

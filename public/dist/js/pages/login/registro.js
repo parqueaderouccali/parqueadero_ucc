@@ -67,7 +67,7 @@ var guardarUsuariofirebase = function (name, surnames, email) {
             uid: user.uid,
             nombre: name,
             apellido: surnames,
-            correo: email        
+            correo: email
         }
 
         db.push().set(usuarios);

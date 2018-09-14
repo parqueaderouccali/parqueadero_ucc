@@ -734,11 +734,7 @@ var cargarCarros = function () {
         var parqueaderos = snapshot.val();  
         
             for(parqueo in parqueaderos){
-                
-                console.log(parqueaderos[parqueo].disponibilidad)
-                console.log(parqueaderos[parqueo].num_parqueadero)
-    
-                
+                                   
                 if(parqueaderos[parqueo].estado == 1){
                     // btnDesocupar();
                     $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).hide();
@@ -756,7 +752,6 @@ var cargarCarros = function () {
                         console.log('disponibilidad 0');     
                         $('#imagenInhabilitado'+parqueaderos[parqueo].num_parqueadero).hide();
                         $('#imagenCarro'+parqueaderos[parqueo].num_parqueadero).hide();
-
                     }
                 }
 

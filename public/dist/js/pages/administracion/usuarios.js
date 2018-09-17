@@ -99,7 +99,7 @@ var getFilterUser = function(){
     var search = $('#txtBuscadorUser').val();
     var tipo = $('#selector-tipo').val();
 
-    var query = dbUser.child('usuarios').orderByChild(tipo).startAt(search).endAt(search + '\uf8ff');
+    var query = dbUser.child('usuarios').orderByChild(tipo).startAt(search.toLowerCase()).endAt(search.toLowerCase() + '\uf8ff');
 
     query.on('value', snap => {
 
@@ -172,18 +172,6 @@ var getFilterUser = function(){
 
 }
 
-/* var deleteUser = function (user){
-
-    var user = firebase.auth().currentUser;
-
-    user.delete(user).then(function() {
-       
-      }).catch(function(error) {
-        // An error happened.
-      });
-
-} */
-
 // Inspecciona todos los cambios en la tabla y la actualiza
 db.on('value', function (snapshot) {
 
@@ -195,16 +183,18 @@ db.on('value', function (snapshot) {
     var numero = 0;
 
     for (usuario in usuarios) {
+       
         numero = numero + 1;
 
         row += '<tr class="UID" id="' + usuario + '">' +
-            '<td class="contador" style="font-size:17px">' + numero + '</td>' +
-            '<td class="nombres" style="font-size:17px">' + usuarios[usuario].nombre + '</td>' +
-            '<td class="apellidos" style="font-size:17px">' + usuarios[usuario].apellido + '</td>' +
-            '<td class="correos" style="font-size:17px">' + usuarios[usuario].correo + '</td>' +
-            '<td class="derecha" > <button type="button" class="btnEdit btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit form-control-feedback"></i> Editar</td>' +
-            '<td class="derecha"> <button type="button" class="btnDelete btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-times form-control-feedback"> </i> Eliminar</td>' +
-            '</tr>';
+                    '<td class="contador" style="font-size:17px">' + numero + '</td>' +
+                    '<td class="nombres" style="font-size:17px">' + usuarios[usuario].nombre + '</td>' +
+                    '<td class="apellidos" style="font-size:17px">' + usuarios[usuario].apellido + '</td>' +
+                    '<td class="correos" style="font-size:17px">' + usuarios[usuario].correo + '</td>' +
+                    '<td class="text-right" > <button type="button" class="btnEdit btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-edit form-control-feedback"></i> Editar</td>' +
+                    '<td class="text-right"> <button type="button" class="btnDelete btn btn-warning" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-times form-control-feedback"> </i> Eliminar</td>' +
+                    
+               '</tr>';
     }
 
     $("tbody").append(row);
@@ -258,4 +248,5 @@ db.on('value', function (snapshot) {
     console.log(error);
 });
 
+// Obtiene el usuario logueado
 getUser();

@@ -65,8 +65,8 @@ var guardarUsuariofirebase = function (name, surnames, email) {
         
         var usuarios = {
             uid: user.uid,
-            nombre: name,
-            apellido: surnames,
+            nombre: name.toLowerCase(),
+            apellido: surnames.toLowerCase(),
             correo: email
         }
 

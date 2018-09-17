@@ -2,6 +2,7 @@
 var db = firebase.database().ref('usuarios/');
 var dbNovedadesUCC = firebase.database().ref('novedades/UCC/');
 var dbNovedadesEstudiantes = firebase.database().ref('novedades/Estudiantes/');
+var dbPicoPlaca = firebase.database().ref('pico_placa/');
 var contador = 0;
 
 // inspecciona si un usuario esta logeado o no
@@ -87,6 +88,7 @@ var NovedadUCC = function(novedad) {
 
 }
 
+// permite obtener una nueva novedad de registrada por los estudiantes en firebase
 var NovedadEstidiantes = function() {
 
     var fecha = new Date();
@@ -110,6 +112,7 @@ var NovedadEstidiantes = function() {
 
 }
 
+// permite agregar una novedad UCC.
 var agregarNovedadUCC = function (){
 
     var novedad = $('#txtnovedadUCC').val();
@@ -122,6 +125,7 @@ var agregarNovedadUCC = function (){
 
 }
 
+// carga del dashboard en tiempo real.
 var dataRealTime = function (){
 
     var db = firebase.database().ref('parqueaderos/');
@@ -167,14 +171,10 @@ var dataRealTime = function (){
 
 }
 
+// permite cargar crear los vehiculos que se encuentra en espera para el ingreso a la Universidad
 $('#EsperaVehiculos').click(function(){
-    alert('Hola')
+    
 });
-
-    /* var cantidad = $('#vehiculosEspera').val();
-
-    $('#cantidadEnespera').val(cantidadEnespera);
-    $('#exampleModalCenter1').hide(); */
 
 
 // Metodos para Novedades UCC donde se Inspecciona todos los cambios en la tabla y la actualiza 
@@ -241,5 +241,61 @@ dbNovedadesEstudiantes.on('value', function (snapshot) {
     console.log(error);
 });
 
+// obtiene el dia de la semana y los carga en la pagina (llamado desde Load en el body)
+var semana = function (){
+
+    var f=new Date();
+    var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+    var semana = dias[f.getUTCDay()]; 
+
+    if(semana === "Domingo"){             
+        $('#conector').html('');
+        $('#diaSemana').html('(No Aplica)');                   
+    }else if(semana === 'Lunes'){
+        getPicoPlaca(semana);
+    }else if(semana === 'Martes'){
+        getPicoPlaca(semana);
+    }else if(semana === 'Miercoles'){
+        getPicoPlaca(semana);
+    }else if(semana === 'Jueves'){
+        getPicoPlaca(semana);
+    }else if(semana === 'Viernes'){
+        getPicoPlaca(semana);
+    }else if(semana === 'Sabado'){
+        $('#diaSemana').html('(No Aplica Pico y Placa)');                      
+        $('#digito1').html('');
+        $('#digito2').html('');
+        $('#picoPlaca').html('');
+    }
+            
+}
+
+// Obtiene los numeros de pico y placa aplicados.
+var getPicoPlaca = function (dia) {
+
+    dbPicoPlaca.on('value',function(snapshot){                
+        
+        var semana = snapshot.val();                
+        
+         for(diasem in semana) {
+            
+            if(dia === semana[diasem].dia){                                     
+                $('#digito1').html(semana[diasem].digito1);
+                $('#conector').html(' y ');
+                $('#digito2').html(semana[diasem].digito2);
+                $('#diaSemana').html('( ' + semana[diasem].dia + ' )'); 
+            }
+                                
+         }
+
+    },function (error) {
+        console.log(error);
+    })
+
+}
+
+
+// metodos que se inician una vez carga la aplicacion.
+semana();
 dataRealTime();
 getUser();

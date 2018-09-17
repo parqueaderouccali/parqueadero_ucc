@@ -1,5 +1,7 @@
 // instancia de firebase que apunta al nodo usuarios
-var db = firebase.database().ref('pico_placa/');
+
+var db = firebase.database().ref('usuarios/');
+var dbPico = firebase.database().ref('pico_placa/');
 
 // inspecciona si un usuario esta logeado o no
 var getUser = function () {
@@ -348,7 +350,7 @@ $('#EditarPicoPlaca').click(function(){
 
     var ID = $('#diaPlaca').val();
 
-        db.child(ID).update({
+        dbPico.child(ID).update({
             digito1: $("#digito1Placa").val(),
             digito2: $("#digito2Placa").val()
         }, function () {

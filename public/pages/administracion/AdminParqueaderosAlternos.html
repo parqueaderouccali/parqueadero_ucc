@@ -40,7 +40,7 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini" >
 <div class="wrapper">
 
   <header class="main-header">
@@ -164,228 +164,108 @@
 
     <!-- Main content -->
     <section class="content">
+      <!-- Small boxes (Stat box) -->      
+  
+      <div class="row ">
+        <div class="row">
+          <div class="col-lg-12 col-ms-6 col-xs-12">
+            <h1  class="picoPlacaCss">
+             <b id="picoPlaca"> Administración de Parqueaderos Alternos</b>
+  
+            </h1>
+          </div>      
+        </div>
+        
+        <br>
 
 
       <div class="row">
-        <div class="col-lg-12 col-ms-6 col-xs-12">
-          <h1  class="picoPlacaCss">
-           <b id="picoPlaca"> Administración de pico y placa</b>
-          </h1>
-        </div>      
+            
+        <div class="col-lg-10">
+          <button id="cambioDigito" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2" >Agregar Nuevo Parqueadero</button>
+        </div>
+        
+      </div>
+        
+      <br>
+      <div class="parqueaderos limpiarTabla" >
+        
+
+      </div>
+
+
       </div>
       
-      <br>
-
-        <div class="col-lg-12">
-        
-        <section class="col-lg-12 ">
-                               
-            <div class="box box-primary">
-                        
-              <div class="box-header">
-                                
-                <button id="cambioDigito" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2">Cambio de Dígito</button>
-
-                <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-
-                  <br>
-                  <div class="row">
-                    <div class="col-lg-12">
-
-                      <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-                        <thead>
-                          <tr role="row">
-                            <th class="sorting_asc size" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" style=" font-size:15px; width: 4%;">
-                              #
-                            </th>
-                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style=" font-size:15px; width: 15%;">
-                              Dia de la Semana
-                            </th>
-                            <th class="sorting " tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style=" font-size:15px; width: 20%;">
-                              Digito 1
-                            </th>
-                            <th class="sorting " tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style=" font-size:15px;  width: 20%;">
-                              Digito 2
-                            </th>
-                               
-                          </tr>
-                        </thead>
-                        
-                        <tbody class="limpiarTabla">
-                          
-                        </tbody>
-                        
-                        <tfoot>
-        
-                        </tfoot>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-5">
-                      <div class="dataTables_info paginas" id="example1_info" role="status" aria-live="polite">
-        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-             
-              <div class="box-footer">
-                
-              </div>
-            </div>          
-           
-        </section>
-    </div> 
-
-      <div class="box-body">
-       
-      </div>
-           
+      <!-- /.row (main row) -->
     </section>
-
-        <!-- /.content-wrapper -->
+    <!-- /.content -->
   </div>
 
-<!-- popup de actualizacion individual de dias de la semana-->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.0
+      </div>
+      <strong>Copyright &copy; 2018
+        <a href="">Universidad Cooperativa de Colombia sede cali</a>.</strong> All rights reserved.
+    </footer>
+
+
+
+<!-- popup de modificacion de vehiculos en espera-->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title text-center" id="exampleModalLongTitle">Actualizar Pico y placa</h3>
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Vehiculos en Espera</h3>
         </button>
       </div>
       <div class="modal-body">
 
         <div class="form-group row">
-          
-            <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Dia</label>
-            <div class="col-sm-12">
-              <input id="diaPlaca" class="form-control text-center " type="text" value="" id="" style="font-size: 15px; color:black; font-weight: bold;" disabled >
-            </div>
-          <br>
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Digito 1:</label>
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
           <div class="col-sm-12">
-            <input id="digito1Placa" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
+            <input id="vehiculosEspera" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
           </div>
-          <br>
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Digito 2:</label>
-          <div class="col-sm-12">
-            <input id="digito2Placa" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-          </div>
-
         </div>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-        <button type="button" class="btn btn-primary" id="EditarPicoPlaca">Editar</button>
+        <button type="button" class="btn btn-primary" id="EsperaVehiculos">Editar</button>
       </div>
     </div>
   </div>
 </div>
 
 
-<!-- Cambio de placas automatico -->
+<!-- popup de modificacion del total de capacidad-->
 <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle"><b>Actualizacion y Generacion de secuencia pico y placa</b></h3>
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Capacidad de Espacios para Moto</h3>
         </button>
       </div>
       <div class="modal-body">
 
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
+          <div class="col-sm-12">
+            <input id="vehiculosEspera" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
+          </div>
+        </div>
 
-<div class="row">
-
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Lunes</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Lunes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Lunes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
       </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Martes</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Martes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Martes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Miercoles</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Miercoles" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Miercoles" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<br>
-<br>
-
-<div class="row">
-
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Jueves</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Jueves" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Jueves" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Viernes</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Viernes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Viernes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-
-  </div>
-
-</div>
-       
-      </div>
-
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-        <button type="button" class="btn btn-primary" id="EditarPlacas">Editar</button>
-        <button type="button" class="btn btn-danger" id="GenerarPlacas">Generar Automatico</button>
+        <button type="button" class="btn btn-primary" id="btnModal" onclick="btnModalPopup()">Editar</button>
       </div>
-
     </div>
   </div>
 </div>
 
-
-<footer class="main-footer">
-  <div class="pull-right hidden-xs">
-    <b>Version</b> 1.0.0
-  </div>
-  <strong>Copyright &copy; 2018
-    <a href="">Universidad Cooperativa de Colombia sede cali</a>.</strong> All rights reserved.
-</footer>
- 
 
 
 <!-- jQuery 3 -->
@@ -439,7 +319,8 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="../../dist/js/pages/administracion/placas.js"></script>
+<script type="text/javascript"src="http://maps.google.com/maps/api/js?key=AIzaSyCrdCdTuPuc9j1utz437CRgl5btRA4xvLo"></script>
+<script src="../../dist/js/pages/administracion/parqueaderosAlternos.js"></script>
 
 
 </body>

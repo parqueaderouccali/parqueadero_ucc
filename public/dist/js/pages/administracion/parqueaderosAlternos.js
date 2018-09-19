@@ -167,7 +167,6 @@ dbAlternos.on('value', function (snapshot) {
 
     console.log(coordX + ' ' + coordY + ' ' + nombreDiv)
 
-     
                                         
     }
 

@@ -768,11 +768,42 @@ var contador = function (){
     if(f.getHours() >= 1 && (f.getMinutes() >= 27 && f.getMinutes() < 42)) {       
        $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
     }else if(f.getHours() >= 1 && (f.getMinutes() >= 42 && f.getMinutes() < 44)){
-        $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");
+        $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");        
     }else if(f.getHours() >= 1 && f.getMinutes() >= 44){
         $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
 
     }
+}
+
+var quitarParqueaderosDiurnos = function (){
+ console.log('Estoy dentro')
+
+for (var i = 15; i <= 26; i++){
+    console.log(i);
+    var db = firebase.database().ref('parqueaderos/parqueadero_' + numero + '/');
+
+    var parqueadero = {
+        disponibilidad: 0
+    }
+
+    db.update(parqueadero);
+
+}
+
+for (var i = 36; i <= 47; i++){
+
+    var db = firebase.database().ref('parqueaderos/parqueadero_' + numero + '/');
+
+    var parqueadero = {
+        disponibilidad: 0
+    }
+
+    db.update(parqueadero);
+
+}
+
+    
+
 }
 
 // metodos que se cargan cuando la aplicacion load().

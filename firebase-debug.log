@@ -1,28 +1,28 @@
-[debug] [2018-09-18T05:22:57.170Z] ----------------------------------------------------------------------
-[debug] [2018-09-18T05:22:57.173Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\CRODRIGUEZ\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-09-18T05:22:57.173Z] CLI Version:   4.2.1
-[debug] [2018-09-18T05:22:57.173Z] Platform:      win32
-[debug] [2018-09-18T05:22:57.173Z] Node Version:  v8.11.4
-[debug] [2018-09-18T05:22:57.174Z] Time:          Tue Sep 18 2018 00:22:57 GMT-0500 (Hora est. Pacífico, Sudamérica)
-[debug] [2018-09-18T05:22:57.174Z] ----------------------------------------------------------------------
+[debug] [2018-09-19T04:44:01.832Z] ----------------------------------------------------------------------
+[debug] [2018-09-19T04:44:01.832Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\CRODRIGUEZ\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-09-19T04:44:01.832Z] CLI Version:   4.2.1
+[debug] [2018-09-19T04:44:01.832Z] Platform:      win32
+[debug] [2018-09-19T04:44:01.832Z] Node Version:  v8.11.4
+[debug] [2018-09-19T04:44:01.832Z] Time:          Tue Sep 18 2018 23:44:01 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-09-19T04:44:01.832Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-09-18T05:22:57.187Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-09-18T05:22:57.188Z] > authorizing via signed-in user
-[debug] [2018-09-18T05:22:57.191Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-09-18T05:22:57.191Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2018-09-19T04:44:01.848Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-09-19T04:44:01.848Z] > authorizing via signed-in user
+[debug] [2018-09-19T04:44:01.848Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-09-19T04:44:01.848Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
 
-[debug] [2018-09-18T05:22:57.695Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-18T05:22:57.702Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/parqueaderouccali-8a09c  
+[debug] [2018-09-19T04:44:02.294Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-19T04:44:02.309Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/parqueaderouccali-8a09c  
  
-[debug] [2018-09-18T05:22:58.726Z] <<< HTTP RESPONSE 200
-[debug] [2018-09-18T05:22:58.728Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parqueaderouccali-8a09c  
+[debug] [2018-09-19T04:44:03.239Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-19T04:44:03.240Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parqueaderouccali-8a09c  
  
-[debug] [2018-09-18T05:22:59.524Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-19T04:44:04.076Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'D:\TESIS\parqueadero_ucc'...
 [info] 
-[debug] [2018-09-18T05:22:59.532Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/811609179419/clients/_:getWebAppConfig  
+[debug] [2018-09-19T04:44:04.076Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/811609179419/clients/_:getWebAppConfig  
  
-[debug] [2018-09-18T05:23:00.272Z] <<< HTTP RESPONSE 200
+[debug] [2018-09-19T04:44:04.722Z] <<< HTTP RESPONSE 200
 [info] i  hosting[parqueaderouccali-8a09c]: Serving hosting files from: public
 [info] +  hosting[parqueaderouccali-8a09c]: Local server: http://localhost:5000

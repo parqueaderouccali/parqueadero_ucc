@@ -134,6 +134,12 @@ var dataRealTime = function (){
     var contadorOcupados = 0;
     var contadorBloqueados = 0;
 
+    var f=new Date();
+    var hours = f.getHours();
+    var minutes = f.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';    
+    var strTime = ampm;
+
     db.on('value', function(snapshot){        
        
         var parqueaderos = snapshot.val();  
@@ -155,12 +161,19 @@ var dataRealTime = function (){
                        
                     }
                 }
-
+                 
                 $('#cantidadPuestos').html(contadorHabilitados);
                 $('#cantidadOcupada').html(contadorOcupados);
                 $('#cantidadInhabilitados').html(contadorBloqueados);
 
             }
+
+            if ((f.getHours() >= 4 && strTime === 'pm') || (f.getHours() <= 11 && strTime === 'pm')) {
+                   var cantidadActual = contadorHabilitados;
+                   var restaReal = parseInt(cantidadActual) - 24;  
+                   $('#cantidadPuestos').html(restaReal);
+            }
+
             contadorHabilitados = 0;  
             contadorOcupados = 0; 
             contadorBloqueados = 0; 
@@ -246,7 +259,13 @@ var semana = function (){
 
     var f=new Date();
     var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
-    var semana = dias[f.getUTCDay()]; 
+    var semana = dias[f.getUTCDay()];
+
+    var hours = f.getHours();
+    var minutes = f.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    
+    var strTime = ampm;
 
     if(semana === "Domingo"){             
         $('#conector').html('');
@@ -267,7 +286,7 @@ var semana = function (){
         $('#digito2').html('');
         $('#picoPlaca').html('');
     }
-            
+           
 }
 
 // Obtiene los numeros de pico y placa aplicados.

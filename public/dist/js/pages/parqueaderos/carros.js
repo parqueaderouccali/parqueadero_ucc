@@ -764,48 +764,124 @@ var cargarCarros = function () {
 }
 
 var contador = function (){
-    var f=new Date();   
-    if(f.getHours() >= 1 && (f.getMinutes() >= 27 && f.getMinutes() < 42)) {       
-       $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
-    }else if(f.getHours() >= 1 && (f.getMinutes() >= 42 && f.getMinutes() < 44)){
-        $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");        
-    }else if(f.getHours() >= 1 && f.getMinutes() >= 44){
-        $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
+  var f=new Date();
+ 
+  var hours = f.getHours();
+  var minutes = f.getMinutes();
+  var ampm = hours >= 12 ? 'pm' : 'am';
+  
+  var strTime = ampm;
+    
+// NO BORRAR CODIGO FUNCIONAL
 
-    }
+  /* if ((f.getHours() >= 1 && strTime === 'am')){  
+    habilitarParqueaderosDiurnos();
+    $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
+  }else if ((f.getHours() <= 3 && strTime === 'pm')){
+    habilitarParqueaderosDiurnos();
+    $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
+  }else if ((f.getHours() >= 4 && strTime === 'pm') || (f.getHours() <= 11 && strTime === 'pm')) {
+    quitarParqueaderosDiurnos();
+    $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");
+  } */
+    
+ 
 }
+
+var contador2 = 0;
 
 var quitarParqueaderosDiurnos = function (){
- console.log('Estoy dentro')
+ 
+contador2 = contador2 + 1;
 
-for (var i = 15; i <= 26; i++){
-    console.log(i);
-    var db = firebase.database().ref('parqueaderos/parqueadero_' + numero + '/');
-
-    var parqueadero = {
-        disponibilidad: 0
+ if(contador2 <= 1){
+    for (var i = 15; i <= 26; i++){
+        
+        var dbParking = firebase.database().ref('parqueaderos/parqueadero_' + i + '/');
+        $('#num_parqueadero' + i).hide();
+    
+        var parqueadero = {
+            disponibilidad: 0
+        }
+    
+        dbParking.update(parqueadero);    
     }
 
-    db.update(parqueadero);
+    for (var i = 36; i <= 47; i++){
+        
+        var dbParking = firebase.database().ref('parqueaderos/parqueadero_' + i + '/');
+        $('#num_parqueadero' + i).hide();
+    
+        var parqueadero = {
+            disponibilidad: 0
+        }
+    
+        dbParking.update(parqueadero);    
+    }
+ }
 
 }
 
-for (var i = 36; i <= 47; i++){
+var contador3 = 0;
 
-    var db = firebase.database().ref('parqueaderos/parqueadero_' + numero + '/');
-
-    var parqueadero = {
-        disponibilidad: 0
-    }
-
-    db.update(parqueadero);
-
-}
+var habilitarParqueaderosDiurnos = function (){
+ 
+    contador3 = contador3 + 1;
+    
+     if(contador3 <= 1){
+        for (var i = 15; i <= 26; i++){
+            
+            var dbParking = firebase.database().ref('parqueaderos/parqueadero_' + i + '/');
+            $('#num_parqueadero' + i).show();
+        
+            var parqueadero = {
+                disponibilidad: 0
+            }
+        
+            dbParking.update(parqueadero); 
+        }
+    
+        for (var i = 36; i <= 47; i++){
+            
+            var dbParking = firebase.database().ref('parqueaderos/parqueadero_' + i + '/');
+            $('#num_parqueadero' + i).show();
+        
+            var parqueadero = {
+                disponibilidad: 0
+            }
+        
+            dbParking.update(parqueadero);    
+            console.log(i);
+        }
+     }
 
     
+}
+
+var contador4 = 0;
+
+var ReiniciaParqueaderosDiurnos = function (){
+ 
+    contador4 = contador4 + 1;
+    
+     if(contador4 <= 1){
+        for (var i = 0; i <= 95; i++){
+            
+            var dbParking = firebase.database().ref('parqueaderos/parqueadero_' + i + '/');
+            $('#num_parqueadero' + i).show();
+        
+            var parqueadero = {
+                disponibilidad: 0
+            }
+        
+            dbParking.update(parqueadero); 
+        }   
+    }
 
 }
 
-// metodos que se cargan cuando la aplicacion load().
+
+
+// metodos que se cargan cuando la aplicacion carga.
 cargarCarros();
 getUser();

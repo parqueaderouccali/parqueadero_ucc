@@ -3,6 +3,10 @@ var db = firebase.database().ref('usuarios/');
 var dbNovedadesUCC = firebase.database().ref('novedades/UCC/');
 var dbNovedadesEstudiantes = firebase.database().ref('novedades/Estudiantes/');
 var dbPicoPlaca = firebase.database().ref('pico_placa/');
+var dbEnEsperaCarros = firebase.database().ref('en_espera/carros/');
+var dbEnEsperaMotos = firebase.database().ref('en_espera/motos/');
+var dbMotosEntrantes = firebase.database().ref('parqueadero_motos/entrantes/');
+var dbMotosSalientes = firebase.database().ref('parqueadero_motos/salientes/');
 var contador = 0;
 
 // inspecciona si un usuario esta logeado o no
@@ -186,9 +190,76 @@ var dataRealTime = function (){
 
 // permite cargar crear los vehiculos que se encuentra en espera para el ingreso a la Universidad
 $('#EsperaVehiculos').click(function(){
-    
+    var cantidadEnEspera = $('#vehiculosEspera').val();
+
+    if(cantidadEnEspera === ''){
+        alert('Ingrese una cantidad: ');
+    }else{
+        EnEsperaCarros(cantidadEnEspera);
+        $('#exampleModalCenter1').hide();
+        $('div').removeClass('modal-backdrop fade in');
+    }
 });
 
+// carga la informacion de la cantidad de vehiculos carros en espera
+dbEnEsperaCarros.on('value', function (snapshot) {
+
+    var valorEnEspera = snapshot.val();   
+    var dato = valorEnEspera.valor;
+    
+    console.log(dato);
+    $('#cantidadEnespera').html(dato);
+    
+}, function (error) {
+    console.log(error);
+});
+
+// Guarda el valor de la espera de vehiculos carros en la base de datos
+var EnEsperaCarros = function (valorHtml) {
+    
+    var enEspera = {
+        valor : valorHtml
+    }
+
+    dbEnEsperaCarros.update(enEspera);
+}
+
+// permite cargar crear los vehiculos motos que se encuentra en espera para el ingreso a la Universidad
+$('#EsperaVehiculosMotos').click(function(){
+    
+    var cantidadEnEspera = $('#vehiculosEsperaMotos').val();
+
+    if(cantidadEnEspera === ''){
+        alert('Ingrese una cantidad: ');
+    }else{
+        EnEsperaMotos(cantidadEnEspera);
+        $('#exampleModalCenter2').hide();
+        $('div').removeClass('modal-backdrop fade in');
+    }
+});
+
+// carga la informacion de la cantidad de vehiculos motos en espera
+dbEnEsperaMotos.on('value', function (snapshot) {
+
+    var valorEnEspera = snapshot.val();   
+    var dato = valorEnEspera.valor;
+    
+    console.log(dato);
+    $('#cantidadTotalesMoto').html(dato);
+    
+}, function (error) {
+    console.log(error);
+});
+
+// Guarda el valor de la espera de vehiculos motos en la base de datos
+var EnEsperaMotos = function (valorHtml) {
+    
+    var enEspera = {
+        valor : valorHtml
+    }
+
+    dbEnEsperaMotos.update(enEspera);
+}
 
 // Metodos para Novedades UCC donde se Inspecciona todos los cambios en la tabla y la actualiza 
 dbNovedadesUCC.on('value', function (snapshot) {
@@ -313,6 +384,29 @@ var getPicoPlaca = function (dia) {
 
 }
 
+// Obtiene la informacion registrada en los entrantes
+dbMotosEntrantes.on('value', function (snapshot) {
+
+    var valorEntrante = snapshot.val();   
+    var dato = valorEntrante.valor;
+    
+    $('#cantidadEntranteMoto').html(dato);
+    
+}, function (error) {
+    console.log(error);
+});
+
+// Obtiene la informacion registrada en los salientes
+dbMotosSalientes.on('value', function (snapshot) {
+
+    var valorSaliente = snapshot.val();   
+    var dato = valorSaliente.valor;
+    
+    $('#cantidadSalienteMoto').html(dato);
+    
+}, function (error) {
+    console.log(error);
+});
 
 // metodos que se inician una vez carga la aplicacion.
 semana();

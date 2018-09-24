@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Parking UCC</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <!-- Favicon icon -->
-    <link rel="shortcut icon" href="../../dist/img/iconos/favicon.ico" type="image/x-icon">
+  <!-- Favicon icon -->
+  <link rel="shortcut icon" href="../../dist/img/iconos/favicon.ico" type="image/x-icon">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../bower_components/alertifyjs/css/alertify.min.css">
-  <link rel="stylesheet" href="../../dist/css/Botones/ubicadosCanvas.css">
+  <link rel="stylesheet" href="../../dist/css/personalizado.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
+  <!-- AdminLTE Skins. Choose a skin from the css/skins" -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
   <!-- Morris chart -->
   <link rel="stylesheet" href="../../bower_components/morris.js/morris.css">
@@ -33,73 +29,74 @@
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-  <link rel="stylesheet" href="../../dist/css/personalizado.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
+<body class="hold-transition skin-blue sidebar-mini" onLoad="setInterval('semana()',100000);">
+<div class="wrapper">
 
-<body class="hold-transition skin-blue sidebar-mini" onLoad="setInterval('contador()',1000);">
-  <div class="wrapper">
-
-    <header class="main-header">
-      <!-- Logo -->
-      <a href="../../pages/login/principal.html" class="logo">
-        <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini">
-          <b>U</b>CC</span>
-        <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg">
-          <b>Parking </b> UCC</span>
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../../pages/login/principal.html" class="logo">
+     <!-- mini logo for sidebar mini 50x50 pixels -->
+     <span class="logo-mini"><b>A</b>LT</span>
+     <!-- logo for regular state and mobile devices -->
+     <span class="logo-lg"><b>Parking </b> UCC</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
       </a>
-      <!-- Header Navbar: style can be found in header.less -->
-      <nav class="navbar navbar-static-top">
-        <!-- Sidebar toggle button-->
-        <a href="#" class="sidebar-toggle" data-toggle="" role="button" >
-          <span class="sr-only">Toggle navigation</span>
-        </a>
-
-        <div class="navbar-custom-menu">
+      <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
-
+          
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <span class="hidden-xs nombresApellidos"></span>
               </a>
-
+  
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
                   <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                  <p class="nombresApellidos">
+  
+                  <p class="nombresApellidos"> 
                     <small>2018</small>
                   </p>
                 </li>
-
+  
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-left">
                     <a href="#" class="btn btn-default btn-flat">Perfil</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat" onclick="logout()">Cerrar Sesión</a>
+                    <a href="#" class="btn btn-default btn-flat" onClick="logout()" >Cerrar Sesión</a>
                   </div>
                 </li>
               </ul>
             </li>
-            <!-- Control Sidebar Toggle Button -->
-
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar">
+          <!-- Control Sidebar Toggle Button -->          
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
           <div class="pull-left image">
@@ -107,717 +104,161 @@
           </div>
           <div class="pull-left info">
             <p class="nombresApellidos"></p>
-            <a href="#">
-              <i class="fa fa-circle text-success"></i> En línea</a>
+            <a href="#"><i class="fa fa-circle text-success"></i> En línea</a>
           </div>
         </div>
         <!-- search form -->
-
+       
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Navegación Principal</li>
           <li class=" treeview">
             <a href="#">
-              <i class="fa fa-dashboard"></i>
-              <span>Parqueaderos</span>
+              <i class="fa fa-dashboard"></i> <span>Parqueaderos</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
-            <ul class="treeview-menu ">
-              <li class="active">
-                <a href="../../pages/parqueaderos/carros.html">
-                  <i class="fa fa-circle-o"></i> Carros</a>
-              </li>
-              <li class="active">
-                <li class="active">
-                  <a href="../../pages/parqueaderos/motos.html">
-                    <i class="fa fa-circle-o"></i> Motos</a>
-                </li>
+            <ul class="treeview-menu">
+              <li class="active"><a href="../../pages/parqueaderos/carros.html"><i class="fa fa-circle-o"></i> Carros</a></li>
+              <li class="active"><a href="../../pages/parqueaderos/motos.html"><i class="fa fa-circle-o"></i> Motos</a></li>              
             </ul>
-            </li>
-
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-laptop"></i>
-                <span>Administración</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-                  <a href="../../pages/administracion/consultar_usuarios.html">
-                    <i class="fa fa-circle-o"></i> Usuarios</a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> Novedades</a>
-                </li>
-                <li>
-                  <a href="../../pages/administracion/AdminPlacas.html">
-                    <i class="fa fa-circle-o"></i> Pico y Placa</a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> Parqueaderos Alternativos</a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> Cambio de Jornada</a>
-                </li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit"></i>
-                <span>Reportes</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-                  <a href="#">
-                    <i class="fa fa-circle-o"></i> Ingresos</a>
-                </li>
-              </ul>
-            </li>
-
+          </li>
+       
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-laptop"></i>
+              <span>Administración</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="../../pages/administracion/AdminUsuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Novedades</a></li>
+              <li><a href="../../pages/administracion/AdminPlacas.html"><i class="fa fa-circle-o"></i> Pico y Placa</a></li>
+              <li><a href="../../pages/administracion/AdminParqueaderosAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternativos</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i> Cambio de Jornada</a></li>            
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-edit"></i> <span>Reportes</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> Ingresos</a></li>
+            </ul>
+          </li>                           
         </ul>
       </section>
-      <!-- /.sidebar -->
-    </aside>
+    <!-- /.sidebar -->
+  </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
 
+    <!-- Main content -->
+    <section class="content">
+      
+      <!-- Inicio Estadisticas Motos -->
+      <div class="row ">         
+          <div class="row">            
+        <div class="col-lg-12 col-ms-6 col-xs-12">
+                 <h1 class="picoPlacaCss">
+             <b id="picoPlaca"> Ingreso y Salida de Motos</b>
+               </h1>
+              </div>               
+          </div>
+      </div>
+      <br>
+      <!-- Inicio Estadisticas Motos -->   
+       <br>
+      <!-- Inicio Graficos -->
 
-      <!-- Main content -->
-      <section class="content">
-        <div class="" style="padding: 0%;">
-          <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="dataTables_length" id="example1_length">
-                </div>
-              </div>
+      <div class="row ">
+         
+        <div class="col-lg-12 ">
+              <section class="col-lg-12 connectedSortable">
+        
+                  <div class="box box-primary">
+                    
+                    <div class="box-header">
+                        <div class="row ">     
+                            <div class="row">
+                                <div class="col-lg-12 col-ms-6 col-xs-12">
+                                   <h3  class="motosCss">
+                                      <b id=""> Total Espacio Disponible: </b>
+                                           <b>100</b>
+                                   </h3>
+                                </div>                  
+                            </div>
+                         </div>
+                    </div>
 
-            </div>
-            <div class="row ">
+                    <div class="box-body " id="">
                           
-                <img id="imagenParqueaderosCarro" src="../../dist/img/parqueaderos/ucc_carros_diurno.png" alt="" style="width:100%;">
-                
-                <div class="col-lg-12"> 
-                <div class="container-fluid">             
-                  <a href="" id="parqueadero1" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo1()">                 
-                    <img id="imagenCarro1" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado1" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero1">1</b>
-                  </a>
-                                
-                  <a href="" id="parqueadero2" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo2()">                 
-                    <img id="imagenCarro2" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado2" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero2">2</b>
-                  </a>
-                                
-                  <a href="" id="parqueadero3" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo3()">                 
-                    <img id="imagenCarro3" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado3" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero3">3</b>
-                  </a>
-                         
-                  <a href="" id="parqueadero4" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo4()">                 
-                    <img id="imagenCarro4" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado4" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero4">4</b>
-                  </a>
-               
-                  <a href="" id="parqueadero5" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo5()">                 
-                    <img id="imagenCarro5" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado5" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero5">5</b>
-                  </a>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3 class="text-center">Entrantes : <b> 60 </b></h3>
+                                <br>
+                                <canvas id="pieChart" style="height: 290px; width: 440px;" width="440" height="220"></canvas>
+  
+                            </div>
+                        
+                            <div class="col-lg-6">
+                              <h3 class="text-center">Saliente : <b> 40 </b></h3>
+                              <br>
+                                <canvas id="pieChart2" style="height: 290px; width: 440px;" width="440" height="220"></canvas> 
+  
+                            </div>
+                        </div>
+                                                                                     
+                    </div>
+                   
+                    <div class="box-footer">
+                   <br>
+                        <div class="row">
+                           <div class="col-lg-5 text-center ">
+                                    
+                              <button type="button" class="btn btn-block btn-success btn-lg" id="btn_aumentar">Agregar</button>
+                                                                
+                            </div>
+                        
+                            <div class="col-lg-2 text-center ">
+                                    
+                                <button type="button" class="btn btn-block btn-primary btn-lg" id="btn_reset">Reset</button>
+                                                                  
+                              </div>
 
-                  <a href="" id="parqueadero6" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo6()">                 
-                    <img id="imagenCarro6" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado6" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero6">6</b>
-                  </a>
-
-                  <a href="" id="parqueadero7" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo7()">                 
-                    <img id="imagenCarro7" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado7" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero7">7</b>
-                  </a>
-
-                  <a href="" id="parqueadero8" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo8()">                 
-                    <img id="imagenCarro8" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado8" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero8">8</b>
-                  </a>
-
-                  <a href="" id="parqueadero9" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo9()">                 
-                    <img id="imagenCarro9" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado9" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero9">9</b>
-                  </a>
-
-                  <a href="" id="parqueadero10" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo10()">                 
-                    <img id="imagenCarro10" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado10" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero10">10</b>
-                  </a>
-
-                  <a href="" id="parqueadero11" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo11()">                 
-                    <img id="imagenCarro11" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado11" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero11">11</b>
-                  </a>
-
-                  <a href="" id="parqueadero12" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo12()">                 
-                    <img id="imagenCarro12" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado12" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero12">12</b>
-                  </a>
-
-                  <a href="" id="parqueadero13" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo13()">                 
-                    <img id="imagenCarro13" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado13" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero13">13</b>
-                  </a>
-                              
-                  <a href="" id="parqueadero14" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo14()">                 
-                    <img id="imagenCarro14" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado14" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero14">14</b>
-                  </a>
-
-                  <a href="" id="parqueadero15" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo15()">                 
-                    <img id="imagenCarro15" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado15" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero15">15</b>
-                  </a>
-
-                  <a href="" id="parqueadero16" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo16()">                 
-                    <img id="imagenCarro16" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado16" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero16">16</b>
-                  </a>
-
-                  <a href="" id="parqueadero17" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo17()">                 
-                    <img id="imagenCarro17" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado17" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero17">17</b>
-                  </a>
-
-                  <a href="" id="parqueadero18" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo18()">                 
-                    <img id="imagenCarro18" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado18" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero18">18</b>
-                  </a>
-
-                  <a href="" id="parqueadero19" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo19()">                 
-                    <img id="imagenCarro19" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado19" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero19">19</b>
-                  </a>
-
-                  <a href="" id="parqueadero20" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo20()">                 
-                    <img id="imagenCarro20" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado20" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero20">20</b>
-                  </a>
-
-                  <a href="" id="parqueadero21" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo21()">                 
-                    <img id="imagenCarro21" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado21" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero21">21</b>
-                  </a>
-
-                  <a href="" id="parqueadero22" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo22()">                 
-                    <img id="imagenCarro22" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado22" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero22">22</b>
-                  </a>
-
-                  <a href="" id="parqueadero23" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo23()">                 
-                    <img id="imagenCarro23" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado23" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero23">23</b>
-                  </a>
-
-                  <a href="" id="parqueadero24" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo24()">                 
-                    <img id="imagenCarro24" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado24" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero24">24</b>
-                  </a>
-                
-                  <a href="" id="parqueadero25" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo25()">                 
-                    <img id="imagenCarro25" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado25" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero25">25</b>
-                  </a>
-                
-                  <a href="" id="parqueadero26" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo26()">                 
-                    <img id="imagenCarro26" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                    <img id="imagenInhabilitado26" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                    <b id="num_parqueadero26">26</b>
-                  </a>                
-                              
-                  <a href="" id="parqueadero27" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo27()">
-                    <b id="num_parqueadero27" >27</b>
-                    <img id="imagenCarro27" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                    <img id="imagenInhabilitado27" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                  </a>
+                            <div class="col-lg-5 text-center">
                              
-                  <a href="" id="parqueadero28" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo28()">
-                    <b id="num_parqueadero28" >28</b>
-                    <img id="imagenCarro28" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                    <img id="imagenInhabilitado28" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                  </a>
-
-                  <a href="" id="parqueadero29" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo29()">
-                    <b id="num_parqueadero29" >29</b>
-                    <img id="imagenCarro29" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                    <img id="imagenInhabilitado29" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>                                   
-                  </a>
-
-                  <a href="" id="parqueadero30" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo30()">
-                    <b id="num_parqueadero30" >30</b>
-                    <img id="imagenCarro30" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                    <img id="imagenInhabilitado30" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                  </a>
-
-                <a href="" id="parqueadero31" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo31()">
-                  <b id="num_parqueadero31" >31</b>
-                  <img id="imagenCarro31" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado31" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero32" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo32()">
-                  <b id="num_parqueadero32" >32</b>
-                  <img id="imagenCarro32" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado32" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero33" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo33()">
-                  <b id="num_parqueadero33" >33</b>
-                  <img id="imagenCarro33" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado33" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero34" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo34()">
-                  <b id="num_parqueadero34" >34</b>
-                  <img id="imagenCarro34" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado34" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero35" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo35()">
-                  <b id="num_parqueadero35" >35</b>
-                  <img id="imagenCarro35" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado35" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero36" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo36()">
-                  <b id="num_parqueadero36" >36</b>
-                  <img id="imagenCarro36" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado36" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero37" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo37()">
-                  <b id="num_parqueadero37" >37</b>
-                  <img id="imagenCarro37" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado37" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero38" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo38()">
-                  <b id="num_parqueadero38" >38</b>
-                  <img id="imagenCarro38" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado38" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero39" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo39()">
-                  <b id="num_parqueadero39" >39</b>
-                  <img id="imagenCarro39" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado39" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero40" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo40()">
-                  <b id="num_parqueadero40" >40</b>
-                  <img id="imagenCarro40" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado40" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero41" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo41()">
-                  <b id="num_parqueadero41" >41</b>
-                  <img id="imagenCarro41" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado41" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero42" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo42()">
-                  <b id="num_parqueadero42" >42</b>
-                  <img id="imagenCarro42" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado42" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero43" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo43()">
-                  <b id="num_parqueadero43" >43</b>
-                  <img id="imagenCarro43" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado43" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero44" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo44()">
-                  <b id="num_parqueadero44" >44</b>
-                  <img id="imagenCarro44" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado44" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero45" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo45()">
-                  <b id="num_parqueadero45" >45</b>
-                  <img id="imagenCarro45" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado45" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero46" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo46()">
-                  <b id="num_parqueadero46" >46</b>
-                  <img id="imagenCarro46" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado46" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero47" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo47()">
-                  <b id="num_parqueadero47" >47</b>
-                  <img id="imagenCarro47" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado47" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero48" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo48()">                 
-                  <img id="imagenCarro48" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado48" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero48">48</b>
-                </a>
-                              
-                <a href="" id="parqueadero49" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo49()">                 
-                  <img id="imagenCarro49" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado49" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero49">49</b>
-                </a>
-                              
-                <a href="" id="parqueadero50" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo50()">                 
-                  <img id="imagenCarro50" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado50" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero50">50</b>
-                </a>
-                       
-                <a href="" id="parqueadero51" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo51()">                 
-                  <img id="imagenCarro51" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado51" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero51">51</b>
-                </a>
-             
-                <a href="" id="parqueadero52" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo52()">                 
-                  <img id="imagenCarro52" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado52" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero52">52</b>
-                </a>
-
-                <a href="" id="parqueadero53" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo53()">                 
-                  <img id="imagenCarro53" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado53" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero53">53</b>
-                </a>
-
-                <a href="" id="parqueadero54" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo54()">                 
-                  <img id="imagenCarro54" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado54" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero54">54</b>
-                </a>
-
-                <a href="" id="parqueadero55" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo55()">
-                  <b id="num_parqueadero55" >55</b>
-                  <img id="imagenCarro55" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado55" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero56" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo56()">
-                  <b id="num_parqueadero56" >56</b>
-                  <img id="imagenCarro56" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado56" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero57" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo57()">
-                  <b id="num_parqueadero57" >57</b>
-                  <img id="imagenCarro57" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado57" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero58" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo58()">
-                  <b id="num_parqueadero58" >58</b>
-                  <img id="imagenCarro58" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado58" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero59" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo59()">
-                  <b id="num_parqueadero59" >59</b>
-                  <img id="imagenCarro59" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado59" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero60" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo60()">
-                  <b id="num_parqueadero60" >60</b>
-                  <img id="imagenCarro60" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado60" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero61" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo61()">                 
-                  <img id="imagenCarro61" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado61" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero61">61</b>
-                </a>
-
-                <a href="" id="parqueadero62" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo62()">                 
-                  <img id="imagenCarro62" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado62" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero62">62</b>
-                </a>
-
-                <a href="" id="parqueadero63" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo63()">                 
-                  <img id="imagenCarro63" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado63" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero63">63</b>
-                </a>
-
-                <a href="" id="parqueadero64" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo64()">                 
-                  <img id="imagenCarro64" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado64" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero64">64</b>
-                </a>
-
-                <a href="" id="parqueadero65" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo65()">                 
-                  <img id="imagenCarro65" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado65" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero65">65</b>
-                </a>
-
-                <a href="" id="parqueadero66" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo66()">
-                  <b id="num_parqueadero66" >66</b>
-                  <img id="imagenCarro66" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado66" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero67" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo67()">
-                  <b id="num_parqueadero67" >67</b>
-                  <img id="imagenCarro67" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado67" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero68" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo68()">
-                  <b id="num_parqueadero68" >68</b>
-                  <img id="imagenCarro68" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado68" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero69" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo69()">
-                  <b id="num_parqueadero69" >69</b>
-                  <img id="imagenCarro69" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado69" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero70" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo70()">
-                  <b id="num_parqueadero70" >70</b>
-                  <img id="imagenCarro70" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado70" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero71" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo71()">
-                  <b id="num_parqueadero71" >71</b>
-                  <img id="imagenCarro71" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado71" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero72" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo72()">                 
-                  <img id="imagenCarro72" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado72" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero72">72</b>
-                </a>
-
-                <a href="" id="parqueadero73" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo73()">                 
-                  <img id="imagenCarro73" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado73" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero73">73</b>
-                </a>
-
-                <a href="" id="parqueadero74" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo74()">                 
-                  <img id="imagenCarro74" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado74" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero74">74</b>
-                </a>
-
-                <a href="" id="parqueadero75" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo75()">                 
-                  <img id="imagenCarro75" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado75" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero75">75</b>
-                </a>
-
-                <a href="" id="parqueadero76" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo76()">                 
-                  <img id="imagenCarro76" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado76" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero76">76</b>
-                </a>
-
-                <a href="" id="parqueadero77" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo77()">                 
-                  <img id="imagenCarro77" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>
-                  <img id="imagenInhabilitado77" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>
-                  <b id="num_parqueadero77">77</b>
-                </a>
-
-                <a href="" id="parqueadero78" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo78()">
-                  <b id="num_parqueadero78" >78</b>
-                  <img id="imagenCarro78" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado78" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero79" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo79()">
-                  <b id="num_parqueadero79" >79</b>
-                  <img id="imagenCarro79" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado79" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero80" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo80()">
-                  <b id="num_parqueadero80" >80</b>
-                  <img id="imagenCarro80" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado80" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero81" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo81()">
-                  <b id="num_parqueadero81" >81</b>
-                  <img id="imagenCarro81" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado81" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero82" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo82()">
-                  <b id="num_parqueadero82" >82</b>
-                  <img id="imagenCarro82" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado82" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero83" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo83()">
-                  <b id="num_parqueadero83" >83</b>
-                  <img id="imagenCarro83" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado83" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero84" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo84()">
-                  <b id="num_parqueadero84" >84</b>
-                  <img id="imagenCarro84" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado84" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero85" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo85()">
-                  <b id="num_parqueadero85" >85</b>
-                  <img id="imagenCarro85" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado85" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero86" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo86()">
-                  <b id="num_parqueadero86" >86</b>
-                  <img id="imagenCarro86" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado86" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero87" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo87()">
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero87" >87</b>
-                  </div>
-                  <img id="imagenCarro87" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>   
-                  <img id="imagenInhabilitado87" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>                                 
-                </a>
-
-                <a href="" id="parqueadero88" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo88()">                
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero88" >88</b> 
-                  </div>
-                  <img id="imagenCarro88" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>   
-                  <img id="imagenInhabilitado88" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>                                
-                </a>
-
-                <a href="" id="parqueadero89" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo89()">                  
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero89" >89</b>
-                  </div>
-                  <img id="imagenCarro89" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>   
-                  <img id="imagenInhabilitado89" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>                                                   
-                </a>
-
-                <a href="" id="parqueadero90" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo90()">                  
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero90" >90</b>
-                  </div>                  
-                  <img id="imagenCarro90" src="../../dist/img/parqueaderos/carro1.png" alt="" hidden>   
-                  <img id="imagenInhabilitado90" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                  
-                </a>
-
-                <a href="" id="parqueadero91" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo91()">                  
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero91" >91</b>
-                  </div>  
-                  <img id="imagenCarro91" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado91" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero92" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo92()">                  
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero92" >92</b>
-                  </div> 
-                  <img id="imagenCarro92" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado92" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero93" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo93()">                  
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero93" >93</b>
-                  </div>
-                  <img id="imagenCarro93" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado93" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero94" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo94()">                  
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero94" >94</b>
-                  </div>
-                  <img id="imagenCarro94" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>   
-                  <img id="imagenInhabilitado94" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>               
-                </a>
-
-                <a href="" id="parqueadero95" class="text-black" data-toggle="modal" data-target="#exampleModalCenter" onclick="numeroParqueo95()">
-                  <div style="height: 50%; text-align: center" >
-                    <b id="num_parqueadero95" >95</b>
-                  </div>
-                  <img id="imagenCarro95" src="../../dist/img/parqueaderos/carro2.png" alt="" hidden>                     
-                  <img id="imagenInhabilitado95" src="../../dist/img/parqueaderos/prohibido.png" alt="" hidden>              
-                </a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-5">
-                <div class="dataTables_info paginas" id="example1_info" role="status" aria-live="polite">
-
-                </div>
-              </div>
-            </div>
-          
-        </div>
-        </div>
-
-      </section>
-      <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
+                                <button type="button" class="btn btn-block btn-danger btn-lg" id="btn_disminuir">Desocupar</button>
+                                                              
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                  </div>          
+
+              </section>
+          </div>  
+     
+      </div>
+
+
+      <!-- /.row (main row) -->
+    </section>
+    <!-- /.content -->
+  </div>
+
+
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
       <div class="pull-right hidden-xs">
         <b>Version</b> 1.0.0
       </div>
@@ -825,100 +266,246 @@
         <a href="">Universidad Cooperativa de Colombia sede cali</a>.</strong> All rights reserved.
     </footer>
 
-    <!-- /.control-sidebar -->
-    <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-  </div>
-  <!-- ./wrapper -->
 
-  <!-- popup de asignacion, quitar, inhabilitar-->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title titulo" id="exampleModalLongTitle">Acciones</h5>
-          </button>
-        </div>
-        <div class="modal-body">
 
-          <div class="form-group row">
-            <label for="example-text-input" class="col-xs-4 col-form-label form-control-label">N° de Parqueadero :</label>
-            <div class="col-sm-4">
-              <input class="form-control text-center" type="text" id="numero_parqueadero" disabled>
-            </div>
+<!-- popup de modificacion de vehiculos en espera-->
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Vehiculos en Espera</h3>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
+          <div class="col-sm-12">
+            <input id="vehiculosEspera" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
           </div>
-
-          <div class="form-group row">
-            <div class="col-sm-12">
-              <button id="btn_asignar" class="btn btn-block btn-success btn-lg" onclick="btnAsignar()">Asignar</button>
-              <button id="btn_desocupar" class="btn btn-block btn-warning btn-lg" onclick="btnDesocupar()">Desocupar</button>              
-              <button id="btn_habilitar" class="btn btn-block btn-info btn-lg" onclick="btnHabilitar()">Habilitar</button>
-              <button id="btn_inhabilitar" class="btn btn-block btn-danger btn-lg" onclick="btnInhabilitar()">Inhabilitar</button>
-            </div>
-          </div>
-
         </div>
 
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+        <button type="button" class="btn btn-primary" id="EsperaVehiculos">Editar</button>
+      </div>
     </div>
   </div>
+</div>
 
 
-  <!-- jQuery 3 -->
-  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-  <!-- jQuery UI 1.11.4 -->
-  <script src="../../bower_components/jquery-ui/jquery-ui.min.js"></script>
-  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-  <script>
-    $.widget.bridge('uibutton', $.ui.button);
-  </script>
-  <!-- Bootstrap 3.3.7 -->
-  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- Morris.js charts -->
-  <script src="../../bower_components/raphael/raphael.min.js"></script>
-  <script src="../../bower_components/morris.js/morris.min.js"></script>
-  <!-- Sparkline -->
-  <script src="../../bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-  <!-- jvectormap -->
-  <script src="../../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-  <script src="../../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-  <!-- jQuery Knob Chart -->
-  <script src="../../bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-  <!-- daterangepicker -->
-  <script src="../../bower_components/moment/min/moment.min.js"></script>
-  <script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-  <!-- datepicker -->
-  <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-  <!-- Bootstrap WYSIHTML5 -->
-  <script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-  <!-- Slimscroll -->
-  <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-  <!-- FastClick -->
-  <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-  <!-- AdminLTE App -->
-  <script src="../../dist/js/adminlte.min.js"></script>
-  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!-- popup de modificacion del total de capacidad-->
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Capacidad de Espacios para Moto</h3>
+        </button>
+      </div>
+      <div class="modal-body">
 
-  <!-- AdminLTE for demo purposes -->
-  <script src="../../dist/js/demo.js"></script>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
+          <div class="col-sm-12">
+            <input id="vehiculosEsperaMotos" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
+          </div>
+        </div>
 
-  <script src="../../bower_components/alertifyjs/alertify.min.js"></script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+        <button type="button" class="btn btn-primary" id="EsperaVehiculosMotos">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDRzqDtc6CpVItDGqxyFA8W0WxV1hkV18k",
-      authDomain: "parqueaderouccali-8a09c.firebaseapp.com",
-      databaseURL: "https://parqueaderouccali-8a09c.firebaseio.com",
-      projectId: "parqueaderouccali-8a09c",
-      storageBucket: "parqueaderouccali-8a09c.appspot.com",
-      messagingSenderId: "811609179419"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="../../dist/js/pages/parqueaderos/carros.js"></script>
+
+
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../../bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="../../bower_components/raphael/raphael.min.js"></script>
+<script src="../../bower_components/morris.js/morris.min.js"></script>
+<script src="../../bower_components/chart.js/Chart.js"></script>
+<!-- Sparkline -->
+<script src="../../bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="../../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../../bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../../bower_components/moment/min/moment.min.js"></script>
+<script src="../../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../../dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDRzqDtc6CpVItDGqxyFA8W0WxV1hkV18k",
+    authDomain: "parqueaderouccali-8a09c.firebaseapp.com",
+    databaseURL: "https://parqueaderouccali-8a09c.firebaseio.com",
+    projectId: "parqueaderouccali-8a09c",
+    storageBucket: "parqueaderouccali-8a09c.appspot.com",
+    messagingSenderId: "811609179419"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="../../dist/js/pages/parqueaderos/motos.js"></script>
+
+<script>
+    $(function () {
+   
+      var aumentar = 0;
+      var disminuir = 100;
+
+    var graficaIngreso = function (aumentar, disminuir){
+       
+      var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+       var pieChart       = new Chart(pieChartCanvas)
+       var PieData        = [
+          {
+            value    : aumentar,
+            color    : '#00A65A',
+            highlight: '#00A65A',
+            label    : 'Ingresos'
+          },
+          {
+            value    : disminuir,
+            color    : '#d2d6de',
+            highlight: '#d2d6de',
+            label    : 'Salidas'
+          }
+        ]
+        var pieOptions     = {
+          //Boolean - Whether we should show a stroke on each segment
+          segmentShowStroke    : true,
+          //String - The colour of each segment stroke
+          segmentStrokeColor   : '#fff',
+          //Number - The width of each segment stroke
+          segmentStrokeWidth   : 2,
+          //Number - The percentage of the chart that we cut out of the middle
+          percentageInnerCutout: 50, // This is 0 for Pie charts
+          //Number - Amount of animation steps
+          animationSteps       : 100,
+          //Boolean - Whether we animate the rotation of the Doughnut
+          animateRotate        : false,
+          //Boolean - Whether we animate scaling the Doughnut from the centre
+          animateScale         : false,
+          //Boolean - whether to make the chart responsive to window resizing
+          responsive           : true,
+          // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+          maintainAspectRatio  : true,
+          //String - A legend template
+          legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+        }
+        //Create pie or douhnut chart
+        // You can switch between pie and douhnut using the method below.
+        pieChart.Doughnut(PieData, pieOptions)
+
+    }
+
+    var graficaSalida = function (aumentar, disminuir){
+       
+       var pieChartCanvas = $('#pieChart2').get(0).getContext('2d')
+        var pieChart       = new Chart(pieChartCanvas)
+        var PieData        = [
+           {
+             value    : disminuir,
+             color    : '#f56954',
+             highlight: '#f56954',
+             label    : 'Ingresos'
+           },
+           {
+             value    : aumentar,
+             color    : '#d2d6de',
+             highlight: '#d2d6de',
+             label    : 'Salidas'
+           }
+         ]
+         var pieOptions     = {
+           //Boolean - Whether we should show a stroke on each segment
+           segmentShowStroke    : true,
+           //String - The colour of each segment stroke
+           segmentStrokeColor   : '#fff',
+           //Number - The width of each segment stroke
+           segmentStrokeWidth   : 2,
+           //Number - The percentage of the chart that we cut out of the middle
+           percentageInnerCutout: 50, // This is 0 for Pie charts
+           //Number - Amount of animation steps
+           animationSteps       : 100,
+           //Boolean - Whether we animate the rotation of the Doughnut
+           animateRotate        : false,
+           //Boolean - Whether we animate scaling the Doughnut from the centre
+           animateScale         : false,
+           //Boolean - whether to make the chart responsive to window resizing
+           responsive           : true,
+           // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+           maintainAspectRatio  : true,
+           //String - A legend template
+           legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+         }
+         //Create pie or douhnut chart
+         // You can switch between pie and douhnut using the method below.
+         pieChart.Doughnut(PieData, pieOptions)
+ 
+     }
+
+      graficaIngreso();
+      graficaSalida();
+
+
+
+
+$('#btn_aumentar').click(function(){
+
+      aumentar = aumentar + 1;
+      disminuir = disminuir - 1;
+
+    graficaIngreso(aumentar,disminuir);
+
+});
+
+$('#btn_reset').click(function(){
+
+
+});
+
+$('#btn_disminuir').click(function(){
+
+  aumentar = aumentar + 1;
+
+  graficaSalida(aumentar,disminuir);
+
+});
+
+
+    })
+</script>
+
 </body>
-
 </html>

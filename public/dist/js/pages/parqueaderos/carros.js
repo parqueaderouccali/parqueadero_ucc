@@ -881,7 +881,7 @@ var ReiniciaParqueaderosDiurnos = function (){
 }
 
 
-
 // metodos que se cargan cuando la aplicacion carga.
 cargarCarros();
 getUser();
+graficaAumento();

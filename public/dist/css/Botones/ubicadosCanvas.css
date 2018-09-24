@@ -1031,6 +1031,11 @@
 #parqueadero94 {position:absolute;left: 72.4%;bottom:183px;}    
 #parqueadero95 {position:absolute;left: 78.3%;bottom:183px;} 
 
+b.login-page,.register-page{
+    background-image: url('../img/iconos/ucc_cali_iphone.JPG' ) no-repeat;
+}
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {

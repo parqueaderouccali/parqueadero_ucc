@@ -17,3 +17,10 @@
 .size{
     width: 330px;
   }
+
+  .motosCss{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;    
+    margin-bottom: 5px;
+  }

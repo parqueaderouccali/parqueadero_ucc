@@ -4,9 +4,8 @@ var dbNovedadesUCC = firebase.database().ref('novedades/UCC/');
 var dbNovedadesEstudiantes = firebase.database().ref('novedades/Estudiantes/');
 var dbPicoPlaca = firebase.database().ref('pico_placa/');
 var dbEnEsperaCarros = firebase.database().ref('en_espera/carros/');
-var dbEnEsperaMotos = firebase.database().ref('en_espera/motos/');
-var dbMotosEntrantes = firebase.database().ref('parqueadero_motos/entrantes/');
-var dbMotosSalientes = firebase.database().ref('parqueadero_motos/salientes/');
+var dbMotosEntrantes = firebase.database().ref('parqueadero_motos/ocupados/');
+var dbMotosSalientes = firebase.database().ref('parqueadero_motos/desocupados/');
 var contador = 0;
 
 // inspecciona si un usuario esta logeado o no
@@ -239,7 +238,7 @@ $('#EsperaVehiculosMotos').click(function(){
 });
 
 // carga la informacion de la cantidad de vehiculos motos en espera
-dbEnEsperaMotos.on('value', function (snapshot) {
+dbMotosSalientes.on('value', function (snapshot) {
 
     var valorEnEspera = snapshot.val();   
     var dato = valorEnEspera.valor;
@@ -258,7 +257,7 @@ var EnEsperaMotos = function (valorHtml) {
         valor : valorHtml
     }
 
-    dbEnEsperaMotos.update(enEspera);
+    dbMotosSalientes.update(enEspera);
 }
 
 // Metodos para Novedades UCC donde se Inspecciona todos los cambios en la tabla y la actualiza 
@@ -384,29 +383,34 @@ var getPicoPlaca = function (dia) {
 
 }
 
-// Obtiene la informacion registrada en los entrantes
+// Obtiene la informacion registrada en los entrantes/ocupados
 dbMotosEntrantes.on('value', function (snapshot) {
 
     var valorEntrante = snapshot.val();   
     var dato = valorEntrante.valor;
     
     $('#cantidadEntranteMoto').html(dato);
+
+    // Obtiene la informacion registrada en los salientes/desocupados
+    dbMotosSalientes.on('value', function (snapshot) {
+
+        var valorSaliente = snapshot.val();   
+        
+        var totalEspacios = valorSaliente.valor - dato;
+    
+        $('#cantidadSalienteMoto').html(totalEspacios);
+        
+    }, function (error) {
+        console.log(error);
+    });
+
     
 }, function (error) {
     console.log(error);
 });
 
-// Obtiene la informacion registrada en los salientes
-dbMotosSalientes.on('value', function (snapshot) {
 
-    var valorSaliente = snapshot.val();   
-    var dato = valorSaliente.valor;
-    
-    $('#cantidadSalienteMoto').html(dato);
-    
-}, function (error) {
-    console.log(error);
-});
+
 
 // metodos que se inician una vez carga la aplicacion.
 semana();

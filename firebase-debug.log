@@ -1,0 +1,28 @@
+[debug] [2018-10-01T02:06:04.210Z] ----------------------------------------------------------------------
+[debug] [2018-10-01T02:06:04.214Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\CRODRIGUEZ\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-01T02:06:04.215Z] CLI Version:   4.2.1
+[debug] [2018-10-01T02:06:04.215Z] Platform:      win32
+[debug] [2018-10-01T02:06:04.215Z] Node Version:  v8.11.4
+[debug] [2018-10-01T02:06:04.216Z] Time:          Sun Sep 30 2018 21:06:04 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-10-01T02:06:04.216Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-01T02:06:04.230Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-01T02:06:04.232Z] > authorizing via signed-in user
+[debug] [2018-10-01T02:06:04.235Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-10-01T02:06:04.235Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-10-01T02:06:04.749Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-01T02:06:04.765Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/parqueaderouccali-8a09c  
+ 
+[debug] [2018-10-01T02:06:05.682Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-01T02:06:05.684Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parqueaderouccali-8a09c  
+ 
+[debug] [2018-10-01T02:06:06.636Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\TESIS\parqueadero_ucc'...
+[info] 
+[debug] [2018-10-01T02:06:06.639Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/811609179419/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-01T02:06:07.394Z] <<< HTTP RESPONSE 200
+[info] i  hosting[parqueaderouccali-8a09c]: Serving hosting files from: public
+[info] +  hosting[parqueaderouccali-8a09c]: Local server: http://localhost:5000

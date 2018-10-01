@@ -40,7 +40,7 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini" onLoad="setInterval('semana()',100000);">
+<body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -177,7 +177,7 @@
       </div>
       <br>
       <!-- Inicio Estadisticas Motos -->   
-       <br>
+
       <!-- Inicio Graficos -->
 
       <div class="row ">
@@ -193,7 +193,7 @@
                                 <div class="col-lg-12 col-ms-6 col-xs-12">
                                    <h3  class="motosCss">
                                       <b id=""> Total Espacio Disponible: </b>
-                                           <b>100</b>
+                                           <b id="txt_disponibilidad_total">0</b>
                                    </h3>
                                 </div>                  
                             </div>
@@ -204,18 +204,25 @@
                           
                         <div class="row">
                             <div class="col-lg-6">
-                                <h3 class="text-center">Entrantes : <b> 60 </b></h3>
-                                <br>
-                                <canvas id="pieChart" style="height: 290px; width: 440px;" width="440" height="220"></canvas>
-  
+                                <h3 class="text-center">Ocupados : <b id="txt_ocupados"> 0 </b></h3>                                
                             </div>
                         
                             <div class="col-lg-6">
-                              <h3 class="text-center">Saliente : <b> 40 </b></h3>
-                              <br>
-                                <canvas id="pieChart2" style="height: 290px; width: 440px;" width="440" height="220"></canvas> 
-  
+                              <h3 class="text-center">Desocupados : <b id="txt_desocupados" > 0 </b></h3>                              
                             </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-lg-4">
+                          </div>
+
+                          <div class="col-lg-4">               
+                              <canvas id="pieChart" width="100" height="100"></canvas> 
+                          </div>
+
+                          <div class="col-lg-4">
+                          </div>
+
                         </div>
                                                                                      
                     </div>
@@ -225,7 +232,7 @@
                         <div class="row">
                            <div class="col-lg-5 text-center ">
                                     
-                              <button type="button" class="btn btn-block btn-success btn-lg" id="btn_aumentar">Agregar</button>
+                              <button type="button" class="btn btn-block btn-danger btn-lg" id="btn_aumentar">Ocupar</button>
                                                                 
                             </div>
                         
@@ -237,7 +244,7 @@
 
                             <div class="col-lg-5 text-center">
                              
-                                <button type="button" class="btn btn-block btn-danger btn-lg" id="btn_disminuir">Desocupar</button>
+                                <button type="button" class="btn btn-block btn-success btn-lg" id="btn_disminuir">Desocupar</button>
                                                               
                             </div>
                         </div>
@@ -376,136 +383,5 @@
   firebase.initializeApp(config);
 </script>
 <script src="../../dist/js/pages/parqueaderos/motos.js"></script>
-
-<script>
-    $(function () {
-   
-      var aumentar = 0;
-      var disminuir = 100;
-
-    var graficaIngreso = function (aumentar, disminuir){
-       
-      var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-       var pieChart       = new Chart(pieChartCanvas)
-       var PieData        = [
-          {
-            value    : aumentar,
-            color    : '#00A65A',
-            highlight: '#00A65A',
-            label    : 'Ingresos'
-          },
-          {
-            value    : disminuir,
-            color    : '#d2d6de',
-            highlight: '#d2d6de',
-            label    : 'Salidas'
-          }
-        ]
-        var pieOptions     = {
-          //Boolean - Whether we should show a stroke on each segment
-          segmentShowStroke    : true,
-          //String - The colour of each segment stroke
-          segmentStrokeColor   : '#fff',
-          //Number - The width of each segment stroke
-          segmentStrokeWidth   : 2,
-          //Number - The percentage of the chart that we cut out of the middle
-          percentageInnerCutout: 50, // This is 0 for Pie charts
-          //Number - Amount of animation steps
-          animationSteps       : 100,
-          //Boolean - Whether we animate the rotation of the Doughnut
-          animateRotate        : false,
-          //Boolean - Whether we animate scaling the Doughnut from the centre
-          animateScale         : false,
-          //Boolean - whether to make the chart responsive to window resizing
-          responsive           : true,
-          // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-          maintainAspectRatio  : true,
-          //String - A legend template
-          legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-        }
-        //Create pie or douhnut chart
-        // You can switch between pie and douhnut using the method below.
-        pieChart.Doughnut(PieData, pieOptions)
-
-    }
-
-    var graficaSalida = function (aumentar, disminuir){
-       
-       var pieChartCanvas = $('#pieChart2').get(0).getContext('2d')
-        var pieChart       = new Chart(pieChartCanvas)
-        var PieData        = [
-           {
-             value    : disminuir,
-             color    : '#f56954',
-             highlight: '#f56954',
-             label    : 'Ingresos'
-           },
-           {
-             value    : aumentar,
-             color    : '#d2d6de',
-             highlight: '#d2d6de',
-             label    : 'Salidas'
-           }
-         ]
-         var pieOptions     = {
-           //Boolean - Whether we should show a stroke on each segment
-           segmentShowStroke    : true,
-           //String - The colour of each segment stroke
-           segmentStrokeColor   : '#fff',
-           //Number - The width of each segment stroke
-           segmentStrokeWidth   : 2,
-           //Number - The percentage of the chart that we cut out of the middle
-           percentageInnerCutout: 50, // This is 0 for Pie charts
-           //Number - Amount of animation steps
-           animationSteps       : 100,
-           //Boolean - Whether we animate the rotation of the Doughnut
-           animateRotate        : false,
-           //Boolean - Whether we animate scaling the Doughnut from the centre
-           animateScale         : false,
-           //Boolean - whether to make the chart responsive to window resizing
-           responsive           : true,
-           // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-           maintainAspectRatio  : true,
-           //String - A legend template
-           legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
-         }
-         //Create pie or douhnut chart
-         // You can switch between pie and douhnut using the method below.
-         pieChart.Doughnut(PieData, pieOptions)
- 
-     }
-
-      graficaIngreso();
-      graficaSalida();
-
-
-
-
-$('#btn_aumentar').click(function(){
-
-      aumentar = aumentar + 1;
-      disminuir = disminuir - 1;
-
-    graficaIngreso(aumentar,disminuir);
-
-});
-
-$('#btn_reset').click(function(){
-
-
-});
-
-$('#btn_disminuir').click(function(){
-
-  aumentar = aumentar + 1;
-
-  graficaSalida(aumentar,disminuir);
-
-});
-
-
-    })
-</script>
-
 </body>
 </html>

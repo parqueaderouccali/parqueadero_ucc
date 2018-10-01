@@ -1,6 +1,10 @@
 
 // instancia de firebase que apunta al nodo usuarios
 var db = firebase.database().ref('usuarios/');
+var dbIngresos = firebase.database().ref('parqueadero_motos/ocupados/valor')
+var dbSaliente = firebase.database().ref('parqueadero_motos/desocupados/valor')
+var dbOcupados = firebase.database().ref('parqueadero_motos/ocupados')
+var dbDesocupados = firebase.database().ref('parqueadero_motos/desocupados')
 
 // inspecciona si un usuario esta logeado o no
 var getUser = function () {
@@ -44,5 +48,133 @@ var logout = function () {
 
 }
 
+$(function () {
+   
+    var aumentar = 0;
+    var disminuir = 100;
+
+  var graficaIngreso = function (aumentar, disminuir){
+     
+    var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+     var pieChart       = new Chart(pieChartCanvas)
+     var PieData        = [
+        {
+          value    : aumentar,
+          color    : '#F56954',
+          highlight: '#F56954',
+          label    : 'Ocupados'
+        },
+        {
+          value    : disminuir,
+          color    : '#00A65A',
+          highlight: '#00A65A',         
+          label    : 'Desocupados'
+        }
+      ]
+      var pieOptions     = {
+        //Boolean - Whether we should show a stroke on each segment
+        segmentShowStroke    : true,
+        //String - The colour of each segment stroke
+        segmentStrokeColor   : '#fff',
+        //Number - The width of each segment stroke
+        segmentStrokeWidth   : 2,
+        //Number - The percentage of the chart that we cut out of the middle
+        percentageInnerCutout: 50, // This is 0 for Pie charts
+        //Number - Amount of animation steps
+        animationSteps       : 100,
+        //Boolean - Whether we animate the rotation of the Doughnut
+        animateRotate        : false,
+        //Boolean - Whether we animate scaling the Doughnut from the centre
+        animateScale         : false,
+        //Boolean - whether to make the chart responsive to window resizing
+        responsive           : true,
+        // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+        maintainAspectRatio  : true,
+        //String - A legend template
+        legendTemplate       : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
+      }
+      //Create pie or douhnut chart
+      // You can switch between pie and douhnut using the method below.
+      pieChart.Doughnut(PieData, pieOptions)
+
+  }
+
+    graficaIngreso();
+
+var datosEntrada = 0;
+var datosSalida = 0;
+
+// carga la informacion de la cantidad de veces que se carque la infomracion
+dbIngresos.on('value', function (snapshot) {
+
+    var valorIngreso = snapshot.val();
+
+    datosEntrada = parseInt(valorIngreso);
+    
+    $('#txt_ocupados').html(datosEntrada)
+
+    dbSaliente.on('value', function (snapshot){
+        
+        var valorSalida = snapshot.val();   
+        
+        $('#txt_disponibilidad_total').html(valorSalida);
+
+        datosSalida = valorSalida - parseInt(datosEntrada);
+
+        $('#txt_desocupados').html(datosSalida)
+
+        graficaIngreso(datosEntrada,datosSalida);
+
+    }, function (error) {
+    console.log(error);
+    }) 
+
+    
+}, function (error) {
+    console.log(error);
+});
+
+
+
+$('#btn_aumentar').click(function(){
+
+    var ocupados = $('#txt_ocupados').text();
+
+    var total = parseInt(ocupados) + 1;
+
+    var ocupar = {
+        valor: total
+    }
+
+    dbOcupados.update(ocupar);
+
+});
+
+$('#btn_reset').click(function(){
+
+    var reset = {
+        valor: 0
+    }
+
+    dbOcupados.update(reset);
+
+});
+
+$('#btn_disminuir').click(function(){
+
+    var desocupados = $('#txt_ocupados').text();
+
+    var total = parseInt(desocupados) - 1;
+
+    var desocupa = {
+        valor: total
+    }
+
+    dbOcupados.update(desocupa);
+
+});
+
+
+})
 
 getUser();

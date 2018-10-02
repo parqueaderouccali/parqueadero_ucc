@@ -122,7 +122,9 @@ dbAlternos.on('value', function (snapshot) {
             '<div class="box-body">'+
                           
                 '<div id="row" >'+
-                    
+                    '<div class="col-lg-12 text-center">'+
+                      ''+ alternos[alterno].ubicacion +''+                        
+                    '</div>'+
                 '</div>'+
                                          
             '</div>'+

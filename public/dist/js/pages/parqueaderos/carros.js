@@ -772,9 +772,7 @@ var contador = function (){
   
   var strTime = ampm;
     
-// NO BORRAR CODIGO FUNCIONAL
-
-  /* if ((f.getHours() >= 1 && strTime === 'am')){  
+  if ((f.getHours() >= 1 && strTime === 'am')){  
     habilitarParqueaderosDiurnos();
     $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
   }else if ((f.getHours() <= 3 && strTime === 'pm')){
@@ -783,7 +781,7 @@ var contador = function (){
   }else if ((f.getHours() >= 4 && strTime === 'pm') || (f.getHours() <= 11 && strTime === 'pm')) {
     quitarParqueaderosDiurnos();
     $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");
-  } */
+  }
     
  
 }

@@ -26,3 +26,31 @@
 [debug] [2018-10-01T02:06:07.394Z] <<< HTTP RESPONSE 200
 [info] i  hosting[parqueaderouccali-8a09c]: Serving hosting files from: public
 [info] +  hosting[parqueaderouccali-8a09c]: Local server: http://localhost:5000
+[debug] [2018-10-02T04:38:06.074Z] ----------------------------------------------------------------------
+[debug] [2018-10-02T04:38:06.080Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\CRODRIGUEZ\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-02T04:38:06.081Z] CLI Version:   4.2.1
+[debug] [2018-10-02T04:38:06.081Z] Platform:      win32
+[debug] [2018-10-02T04:38:06.081Z] Node Version:  v8.11.4
+[debug] [2018-10-02T04:38:06.086Z] Time:          Mon Oct 01 2018 23:38:06 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-10-02T04:38:06.086Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-02T04:38:06.131Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-02T04:38:06.132Z] > authorizing via signed-in user
+[debug] [2018-10-02T04:38:06.136Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-10-02T04:38:06.136Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-10-02T04:38:06.639Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-02T04:38:06.680Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/parqueaderouccali-8a09c  
+ 
+[debug] [2018-10-02T04:38:07.705Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-02T04:38:07.707Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parqueaderouccali-8a09c  
+ 
+[debug] [2018-10-02T04:38:08.559Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\TESIS\parqueadero_ucc'...
+[info] 
+[debug] [2018-10-02T04:38:08.563Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/811609179419/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-02T04:38:09.295Z] <<< HTTP RESPONSE 200
+[info] i  hosting[parqueaderouccali-8a09c]: Serving hosting files from: public
+[info] +  hosting[parqueaderouccali-8a09c]: Local server: http://localhost:5000

@@ -106,9 +106,7 @@ dbAlternos.on('value', function (snapshot) {
 
     for (alterno in alternos) {
 
-        numero = numero + 1;
-        
-        
+        numero = numero + 1;    
 
         row +=  '<div class="col-lg-6 ">'+
         '<section class="col-lg-12 connectedSortable">' +
@@ -123,8 +121,8 @@ dbAlternos.on('value', function (snapshot) {
           
             '<div class="box-body">'+
                           
-                '<div id="map_canvas" style="width: 100%; height: 350px;">'+
-
+                '<div id="row" >'+
+                    
                 '</div>'+
                                          
             '</div>'+
@@ -160,18 +158,11 @@ dbAlternos.on('value', function (snapshot) {
 
         '</section>'+
     '</div>';
-
-    var coordX = alternos[alterno].coordenadasX;
-    var coordY = alternos[alterno].coordenadasY;
-    var nombreDiv = alterno;
-
-    console.log(coordX + ' ' + coordY + ' ' + nombreDiv)
-
                                         
     }
-
+    console.log(row)
     $(".parqueaderos").append(row);
-    mapa(coordX , coordY , nombreDiv);
+    
     row = "";    
     numero = 0;
 
@@ -179,7 +170,7 @@ dbAlternos.on('value', function (snapshot) {
     $('.btnEdit').click(function () {
 
         var placasID = $(this).closest('tr').attr('id');
-        console.log(placasID)
+
         $("#diaPlaca").val(placasID);
         $("#digito1Placa").val($('#' + placasID).find(".digito1").text());
         $("#digito2Placa").val($('#' + placasID).find(".digito2").text());  

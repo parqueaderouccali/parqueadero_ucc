@@ -48,6 +48,7 @@ var logout = function () {
 
 }
 
+// carga de figuras
 $(function () {
    
     var aumentar = 0;
@@ -134,8 +135,7 @@ dbIngresos.on('value', function (snapshot) {
     console.log(error);
 });
 
-
-
+// boton para aumentar los cupos de las motos
 $('#btn_aumentar').click(function(){
 
     var ocupados = $('#txt_ocupados').text();
@@ -148,8 +148,13 @@ $('#btn_aumentar').click(function(){
 
     dbOcupados.update(ocupar);
 
+    $('#alerta_acceso').html("Acceso Concedido");
+
+    setTimeout(function(){ $("#alerta_acceso").html(""); }, 2000);
+
 });
 
+// boton para reiniciar contadores
 $('#btn_reset').click(function(){
 
     var reset = {
@@ -160,6 +165,7 @@ $('#btn_reset').click(function(){
 
 });
 
+// boton para disminuir los cupos de las motos
 $('#btn_disminuir').click(function(){
 
     var desocupados = $('#txt_ocupados').text();
@@ -171,6 +177,10 @@ $('#btn_disminuir').click(function(){
     }
 
     dbOcupados.update(desocupa);
+
+    $('#alerta_acceso').html("Acceso Concedido");
+
+    setTimeout(function(){ $("#alerta_acceso").html(""); }, 2000);
 
 });
 

@@ -185,14 +185,14 @@
         <div class="col-lg-12 ">
               <section class="col-lg-12 connectedSortable">
         
-                  <div class="box box-primary">
+                  <div class="box box-success">
                     
                     <div class="box-header">
                         <div class="row ">     
                             <div class="row">
                                 <div class="col-lg-12 col-ms-6 col-xs-12">
-                                   <h3  class="motosCss">
-                                      <b id=""> Total Espacio Disponible: </b>
+                                   <h3  class="motosCss tamano_titulo">
+                                      <b id="" > Total Espacio Disponible: </b>
                                            <b id="txt_disponibilidad_total">0</b>
                                    </h3>
                                 </div>                  
@@ -201,19 +201,11 @@
                     </div>
 
                     <div class="box-body " id="">
-                          
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <h3 class="text-center">Ocupados : <b id="txt_ocupados"> 0 </b></h3>                                
-                            </div>
-                        
-                            <div class="col-lg-6">
-                              <h3 class="text-center">Desocupados : <b id="txt_desocupados" > 0 </b></h3>                              
-                            </div>
-                        </div>
-
+                      
                         <div class="row">
                           <div class="col-lg-4">
+                              <h3 class="text-center tamano_texto">Ocupados : </h3>
+                              <h3 class="text-center"><b id="txt_ocupados" class="tamano_numero"> 0 </b></h3>
                           </div>
 
                           <div class="col-lg-4">               
@@ -221,8 +213,16 @@
                           </div>
 
                           <div class="col-lg-4">
+                              <h3 class="text-center tamano_texto">Desocupados : </h3>
+                              <h3 class="text-center"><b id="txt_desocupados" class="tamano_numero"> 0 </b></h3>
                           </div>
 
+                        </div>
+                            
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                              <h3><b id="alerta_acceso" class="text_acceso"></b></h3>
+                            </div>                    
                         </div>
                                                                                      
                     </div>

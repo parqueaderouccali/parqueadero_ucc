@@ -24,3 +24,20 @@
     margin-top: 0px;    
     margin-bottom: 5px;
   }
+
+  .tamano_numero{
+      font-size: 160px;
+  }
+
+  .tamano_texto{
+    font-size: 40px;
+}
+
+.tamano_titulo{
+    font-size: 30px;
+}
+
+.text_acceso{
+    font-size: 35px;
+    color: red;
+}

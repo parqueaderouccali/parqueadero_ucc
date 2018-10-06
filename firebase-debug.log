@@ -1,28 +1,24 @@
-[debug] [2018-10-02T22:27:34.031Z] ----------------------------------------------------------------------
-[debug] [2018-10-02T22:27:34.046Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\CRODRIGUEZ\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-10-02T22:27:34.046Z] CLI Version:   4.2.1
-[debug] [2018-10-02T22:27:34.046Z] Platform:      win32
-[debug] [2018-10-02T22:27:34.046Z] Node Version:  v8.11.4
-[debug] [2018-10-02T22:27:34.046Z] Time:          Tue Oct 02 2018 17:27:34 GMT-0500 (Hora est. Pacífico, Sudamérica)
-[debug] [2018-10-02T22:27:34.046Z] ----------------------------------------------------------------------
+[debug] [2018-10-06T16:05:54.263Z] ----------------------------------------------------------------------
+[debug] [2018-10-06T16:05:54.265Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\CRODRIGUEZ\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-06T16:05:54.265Z] CLI Version:   4.2.1
+[debug] [2018-10-06T16:05:54.265Z] Platform:      win32
+[debug] [2018-10-06T16:05:54.265Z] Node Version:  v8.11.4
+[debug] [2018-10-06T16:05:54.266Z] Time:          Sat Oct 06 2018 11:05:54 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] [2018-10-06T16:05:54.266Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-10-02T22:27:34.078Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-10-02T22:27:34.078Z] > authorizing via signed-in user
-[debug] [2018-10-02T22:27:34.083Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2018-10-02T22:27:34.083Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
-
-[debug] [2018-10-02T22:27:34.672Z] <<< HTTP RESPONSE 200
-[debug] [2018-10-02T22:27:34.688Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/parqueaderouccali-8a09c  
+[debug] [2018-10-06T16:05:54.280Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-06T16:05:54.280Z] > authorizing via signed-in user
+[debug] [2018-10-06T16:05:54.283Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/parqueaderouccali-8a09c  
  
-[debug] [2018-10-02T22:27:37.443Z] <<< HTTP RESPONSE 200
-[debug] [2018-10-02T22:27:37.443Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parqueaderouccali-8a09c  
+[debug] [2018-10-06T16:05:55.071Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T16:05:55.074Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parqueaderouccali-8a09c  
  
-[debug] [2018-10-02T22:27:38.457Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T16:05:55.992Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'D:\TESIS\parqueadero_ucc'...
 [info] 
-[debug] [2018-10-02T22:27:38.473Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/811609179419/clients/_:getWebAppConfig  
+[debug] [2018-10-06T16:05:55.999Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/811609179419/clients/_:getWebAppConfig  
  
-[debug] [2018-10-02T22:27:39.552Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T16:05:56.663Z] <<< HTTP RESPONSE 200
 [info] i  hosting[parqueaderouccali-8a09c]: Serving hosting files from: public
 [info] +  hosting[parqueaderouccali-8a09c]: Local server: http://localhost:5000

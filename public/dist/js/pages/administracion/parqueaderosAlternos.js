@@ -186,35 +186,5 @@ dbAlternos.on('value', function (snapshot) {
     console.log(error);
 });
 
-var mapa = function (coordenadaX, coordenadaY, nombre){
-
-    console.log("#" + nombre)
-
-    var map = new google.maps.Map(document.getElementById("#" + nombre), {
-        scaleControl: true});
-        map.setCenter(new google.maps.LatLng(coordenadaX, coordenadaY));
-        map.setZoom(16);
-        map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
-        
-        var marker = new google.maps.Marker({map: map, position:
-        map.getCenter()});
-        var infowindow = new google.maps.InfoWindow();
-        infowindow.setContent('<div class="box-body">' +
-                                '<dl class="dl-horizontal">' +
-                                '<dt>Dirección</dt>' + 
-                                '<dd>Cra 1 # 12 - 23</dd>' +
-                                '<dt>Precio</dt>' +
-                                '<dd>$ 1.000 / 3 Horas</dd>' +
-                                '<dt>Horarios</dt>' +
-                                '<dd>Lunes a Viernes (07:00 a.m a 10:30 p.m) y Sabados (07:00 a.m a 06:00 p.m)</dd>' +
-                                '<dd>Sabados (07:00 a.m a 06:00 p.m)</dd>' +                                
-                                '</dl>' +
-                              '</div>');
-        google.maps.event.addListener(marker, 'click', function() {
-        infowindow.open(map, marker);
-        });
-
-}
-
 
 getUser();

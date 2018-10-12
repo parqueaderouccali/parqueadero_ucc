@@ -29,6 +29,9 @@
   <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  
+  <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -138,7 +141,7 @@
               <li><a href="../../pages/administracion/AdminUsuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
               <li><a href="../../pages/administracion/AdminPlacas.html"><i class="fa fa-circle-o"></i> Pico y Placa</a></li>
               <li><a href="../../pages/administracion/AdminParqueaderosAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternativos</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Cambio de Jornada</a></li>            
+              <li><a href="../../pages/administracion/AdminCambioJornada.html"><i class="fa fa-circle-o"></i> Cambio de Jornada</a></li>            
             </ul>
           </li>
           <li class="treeview">
@@ -154,15 +157,15 @@
                   <i class="fa fa-circle-o"></i> Parqueadero Motos</a>
               </li>
               <li>
-                <a href="#">
+                <a href="../../pages/estadisticas/EstCarros.html">
                   <i class="fa fa-circle-o"></i> Parqueadero Carros</a>
               </li>
               <li>
-                <a href="#">
+                <a href="../../pages/estadisticas/EstNovedades.html">
                   <i class="fa fa-circle-o"></i> Novedadaes</a>
               </li>
               <li>
-                <a href="#">
+                <a href="../../pages/estadisticas/EstAlternos.html">
                   <i class="fa fa-circle-o"></i> Parqueaderos Alternos</a>
               </li>                
             </ul>
@@ -183,213 +186,47 @@
       <div class="row">
         <div class="col-lg-12 col-ms-6 col-xs-12">
           <h1  class="picoPlacaCss">
-           <b id="picoPlaca"> Administración de pico y placa</b>
+           <b id="picoPlaca"> Estadistica NOvedades Estudiantes y UCC</b>
           </h1>
         </div>      
       </div>
       
       <br>
 
-        <div class="col-lg-12">
+    <div class="col-lg-12">
         
         <section class="col-lg-12 ">
                                
             <div class="box box-primary">
                         
-              <div class="box-header">
-                                
-                <button id="cambioDigito" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter2">Cambio de Dígito</button>
+            <div class="box-header">
+              
+              <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
 
-                <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                <h3>Filtros</h3>
 
-                  <br>
-                  <div class="row">
-                    <div class="col-lg-12">
-
-                      <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-                        <thead>
-                          <tr role="row">
-                            <th class="sorting_asc size" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" style=" font-size:15px; width: 4%;">
-                              #
-                            </th>
-                            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"  style=" font-size:15px; width: 15%;">
-                              Dia de la Semana
-                            </th>
-                            <th class="sorting " tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style=" font-size:15px; width: 20%;">
-                              Digito 1
-                            </th>
-                            <th class="sorting " tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style=" font-size:15px;  width: 20%;">
-                              Digito 2
-                            </th>
-                               
-                          </tr>
-                        </thead>
-                        
-                        <tbody class="limpiarTabla">
-                          
-                        </tbody>
-                        
-                        <tfoot>
-        
-                        </tfoot>
-                      </table>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-5">
-                      <div class="dataTables_info paginas" id="example1_info" role="status" aria-live="polite">
-        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-             
-              <div class="box-footer">
-                
-              </div>
-            </div>          
+              </div>                          
+                                             
+            </div>      
+          
+            <div class="box-body">
+                <h3>Grafica</h3>
+            </div>
+            
+            <div class="box-footer">
+              
+            </div>
            
         </section>
     </div> 
 
-      <div class="box-body">
-       
-      </div>
+     
            
     </section>
 
         <!-- /.content-wrapper -->
   </div>
 
-<!-- popup de actualizacion individual de dias de la semana-->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title text-center" id="exampleModalLongTitle">Actualizar Pico y placa</h3>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <div class="form-group row">
-          
-            <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Dia</label>
-            <div class="col-sm-12">
-              <input id="diaPlaca" class="form-control text-center " type="text" value="" id="" style="font-size: 15px; color:black; font-weight: bold;" disabled >
-            </div>
-          <br>
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Digito 1:</label>
-          <div class="col-sm-12">
-            <input id="digito1Placa" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-          </div>
-          <br>
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Digito 2:</label>
-          <div class="col-sm-12">
-            <input id="digito2Placa" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-          </div>
-
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-        <button type="button" class="btn btn-primary" id="EditarPicoPlaca">Editar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Cambio de placas automatico -->
-<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle"><b>Actualizacion y Generacion de secuencia pico y placa</b></h3>
-        </button>
-      </div>
-      <div class="modal-body">
-
-
-<div class="row">
-
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Lunes</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Lunes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Lunes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Martes</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Martes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Martes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Miercoles</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Miercoles" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Miercoles" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<br>
-<br>
-
-<div class="row">
-
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Jueves</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Jueves" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Jueves" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-    <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Viernes</b></h3></label>
-      <div class="col-sm-3">
-        <input id="digito1Viernes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-        <br>
-        <input id="digito2Viernes" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
-      </div>
-    </div>
-  </div>
-  <div class="col-lg-4">
-
-  </div>
-
-</div>
-       
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-        <button type="button" class="btn btn-primary" id="EditarPlacas">Editar</button>
-        <button type="button" class="btn btn-danger" id="GenerarPlacas">Generar Automatico</button>
-      </div>
-
-    </div>
-  </div>
-</div>
 
 
 <footer class="main-footer">
@@ -439,6 +276,8 @@
 <script src="../../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 <script>
@@ -453,7 +292,7 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="../../dist/js/pages/administracion/placas.js"></script>
+<script src="../../dist/js/pages/administracion/cambioJornada.js"></script>
 
 
 </body>

@@ -1,5 +1,20 @@
 // instancia de firebase que apunta al nodo usuarios
 var db = firebase.database().ref('usuarios/');
+var dbEstadistica = firebase.database().ref('estadisticas/logCarros/')
+
+// declaracion de variables para la toma de informacion de fecha actual.
+var f=new Date();
+var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+var semana = dias[f.getUTCDay()];
+var dia = f.getDate();
+var mes = f.getMonth() + 1;
+var ano = f.getFullYear();
+var hora = f.getHours();
+var minutos = f.getMinutes();
+var ampm = hora >= 12 ? 'pm' : 'am';    
+var strTime = ampm;
+var fechaAct = ano +'-'+ mes +'-'+ dia;
+var horaAct = hora +':'+minutos +' '+ampm;
 
 // inspecciona si un usuario esta logeado o no
 var getUser = function () {
@@ -56,19 +71,18 @@ var btnAsignar = function () {
 
         for (numero in parqueaderos) {
 
-            console.log(parqueaderos[numero].num_parqueadero)
-            console.log(numero_parqueadero)
-
             if (numero_parqueadero == parqueaderos[numero].num_parqueadero) {
-                console.log(numero)
-
+                
                 var db = firebase.database().ref('parqueaderos/' + numero + '/');
 
                 var parqueadero = {
                     disponibilidad: 1
                 }
 
-                db.update(parqueadero);                
+                db.update(parqueadero); 
+                
+                LogIngresosCarro(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,'INGRESO',numero);
+                
                 $('#exampleModalCenter').modal('hide')
             }
 
@@ -77,9 +91,6 @@ var btnAsignar = function () {
     }, function (error) {
         console.log(error);
     })
-
-
-
 }
 
 // metodo para desocupar un espacio ocupado por un vehiculo
@@ -109,7 +120,8 @@ var btnDesocupar = function () {
                     disponibilidad: 0
                 }
 
-                db.update(parqueadero);                           
+                db.update(parqueadero);  
+                LogIngresosCarro(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,'SALIDA',numero);                         
                 $('#exampleModalCenter').modal('hide');
             }
 
@@ -149,6 +161,7 @@ var btnHabilitar = function () {
                 }
 
                 db.update(parqueadero);
+                LogIngresosCarro(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,'DISPONIBLE',numero);
                 $('#exampleModalCenter').modal('hide')
             }
 
@@ -171,7 +184,6 @@ var btnInhabilitar = function () {
 
         var parqueaderos = snapshot.val();
 
-        // console.log(parqueaderos);
 
         for (numero in parqueaderos) {
 
@@ -179,7 +191,6 @@ var btnInhabilitar = function () {
             console.log(numero_parqueadero)
 
             if (numero_parqueadero == parqueaderos[numero].num_parqueadero) {
-                console.log(numero)
 
                 var db = firebase.database().ref('parqueaderos/' + numero + '/');
 
@@ -189,6 +200,7 @@ var btnInhabilitar = function () {
 
                 db.update(parqueadero);
                 btnDesocupar();
+                LogIngresosCarro(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,'INHABILITADO','parqueadero_'+numero_parqueadero);
                 $('#exampleModalCenter').modal('hide')
             }
 
@@ -200,6 +212,27 @@ var btnInhabilitar = function () {
 
 }
 
+// registra el log del ingreso y salida de motos
+var LogIngresosCarro = function(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,tipo,numero) {
+
+    var ingresos = {
+        fechaActual: fechaAct,
+        horaActual: horaAct,
+        hora_hh: hora,
+        hora_mm: minutos,
+        hora_ampm: ampm,
+        fecha_dia: dia,
+        fecha_mes: mes,
+        fecha_ano: ano,
+        fecha_semana: semana,
+        trigger: 0,
+        tipos: tipo,
+        num_parqueadero: numero
+    }
+    
+    dbEstadistica.push().set(ingresos);
+    
+}
 
 var numeroParqueo1 = function (){
     $("#numero_parqueadero").empty();
@@ -725,6 +758,7 @@ var numeroParqueo95 = function () {
     $("#numero_parqueadero").css("font-weight", "bolder");
 }
 
+// Carga todos los carros en pantalla
 var cargarCarros = function () {
 
     var db = firebase.database().ref('parqueaderos/');
@@ -763,6 +797,7 @@ var cargarCarros = function () {
 
 }
 
+// este metodo control las jornadas activas
 var contador = function (){
   var f=new Date();
  

@@ -5,6 +5,23 @@ var dbIngresos = firebase.database().ref('parqueadero_motos/ocupados/valor')
 var dbSaliente = firebase.database().ref('parqueadero_motos/desocupados/valor')
 var dbOcupados = firebase.database().ref('parqueadero_motos/ocupados')
 var dbDesocupados = firebase.database().ref('parqueadero_motos/desocupados')
+var dbZonas = firebase.database().ref('parqueadero_motos/zonas/')
+var dbEstadistica = firebase.database().ref('estadisticas/logMotos/')
+
+// declaracion de variables para la toma de informacion de fecha actual.
+var f=new Date();
+var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+var semana = dias[f.getUTCDay()];
+var dia = f.getDate();
+var mes = f.getMonth() + 1;
+var ano = f.getFullYear();
+var hora = f.getHours();
+var minutos = f.getMinutes();
+var ampm = hora >= 12 ? 'pm' : 'am';    
+var strTime = ampm;
+var fechaAct = ano +'-'+ mes +'-'+ dia;
+var horaAct = hora +':'+minutos +' '+ampm;
+
 
 // inspecciona si un usuario esta logeado o no
 var getUser = function () {
@@ -129,7 +146,22 @@ dbIngresos.on('value', function (snapshot) {
     }, function (error) {
     console.log(error);
     }) 
+    
+}, function (error) {
+    console.log(error);
+});
 
+// carga la informacion de las zonas
+dbZonas.on('value', function (snapshot) {
+
+    var valorIngreso = snapshot.val();
+
+    var zonaAdmin = valorIngreso.administrativa;
+    $('#txt_zona_admin').html(zonaAdmin)
+    var zonaPrincipal = valorIngreso.principal;
+    $('#txt_zona_principal').html(zonaPrincipal)
+    var zonaCafeteria = valorIngreso.cafeteria;            
+    $('#txt_zona_Cafeteria').html(zonaCafeteria)
     
 }, function (error) {
     console.log(error);
@@ -137,7 +169,7 @@ dbIngresos.on('value', function (snapshot) {
 
 // boton para aumentar los cupos de las motos
 $('#btn_aumentar').click(function(){
-
+    
     var ocupados = $('#txt_ocupados').text();
 
     var total = parseInt(ocupados) + 1;
@@ -147,9 +179,14 @@ $('#btn_aumentar').click(function(){
     }
 
     dbOcupados.update(ocupar);
+       
+    var ingreso_motos = $('#txt_ocupados').text();
+    var salida_motos = $('#txt_desocupados').text();
+    var total_motos = $('#txt_disponibilidad_total').text();
+
+    LogIngresosMotos(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,ingreso_motos,salida_motos,total_motos,'INGRESO');
 
     $('#alerta_acceso').html("Acceso Concedido");
-
     setTimeout(function(){ $("#alerta_acceso").html(""); }, 2000);
 
 });
@@ -178,12 +215,40 @@ $('#btn_disminuir').click(function(){
 
     dbOcupados.update(desocupa);
 
-    $('#alerta_acceso').html("Acceso Concedido");
+    var ingreso_motos = $('#txt_ocupados').text();
+    var salida_motos = $('#txt_desocupados').text();
+    var total_motos = $('#txt_disponibilidad_total').text();
 
+    LogIngresosMotos(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,ingreso_motos,salida_motos,total_motos,'SALIDA');
+
+    $('#alerta_acceso').html("Acceso Concedido");
     setTimeout(function(){ $("#alerta_acceso").html(""); }, 2000);
 
 });
 
+// registra el log del ingreso y salida de motos
+var LogIngresosMotos = function(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,ingreso_motos,salida_motos,total_motos,tipo) {
+
+    var ingresos = {
+        fechaActual: fechaAct,
+        horaActual: horaAct,
+        hora_hh: hora,
+        hora_mm: minutos,
+        hora_ampm: ampm,
+        fecha_dia: dia,
+        fecha_mes: mes,
+        fecha_ano: ano,
+        fecha_semana: semana,
+        ingreso: ingreso_motos,
+        salida: salida_motos,
+        total: total_motos,
+        trigger: 0,
+        tipos: tipo,
+    }
+    
+    dbEstadistica.push().set(ingresos);
+    
+}
 
 })
 

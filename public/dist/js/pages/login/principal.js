@@ -6,7 +6,23 @@ var dbPicoPlaca = firebase.database().ref('pico_placa/');
 var dbEnEsperaCarros = firebase.database().ref('en_espera/carros/');
 var dbMotosEntrantes = firebase.database().ref('parqueadero_motos/ocupados/');
 var dbMotosSalientes = firebase.database().ref('parqueadero_motos/desocupados/');
+var dbMotosZonas = firebase.database().ref('parqueadero_motos/zonas/');
+var dbEstadisticaNov = firebase.database().ref('estadisticas/logNovedades/')
 var contador = 0;
+
+// declaracion de variables para la toma de informacion de fecha actual.
+var f=new Date();
+var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+var semana = dias[f.getUTCDay()];
+var dia = f.getDate();
+var mes = f.getMonth() + 1;
+var ano = f.getFullYear();
+var hora = f.getHours();
+var minutos = f.getMinutes();
+var ampm = hora >= 12 ? 'pm' : 'am';    
+var strTime = ampm;
+var fechaAct = ano +'-'+ mes +'-'+ dia;
+var horaAct = hora +':'+minutos +' '+ampm;
 
 // inspecciona si un usuario esta logeado o no
 var getUser = function () {
@@ -73,7 +89,7 @@ var NovedadUCC = function(novedad) {
     var fecha = new Date();
 
     var mes = fecha.getMonth() + 1;
-    var dia = fecha.getDay();
+    var dia = fecha.getDate();
     var ano = fecha.getFullYear();
 
     var hora = fecha.getHours();
@@ -116,16 +132,37 @@ var NovedadEstidiantes = function() {
 }
 
 // permite agregar una novedad UCC.
-var agregarNovedadUCC = function (){
-
+$('#guardarNovedadUCC').click(function(){
     var novedad = $('#txtnovedadUCC').val();
 
     if(novedad === ''){
         alert('Ingrese una novedad');
     }else{
-        NovedadUCC(novedad);
+        // NovedadUCC(novedad);
+        LogNovedades(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,novedad,'UCC')
     }
+})
 
+
+// registra el log del ingreso y salida de motos
+var LogNovedades = function(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,novedad,tipo) {
+
+    var lognovedad = {
+        fechaActual: fechaAct,
+        horaActual: horaAct,
+        hora_hh: hora,
+        hora_mm: minutos,
+        hora_ampm: ampm,
+        fecha_dia: dia,
+        fecha_mes: mes,
+        fecha_ano: ano,
+        fecha_semana: semana,
+        descripcion: novedad,
+        tipos: tipo,
+    }
+    
+    dbEstadisticaNov.push().set(lognovedad);
+    
 }
 
 // carga del dashboard en tiempo real.
@@ -226,12 +263,18 @@ var EnEsperaCarros = function (valorHtml) {
 // permite cargar crear los vehiculos motos que se encuentra en espera para el ingreso a la Universidad
 $('#EsperaVehiculosMotos').click(function(){
     
-    var cantidadEnEspera = $('#vehiculosEsperaMotos').val();
+    var cantidadZonaAdmin = $('#zonaAdmin').val();
+    var cantidadZonaPrincipal = $('#zonaPrincipal').val();
+    var cantidadZonaCafeteria = $('#zonaCafeteria').val();
 
-    if(cantidadEnEspera === ''){
+
+    if(cantidadZonaAdmin === '' || cantidadZonaCafeteria === '' || cantidadZonaPrincipal === ''){
         alert('Ingrese una cantidad: ');
     }else{
-        EnEsperaMotos(cantidadEnEspera);
+
+        var valorTotal = parseInt(cantidadZonaAdmin) + parseInt(cantidadZonaPrincipal) + parseInt(cantidadZonaCafeteria);
+
+        CantidadTotalMotos(cantidadZonaAdmin,cantidadZonaPrincipal,cantidadZonaCafeteria,valorTotal);
         $('#exampleModalCenter2').hide();
         $('div').removeClass('modal-backdrop fade in');
     }
@@ -251,13 +294,21 @@ dbMotosSalientes.on('value', function (snapshot) {
 });
 
 // Guarda el valor de la espera de vehiculos motos en la base de datos
-var EnEsperaMotos = function (valorHtml) {
+var CantidadTotalMotos = function (valorAdmin, valorPrincipal, valorCafeteria, valorTotal) {
     
-    var enEspera = {
-        valor : valorHtml
+    var zonas = {
+        administrativa : valorAdmin,
+        cafeteria : valorCafeteria,
+        principal : valorPrincipal,     
     }
 
-    dbMotosSalientes.update(enEspera);
+    var totalEspaciosDisponibles = {
+        valor : valorTotal
+    }
+
+    dbMotosZonas.update(zonas);
+    dbMotosSalientes.update(totalEspaciosDisponibles);
+
 }
 
 // Metodos para Novedades UCC donde se Inspecciona todos los cambios en la tabla y la actualiza 
@@ -409,6 +460,25 @@ dbMotosEntrantes.on('value', function (snapshot) {
     console.log(error);
 });
 
+// obtiene los valores actuales de las zonas del parqueadero
+$('#cargarInfoZonasMotos').click(function (){
+
+    dbMotosZonas.on('value', function (snapshot) {
+
+        var valorEntrante = snapshot.val();   
+        
+        var admin = valorEntrante.administrativa;        
+        $('#zonaAdmin').val(admin);
+        var cafeteria = valorEntrante.cafeteria;        
+        $('#zonaCafeteria').val(cafeteria);
+        var principal = valorEntrante.principal;        
+        $('#zonaPrincipal').val(principal);
+            
+        }, function (error) {
+            console.log(error);
+        });
+
+});
 
 
 

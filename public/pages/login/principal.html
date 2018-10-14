@@ -277,7 +277,7 @@
               <div class="icon">
                 <i class="ion ion-checkmark-circled"></i>
               </div>
-              <a href="#" class="small-box-footer" data-toggle="modal" data-target="#exampleModalCenter2">Modificar <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer" data-toggle="modal" data-target="#exampleModalCenter2" id="cargarInfoZonasMotos">Modificar <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -345,7 +345,7 @@
                         <input id="txtnovedadUCC" class="form-control" placeholder="Ingresar novedad .... ">
         
                         <div class="input-group-btn">
-                          <button type="button" class="btn btn-success" onclick="agregarNovedadUCC()"><i class="fa fa-plus"></i></button>
+                          <button type="button" class="btn btn-success" id="guardarNovedadUCC"><i class="fa fa-plus"></i></button>
                         </div>
                       </div>
                     </div>
@@ -433,9 +433,19 @@
       <div class="modal-body">
 
         <div class="form-group row">
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
+          <label for="example-text-input" class="col-xs-12 col-form-label form-control-label">Zona Administrativa:</label>
           <div class="col-sm-12">
-            <input id="vehiculosEsperaMotos" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
+            <input id="zonaAdmin" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
+          </div>
+          <br>
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Zona Principal:</label>
+          <div class="col-sm-12">
+            <input id="zonaPrincipal" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
+          </div>
+          <br>
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Zona Cafeteria:</label>
+          <div class="col-sm-12">
+            <input id="zonaCafeteria" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
           </div>
         </div>
 

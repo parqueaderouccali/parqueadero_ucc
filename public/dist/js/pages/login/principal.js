@@ -138,14 +138,18 @@ $('#guardarNovedadUCC').click(function(){
     if(novedad === ''){
         alert('Ingrese una novedad');
     }else{
-        // NovedadUCC(novedad);
-        LogNovedades(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,novedad,'UCC')
+        NovedadUCC(novedad);
+        LogNovedades(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,novedad,'UCC')
     }
 })
 
 
 // registra el log del ingreso y salida de motos
-var LogNovedades = function(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,semana,novedad,tipo) {
+var LogNovedades = function(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,novedad,tipo) {
+
+    var f=new Date();
+    var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+    var semana = dias[f.getUTCDay()-1];
 
     var lognovedad = {
         fechaActual: fechaAct,
@@ -160,6 +164,7 @@ var LogNovedades = function(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,seman
         descripcion: novedad,
         tipos: tipo,
     }
+    console.log(lognovedad);
     
     dbEstadisticaNov.push().set(lognovedad);
     
@@ -380,15 +385,15 @@ var semana = function (){
 
     var f=new Date();
     var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
-    var semana = dias[f.getUTCDay()];
-
+    var semana = dias[f.getUTCDay()-1];
+    
     var hours = f.getHours();
     var minutes = f.getMinutes();
     var ampm = hours >= 12 ? 'pm' : 'am';
     
     var strTime = ampm;
 
-    if(semana === "Domingo"){             
+    if(semana === "Domingo" || semana == undefined){             
         $('#conector').html('');
         $('#diaSemana').html('(No Aplica)');                   
     }else if(semana === 'Lunes'){
@@ -401,11 +406,6 @@ var semana = function (){
         getPicoPlaca(semana);
     }else if(semana === 'Viernes'){
         getPicoPlaca(semana);
-    }else if(semana === 'Sabado'){
-        $('#diaSemana').html('(No Aplica Pico y Placa)');                      
-        $('#digito1').html('');
-        $('#digito2').html('');
-        $('#picoPlaca').html('');
     }
            
 }

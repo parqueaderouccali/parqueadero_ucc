@@ -1,6 +1,9 @@
 // instancia de firebase que apunta al nodo usuarios
 var db = firebase.database().ref('usuarios/');
 var dbEstadistica = firebase.database().ref('estadisticas/logCarros/')
+var dbDiurna= firebase.database().ref('cambio_jornada/diurna/')
+var dbNocturna = firebase.database().ref('cambio_jornada/nocturna/')
+
 
 // declaracion de variables para la toma de informacion de fecha actual.
 var f=new Date();
@@ -225,7 +228,6 @@ var LogIngresosCarro = function(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,s
         fecha_mes: mes,
         fecha_ano: ano,
         fecha_semana: semana,
-        trigger: 0,
         tipos: tipo,
         num_parqueadero: numero
     }
@@ -806,18 +808,50 @@ var contador = function (){
   var ampm = hours >= 12 ? 'pm' : 'am';
   
   var strTime = ampm;
+   
+  console.log('Hora ' + hours + ' ' + ampm)
+
+  dbDiurna.on('value',function(snapshot){
+
+    var diurna = snapshot.val();
+
+    dbNocturna.on('value',function(snapshot){
+
+        var nocturna = snapshot.val();
+
+        if(diurna == 0 && nocturna == 1){
+            quitarParqueaderosDiurnos();
+            $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");
+        }else if(diurna == 1 && nocturna == 0){
+            habilitarParqueaderosDiurnos();
+            $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
+        }else if(diurna == 1 && nocturna == 1){
+            
+            if ((f.getHours() >= 1 && strTime === 'am')){  
+                habilitarParqueaderosDiurnos();
+                $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
+              }else if ((f.getHours() <= 15 && strTime === 'pm')){
+                habilitarParqueaderosDiurnos();
+                $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
+              }else if ((f.getHours() >= 16 && strTime === 'pm') || (f.getHours() <= 23 && strTime === 'pm')) {
+                quitarParqueaderosDiurnos();
+                $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");
+              }else if ((f.getHours() <= 3 && strTime === 'pm')){
+                habilitarParqueaderosDiurnos();
+                $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
+              }else if ((f.getHours() >= 4 && strTime === 'pm') || (f.getHours() <= 11 && strTime === 'pm')) {
+                quitarParqueaderosDiurnos();
+                $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");
+              }
+
+        }else if (diurna == 0 && nocturna == 0){
+            habilitarParqueaderosDiurnos();
+            $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
+        }
+
+    })
     
-  if ((f.getHours() >= 1 && strTime === 'am')){  
-    habilitarParqueaderosDiurnos();
-    $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
-  }else if ((f.getHours() <= 3 && strTime === 'pm')){
-    habilitarParqueaderosDiurnos();
-    $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_diurno.png");
-  }else if ((f.getHours() >= 4 && strTime === 'pm') || (f.getHours() <= 11 && strTime === 'pm')) {
-    quitarParqueaderosDiurnos();
-    $("#imagenParqueaderosCarro").attr("src","../../dist/img/parqueaderos/ucc_carros_nocturno.png");
-  }
-    
+  })
  
 }
 

@@ -3,6 +3,7 @@
 var db = firebase.database().ref('usuarios/');
 var dbAlternos = firebase.database().ref('alternos/');
 
+
 // inspecciona si un usuario esta logeado o no
 var getUser = function () {
 
@@ -94,7 +95,6 @@ var btnModalPopup = function () {
 }
 
 // Inspecciona todos los cambios en la tabla y la actualiza
-
 dbAlternos.on('value', function (snapshot) {
 
     var alternos = snapshot.val();
@@ -141,7 +141,9 @@ dbAlternos.on('value', function (snapshot) {
                 '<div class="box-body">'+
                   '<dl class="dl-horizontal">'+
                     '<dt id="' + alterno + '" hidden>' + alterno + '</dt>' +
-                    '<dt>Coordenadas</dt>' +
+                    '<dt>Codigo</dt>' +                    
+                    '<dd>'+ alterno + '</dd>' +
+                    '<dt>Coordenadas</dt>' +                    
                     '<dd>'+ alternos[alterno].coordenadasX + ' , ' + alternos[alterno].coordenadasY + '</dd>' +
                     '<dt>Dirección</dt>' +
                     '<dd>' + alternos[alterno].direccion + '</dd>' +
@@ -162,7 +164,6 @@ dbAlternos.on('value', function (snapshot) {
     '</div>';
                                         
     }
-    console.log(row)
     $(".parqueaderos").append(row);
     
     row = "";    
@@ -185,6 +186,65 @@ dbAlternos.on('value', function (snapshot) {
 }, function (error) {
     console.log(error);
 });
+
+var contador = 0;
+// Permite guardar el parqueadero alterno
+var btnGuardarParqueadero = function() {
+
+    var _titulo = $('#txt_titulo').val()
+    var  _coordenada_X = $('#txt_coordenadasX').val()
+    var  _coordenada_Y = $('#txt_coordenadasY').val()
+    var _direccion = $('#txt_direccion').val()
+    var _horario = $('#txt_horario').val()
+    var _novedades = $('#txt_novedades').val()
+    var _precio = $('#txt_precio').val()
+    var _disponible = $('#txt_disponible').val()
+    var _ubicacion = $('#txt_ubicacion').val()
+    var _contrasena = $('#txt_contrasena').val()
+
+    dbAlternos.on('value', function (snapshot) {
+
+        var alternos = snapshot.val();
+
+        for(alterno in alternos){
+            contador = contador + 1;            
+        }   
+       
+    }, function (error) {
+        console.log(error);
+    });
+
+    var parqueaderoAlterno = {
+        consecutivo: contador + 1,
+        coordenadasX: _coordenada_X,
+        coordenadasY: _coordenada_Y,
+        direccion: _direccion,
+        disponibilidad: _disponible,
+        horario: _horario,
+        nombre: _titulo,
+        novedades: _novedades,
+        precio: _precio,
+        ubicacion: _ubicacion,
+        password: _contrasena,
+    }
+
+dbAlternos.child('alterno_' + (contador + 1)).set(parqueaderoAlterno);
+contador = 0;
+
+$('#txt_titulo').val("")
+$('#txt_coordenadasX').val("0")
+$('#txt_coordenadasY').val("0")
+$('#txt_direccion').val("")
+$('#txt_horario').val("")
+$('#txt_novedades').val("")
+$('#txt_precio').val("0")
+$('#txt_disponible').val("0")
+$('#txt_ubicacion').val("")
+$('#txt_contrasena').val("")
+
+$('#exampleModalCenter2').modal('hide');
+
+}
 
 
 getUser();

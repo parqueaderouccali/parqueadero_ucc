@@ -256,25 +256,87 @@
 
 <!-- popup de modificacion del total de capacidad-->
 <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-sm" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Capacidad de Espacios para Moto</h3>
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle">Registro de Parqueaderos Alternos</h3>
         </button>
       </div>
       <div class="modal-body">
 
-        <div class="form-group row">
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese cantidad:</label>
-          <div class="col-sm-12">
-            <input id="vehiculosEspera" class="form-control text-center " type="text" value="" id="UID_dato" style="font-size: 20px; color:brown; font-weight: bold;" >
+        <div class="form-group row">          
+          <div class="col-lg-12">
+            <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Titulo:</label>
+            <input id="txt_titulo" class="form-control text-center " type="text" value=""  style="font-size: 20px; color:black;" >
           </div>
         </div>
+
+        <div class="form-group row">          
+          <div class="col-lg-6">
+              <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Coordenadas X:</label>
+            <input id="txt_coordenadasX" class="form-control text-center" type="text" value="0"  style="font-size: 20px; color:black;">
+          </div>
+          
+          <div class="col-lg-6">
+              <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Coordenadas Y:</label>
+            <input id="txt_coordenadasY" class="form-control text-center" type="text" value="0" style="font-size: 20px; color:black;">
+          </div>
+        </div>
+
+        <div class="form-group row">          
+            <div class="col-lg-12">
+              <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Dirección:</label>
+              <input id="txt_direccion" class="form-control text-center " type="text" value="" style="font-size: 20px; color:black;" >
+            </div>
+          </div>
+        
+        <div class="form-group row">          
+              <div class="col-lg-12">
+                <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Horario:</label>
+                <textarea id="txt_horario" class="form-control" rows="3" style="font-size: 20px; color:black;"></textarea>
+              </div>
+        </div>
+
+        <div class="form-group row">          
+            <div class="col-lg-12">
+              <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Novedades:</label>
+              <textarea id="txt_novedades" class="form-control" rows="3" style="font-size: 20px; color:black;"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group row">          
+            <div class="col-lg-6">       
+                <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Precio (COP):</label>
+                  <input id="txt_precio" class="form-control text-center" type="text" value="0"  style="font-size: 20px; color:black;">
+            </div>
+             
+              <div class="col-lg-6">
+                  <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Disponible:</label>
+                  <input id="txt_disponible" class="form-control text-center" type="text" value="0" style="font-size: 20px; color:black;">
+              </div>          
+          </div>
+
+          <div class="form-group row">          
+              <div class="col-lg-12">
+                <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ubicación Max. (450x300): 
+                    <a href="https://www.google.com/maps/place/Cali,+Valle+del+Cauca/@3.3952332,-76.595704,12z/data=!3m1!4b1!4m5!3m4!1s0x8e30a6f0cc4bb3f1:0x1f0fb5e952ae6168!8m2!3d3.4516467!4d-76.5319854" target="_blank">Ver Google Maps</a>
+                </label>
+                
+                <textarea id="txt_ubicacion" class="form-control" rows="3" style="font-size: 20px; color:black;"></textarea>
+              </div>
+        </div>
+
+        <div class="form-group row">          
+            <div class="col-lg-12">
+              <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Contraseña de Acceso Aplicativo Movil:</label>
+              <input id="txt_contrasena" class="form-control text-center " type="password" value="" style="font-size: 20px; color:brown; font-weight: bold" >
+            </div>
+          </div>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-        <button type="button" class="btn btn-primary" id="btnModal" onclick="btnModalPopup()">Editar</button>
+        <button type="button" class="btn btn-primary" id="btnModal" onclick="btnGuardarParqueadero()">Guardar</button>
       </div>
     </div>
   </div>

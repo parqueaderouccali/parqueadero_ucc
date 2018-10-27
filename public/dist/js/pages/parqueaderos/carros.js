@@ -54,7 +54,7 @@ var logout = function () {
     firebase.auth().signOut()
         .then(function () {
             console.log('Sesión Finalizada')
-            $(location).attr('href', '../../index.html');
+            $(location).attr('href', '../../../index.html');
         }, function (error) {
             console.log(error);
         })

@@ -75,7 +75,7 @@
                 <li class="user-header">
                   <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
   
-                  <p class="nombresApellidos"> 
+                  <p class="nombresApellidos">
                     <small>2018</small>
                   </p>
                 </li>
@@ -86,7 +86,7 @@
                     <a href="#" class="btn btn-default btn-flat">Perfil</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat" onClick="logout()" >Cerrar Sesión</a>
+                    <a href="#" class="btn btn-default btn-flat" onclick="logout()">Cerrar Sesión</a>
                   </div>
                 </li>
               </ul>
@@ -152,22 +152,10 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li>
-                <a href="../../pages/estadisticas/EstMotos.html">
-                  <i class="fa fa-circle-o"></i> Parqueadero Motos</a>
-              </li>
-              <li>
-                <a href="../../pages/estadisticas/EstCarros.html">
-                  <i class="fa fa-circle-o"></i> Parqueadero Carros</a>
-              </li>
-              <li>
-                <a href="../../pages/estadisticas/EstNovedades.html">
-                  <i class="fa fa-circle-o"></i> Novedadaes</a>
-              </li>
-              <li>
-                <a href="../../pages/estadisticas/EstAlternos.html">
-                  <i class="fa fa-circle-o"></i> Parqueaderos Alternos</a>
-              </li>                
+              <li><a href="../../pages/estadisticas/EstMotos.html"><i class="fa fa-circle-o"></i> Parqueadero Motos</a></li>
+              <li><a href="../../pages/estadisticas/EstCarros.html"><i class="fa fa-circle-o"></i> Parqueadero Carros</a></li>
+              <li><a href="../../pages/estadisticas/EstNovedades.html"><i class="fa fa-circle-o"></i> Novedadaes</a></li>
+              <li><a href="../../pages/estadisticas/EstAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternos</a></li>                
             </ul>
           </li>                           
         </ul>
@@ -175,56 +163,112 @@
     <!-- /.sidebar -->
   </aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+
+   <!-- Content Wrapper. Contains page content -->
+   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
 
     <!-- Main content -->
     <section class="content">
+      <!-- Small boxes (Stat box) -->      
+  
+      <div class="row ">
+        <div class="row">
+          <div class="col-lg-12 col-ms-6 col-xs-12">
+            <h1  class="picoPlacaCss">
+             <b id="picoPlaca"> Estadistica Ingreso y Salida de Carros</b>
+  
+            </h1>
+          </div>      
+        </div>
+        
+        <br>
+        
+
+        <div class="col-lg-12">        
+            <section class="col-lg-12 ">                                 
+                <div class="box box-default">
+                            
+                  <div class="box-header">                                    
+                      <div class="form-group">
+                          <label>Seleccionar año a consultar :</label>
+                          <select id="ano_fecha" class="form-control select2" style="width: 100%;"> 
+                              <option value="Seleccionar">Seleccionar</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                          </select>
+                        </div>                         
+                  </div>
+                  <div class="box-body">                                    
+                      <div class="row">
+                          <div class="col-lg-3 text-center">
+                              <div class="form-group">                             
+                                  <div style="width:20px; height: 20px; background-color: rgba(220,220,220,1); float:left;"></div>                                    
+                                  <h4> INHABILITADOS</h4>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 text-center">
+                              <div class="form-group">                             
+                                  <div style="width:20px; height: 20px; background-color: rgb(0, 166, 90); float:left;"></div>                                    
+                                  <h4> HABILITADOS</h4>
+                              </div>
+                          </div> 
+                          <div class="col-lg-3 text-center">
+                              <div class="form-group">                             
+                                  <div style="width:20px; height: 20px; background-color: rgba(209,29,29,1); float:left;"></div>                                    
+                                  <h4> SALIDAS</h4>
+                              </div>
+                          </div> 
+                          <div class="col-lg-3 text-center">                            
+                            <div class="form-group">                             
+                                <div style="width:20px; height: 20px; background-color: rgba(60,141,188,1); float:left;"></div>                                    
+                                <h4> INGRESOS</h4>
+                            </div>
+                          </div> 
+                      </div>
+                                    
+                  </div>                              
+               
+            </section>
+        </div>  
+
+     <div class="row">
+        <div class="col-lg-2">
+        </div> 
+        <div class="col-lg-8">        
+          <section >                                 
+              <div class="box box-primary">
+                          
+                <div class="box-header">                                    
+                                   
+                </div>      
+            
+                <div class="box-body">
+                  <canvas id="barChart" ></canvas> 
+                </div>
+              
+                <div class="box-footer">
+                  
+                </div>
+             
+          </section>
+        </div>
+        <div class="col-lg-2">
+        </div>
+      </div>
+
+    
 
 
-      <div class="row">
-        <div class="col-lg-12 col-ms-6 col-xs-12">
-          <h1  class="picoPlacaCss">
-           <b id="picoPlaca"> Estadistica Ingreso y Salida de Carros</b>
-          </h1>
-        </div>      
       </div>
       
-      <br>
-
-    <div class="col-lg-12">
-        
-        <section class="col-lg-12 ">
-                               
-            <div class="box box-primary">
-                        
-            <div class="box-header">
-              
-              <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-
-                <h3>Filtros</h3>
-
-              </div>                          
-                                             
-            </div>      
-          
-            <div class="box-body">
-                <h3>Grafica</h3>
-            </div>
-            
-            <div class="box-footer">
-              
-            </div>
-           
-        </section>
-    </div> 
-
-     
-           
+      <!-- /.row (main row) -->
     </section>
-
-        <!-- /.content-wrapper -->
+    <!-- /.content -->
   </div>
 
 
@@ -252,6 +296,7 @@
 <!-- Morris.js charts -->
 <script src="../../bower_components/raphael/raphael.min.js"></script>
 <script src="../../bower_components/morris.js/morris.min.js"></script>
+<script src="../../bower_components/chart.js/Chart.js"></script>
 <!-- Sparkline -->
 <script src="../../bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
@@ -292,7 +337,7 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="../../dist/js/pages/administracion/cambioJornada.js"></script>
+<script src="../../dist/js/pages/estadisticas/EstadisticaCarros.js"></script>
 
 
 </body>

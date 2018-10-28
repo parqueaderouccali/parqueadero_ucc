@@ -73,22 +73,22 @@ $(function () {
         datasets: [          
             {
                 label               : 'Ingresos',
-                fillColor           : 'rgba(60,141,188,0.9)',
-                strokeColor         : 'rgba(60,141,188,0.8)',
-                pointColor          : '#3b8bba',
-                pointStrokeColor    : 'rgba(60,141,188,1)',
+                fillColor           : '#00A65A',
+                strokeColor         : '#00A65A',
+                pointColor          : '#00A65A',
+                pointStrokeColor    : '#00A65A',
                 pointHighlightFill  : '#fff',
-                pointHighlightStroke: 'rgba(60,141,188,1)',
+                pointHighlightStroke: '#00A65A',
                 data                : [contIngresoEnero, contIngresoFebrero, contIngresoMarzo, contIngresoAbril, contIngresoMayo, contIngresoJunio, contIngresoJulio, contIngresoAgosto, contIngresoSeptiembre, contIngresoOctubre, contIngresoNoviembre, contIngresoDiciembre]
             },
             {
                 label               : 'Salidas',
-                fillColor           : 'rgba(209,29,29,0.9)',
-                strokeColor         : 'rgba(209,29,29,0.8)',
-                pointColor          : '#3b8bba',
-                pointStrokeColor    : 'rgba(209,29,29,1)',
+                fillColor           : '#00A65A',
+                strokeColor         : '#00A65A',
+                pointColor          : '#00A65A',
+                pointStrokeColor    : '#00A65A',
                 pointHighlightFill  : '#fff',
-                pointHighlightStroke: 'rgba(209,29,29,1)',
+                pointHighlightStroke: '#00A65A',
                 data                : [contSalidaEnero, contSalidaFebrero, contSalidaMarzo, contSalidaAbril, contSalidaMayo, contSalidaJunio, contSalidaJulio, contSalidaAgosto, contSalidaSeptiembre, contSalidaOctubre, contSalidaNoviembre, contSalidaDiciembre]
           }
           
@@ -99,9 +99,9 @@ $(function () {
     var barChartCanvas                   = $('#barChart').get(0).getContext('2d')
     var barChart                         = new Chart(barChartCanvas)
     var barChartData                     = areaChartData
-    barChartData.datasets[1].fillColor   = '#00a65a'
-    barChartData.datasets[1].strokeColor = '#00a65a'
-    barChartData.datasets[1].pointColor  = '#00a65a'
+    barChartData.datasets[1].fillColor   = '#D11D1D'
+    barChartData.datasets[1].strokeColor = '#D11D1D'
+    barChartData.datasets[1].pointColor  = '#D11D1D'
     var barChartOptions                  = {
       //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
       scaleBeginAtZero        : true,

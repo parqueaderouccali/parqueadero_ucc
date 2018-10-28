@@ -123,8 +123,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="active"><a href="../../pages/parqueaderos/carros.html"><i class="fa fa-circle-o"></i> Carros</a></li>
-              <li class="active"><a href="../../pages/parqueaderos/motos.html"><i class="fa fa-circle-o"></i> Motos</a></li>              
+                <li class="active"><a href="../../pages/parqueaderos/carros.html"><i class="fa fa-circle-o"></i> Carros</a></li>
+                <li class="active"><a href="../../pages/parqueaderos/motos.html"><i class="fa fa-circle-o"></i> Motos</a></li>                     
             </ul>
           </li>
        
@@ -140,33 +140,45 @@
               <li><a href="../../pages/administracion/AdminUsuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
               <li><a href="../../pages/administracion/AdminPlacas.html"><i class="fa fa-circle-o"></i> Pico y Placa</a></li>
               <li><a href="../../pages/administracion/AdminParqueaderosAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternativos</a></li>
-              <li><a href="../../pages/administracion/AdminCambioJornada.html"><i class="fa fa-circle-o"></i> Cambio de Jornada</a></li>            
+              <li><a href="../../pages/administracion/AdminCambioJornada.html"><i class="fa fa-circle-o"></i> Cambio de Jornada</a></li>
             </ul>
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-edit"></i> <span>Estadisticas</span>
+              <i class="fa fa-edit"></i> 
+              <span>Estadísticas</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
-            <ul class="treeview-menu">
-                <li><a href="../../pages/estadisticas/EstMotos.html"><i class="fa fa-circle-o"></i> Parqueadero Motos</a></li>                    
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-circle-o"></i> Parqueadero Carros
+            
+                <ul class="treeview-menu">
+                  <li class="treeview">
+                    <a href="#"><i class="fa fa-circle-o"></i> Parqueadero Motos
                       <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                       </span>
                     </a>
                     <ul class="treeview-menu">
-                      <li><a href="../../../pages/estadisticas/carros/EstCarrosMesesxAno.html"><i class="fa fa-circle-o"></i>Año x Meses</a></li>
-                      <li><a href="../../../pages/estadisticas/carros/EstCarrosMesesxSemana.html"><i class="fa fa-circle-o"></i>Meses x Semana</a></li>
+                      <li><a href="../estadisticas/motos/EstMotosMesesxAno.html"><i class="fa fa-circle-o"></i>Año x Meses</a></li>
+                      <li><a href="../estadisticas/motos/EstMotosMesesxSemana.html"><i class="fa fa-circle-o"></i>Meses x Semana</a></li>
+                      <li><a href="../estadisticas/motos/EstMotosMesesxSemanaLine.html"><i class="fa fa-circle-o"></i>Meses x Semana (Línea)</a></li>                                            
                     </ul>
-                </li>
-                <li><a href="../../pages/estadisticas/EstNovedades.html"><i class="fa fa-circle-o"></i> Novedadaes</a></li>
-                <li><a href="../../pages/estadisticas/EstAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternos</a></li>                
-             
-            </ul> 
+                </li>                    
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-circle-o"></i> Parqueadero Carros
+                          <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                          </span>
+                        </a>
+                        <ul class="treeview-menu">
+                          <li><a href="../estadisticas/carros/EstCarrosMesesxAno.html"><i class="fa fa-circle-o"></i>Año x Meses</a></li>
+                          <li><a href="../estadisticas/carros/EstCarrosMesesxSemana.html"><i class="fa fa-circle-o"></i>Meses x Semana</a></li>                          
+                        </ul>
+                    </li>
+                    <li><a href="../../pages/estadisticas/EstNovedades.html"><i class="fa fa-circle-o"></i> Novedades</a></li>
+                    <!-- <li><a href="../../pages/estadisticas/EstAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternos</a></li> -->                               
+                </ul>                                                 
           </li>                           
         </ul>
       </section>
@@ -180,46 +192,83 @@
     <!-- Main content -->
     <section class="content">
 
-
-      <div class="row">
-        <div class="col-lg-12 col-ms-6 col-xs-12">
-          <h1  class="picoPlacaCss">
-           <b id="picoPlaca"> Estadistica NOvedades Estudiantes y UCC</b>
-          </h1>
-        </div>      
-      </div>
-      
-      <br>
-
-    <div class="col-lg-12">
         
-        <section class="col-lg-12 ">
-                               
-            <div class="box box-primary">
-                        
-            <div class="box-header">
-              
-              <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+      <div class="row ">
+        <div class="row">
+          <div class="col-lg-12 col-ms-6 col-xs-12">
+            <h1  class="picoPlacaCss">
+             <b id="picoPlaca"> Estadística de Novedades (Año x Meses)</b>
+  
+            </h1>
+          </div>      
+        </div>
+        
+        <br>
+        
 
-                <h3>Filtros</h3>
-
-              </div>                          
-                                             
-            </div>      
-          
-            <div class="box-body">
-                <h3>Grafica</h3>
-            </div>
-            
-            <div class="box-footer">
-              
-            </div>
-           
-        </section>
-    </div> 
-
+        <div class="col-lg-12">        
+            <section class="col-lg-12 ">                                 
+                <div class="box box-default">
+                            
+                  <div class="box-header">                                    
+                      <div class="form-group">
+                          <label>Seleccionar año a consultar :</label>
+                          <select id="ano_fecha" class="form-control select2" style="width: 100%;"> 
+                              <option value="Seleccionar">Seleccionar</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                          </select>
+                        </div>                         
+                  </div>
+                  <div class="box-body">                                    
+                      <div class="row">
      
-           
+                          <div class="col-lg-12 text-center">
+                              <div class="form-group">                             
+                                  <div style="width:20px; height: 20px; background-color: rgb(0, 166, 90); float:left;"></div>                                    
+                                  <h4> CANTIDAD DE NOVEDADES REPORTADAS </h4>
+                              </div>
+                          </div> 
+                          
+                      </div>
+                                    
+                  </div>                              
+               
+            </section>
+        </div>  
+
+     <div class="row">
+        <div class="col-lg-2">
+        </div> 
+        <div class="col-lg-8">        
+          <section >                                 
+              <div class="box box-primary">
+                          
+                <div class="box-header">                                    
+                                   
+                </div>      
+            
+                <div class="box-body">
+                  <canvas id="barChart" ></canvas> 
+                </div>
+              
+                <div class="box-footer">
+                  
+                </div>
+             
+          </section>
+        </div>
+        <div class="col-lg-2">
+        </div>
+      </div>
+
+      </div>
+     
+          
     </section>
 
         <!-- /.content-wrapper -->
@@ -250,6 +299,7 @@
 <!-- Morris.js charts -->
 <script src="../../bower_components/raphael/raphael.min.js"></script>
 <script src="../../bower_components/morris.js/morris.min.js"></script>
+<script src="../../bower_components/chart.js/Chart.js"></script>
 <!-- Sparkline -->
 <script src="../../bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
@@ -290,7 +340,7 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="../../dist/js/pages/administracion/cambioJornada.js"></script>
+<script src="../../dist/js/pages/estadisticas/EstNovedades.js"></script>
 
 
 </body>

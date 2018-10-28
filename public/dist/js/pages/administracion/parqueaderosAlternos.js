@@ -141,7 +141,7 @@ dbAlternos.on('value', function (snapshot) {
                 '<div class="box-body">'+
                   '<dl class="dl-horizontal">'+
                     '<dt id="' + alterno + '" hidden>' + alterno + '</dt>' +
-                    '<dt>Codigo</dt>' +                    
+                    '<dt>Código</dt>' +                    
                     '<dd>'+ alterno + '</dd>' +
                     '<dt>Coordenadas</dt>' +                    
                     '<dd>'+ alternos[alterno].coordenadasX + ' , ' + alternos[alterno].coordenadasY + '</dd>' +
@@ -153,6 +153,8 @@ dbAlternos.on('value', function (snapshot) {
                     '<dd>' + alternos[alterno].horario + '</dd>' +                        
                     '<dt>Novedades</dt>' +
                     '<dd>' + alternos[alterno].novedades + ' </dd>' +
+                    '<dt>Disponibilidad</dt>' +
+                    '<dd>' + alternos[alterno].disponibilidad + ' </dd>' +
                   '</dl>'+
                 '</div>'+
                 

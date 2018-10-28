@@ -17,6 +17,8 @@ var createuser = function () {
         alertify.error(("Ingrese la contraseña"));
     }else if(password_2 === ""){        
         alertify.error(("Ingrese la confirmación de la contraseña"));
+    }else if (password !== password_2){
+        alertify.error(("Las contraseñas no coinciden"));
     }else{
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function (data) {             

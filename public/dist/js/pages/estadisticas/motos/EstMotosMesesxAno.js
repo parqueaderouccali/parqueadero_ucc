@@ -42,7 +42,7 @@ var getUser = function () {
 
 
         } else {
-            $(location).attr('href', '../../index.html');
+            $(location).attr('href', '../../../index.html');
         }
     })
 }

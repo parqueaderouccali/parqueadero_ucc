@@ -131,7 +131,7 @@ $(function () {
     }
 
     barChartOptions.datasetFill = false
-    barChart.Bar(barChartData, barChartOptions)
+    barChart.Line(barChartData, barChartOptions)
     
   }
 
@@ -142,107 +142,107 @@ $(function () {
 // carga la informacion de la cantidad de veces que se carque la infomracion
 
 $(document).on('change', '#mes_fecha', function(event) {
-   var valueSelectMes = $("#mes_fecha option:selected").val();
-  
-   dbEstadisticas.on('value', function (snapshot) {
-
-    var contIngresoLunes = 0,contIngresoMartes = 0,contIngresoMiercoles = 0,contIngresoJueves = 0,contIngresoViernes = 0, contIngresoSabado = 0,contIngresoDomingo = 0;
-    var contSalidaLunes = 0,contSalidaMartes = 0,contSalidaMiercoles = 0,contSalidaJueves = 0,contSalidaViernes = 0,contSalidaSabado = 0,contSalidaDomingo = 0;
-
-    var datos = snapshot.val();    
-    
-    for(dato in datos){
-        console.log(datos[dato].fecha_mes + ' ' + valueSelectMes)
-        if(datos[dato].fecha_mes == valueSelectMes){ 
-            
-            switch (datos[dato].fecha_semana) {
-                case 'Lunes':
-                    if(datos[dato].tipos == 'INGRESO'){
-                        contIngresoLunes = contIngresoLunes + 1;
-                    }
-        
-                    if(datos[dato].tipos == 'SALIDA'){
-                        contSalidaLunes = contSalidaLunes + 1;
-                    }
-        
-                    break;
-                case 'Martes':
-                    if(datos[dato].tipos == 'INGRESO'){
-                        contIngresoMartes = contIngresoMartes + 1;
-                    }
-        
-                    if(datos[dato].tipos == 'SALIDA'){
-                        contSalidaMartes = contSalidaMartes + 1;
-                    }
-        
-                   
-                    break;
-                case 'Miercoles':
-                    if(datos[dato].tipos == 'INGRESO'){
-                        contIngresoMiercoles = contIngresoMiercoles + 1;
-                    }
-        
-                    if(datos[dato].tipos == 'SALIDA'){
-                        contSalidaMiercoles = contSalidaMiercoles + 1;
-                    }
-            
-                    break;
-                case 'Jueves':
-                    if(datos[dato].tipos == 'INGRESO'){
-                        contIngresoJueves = contIngresoJueves + 1;
-                    }
-        
-                    if(datos[dato].tipos == 'SALIDA'){
-                        contSalidaJueves = contSalidaJueves + 1;
-                    }
-                        
-                    break;
-                case 'Viernes':
-                    if(datos[dato].tipos == 'INGRESO'){
-                        contIngresoViernes = contIngresoViernes + 1;
-                    }
-        
-                    if(datos[dato].tipos == 'SALIDA'){
-                        contSalidaViernes = contSalidaViernes + 1;
-                    }
-        
-                   
-                    break;
-                case 'Sabado':
-                    if(datos[dato].tipos == 'INGRESO'){
-                        contIngresoSabado = contIngresoSabado + 1;
-                    }
-        
-                    if(datos[dato].tipos == 'SALIDA'){
-                        contSalidaSabado = contSalidaSabado + 1;
-                    }
-                      
-                    break;
-                case 'Domingo':
-                    if(datos[dato].tipos == 'INGRESO'){
-                        contIngresoDomingo = contIngresoDomingo + 1;
-                    }
-        
-                    if(datos[dato].tipos == 'SALIDA'){
-                        contSalidaDomingo = contSalidaDomingo + 1;
-                    }
-                            
-                    break;               
-            }            
-        }
-
-        console.log('INGRESO ' + contIngresoSabado)
-        console.log('SALIDA ' + contSalidaSabado)
-    }
-        
-    graficaEstadisticaMotos(contIngresoLunes,contIngresoMartes,contIngresoMiercoles,contIngresoJueves,contIngresoViernes, contIngresoSabado,contIngresoDomingo,
-        contSalidaLunes,contSalidaMartes,contSalidaMiercoles,contSalidaJueves,contSalidaViernes,contSalidaSabado,contSalidaDomingo)
-    
-}, function (error) {
-    console.log(error);
-});
-
-});
+    var valueSelectMes = $("#mes_fecha option:selected").val();
+   
+    dbEstadisticas.on('value', function (snapshot) {
+ 
+     var contIngresoLunes = 0,contIngresoMartes = 0,contIngresoMiercoles = 0,contIngresoJueves = 0,contIngresoViernes = 0, contIngresoSabado = 0,contIngresoDomingo = 0;
+     var contSalidaLunes = 0,contSalidaMartes = 0,contSalidaMiercoles = 0,contSalidaJueves = 0,contSalidaViernes = 0,contSalidaSabado = 0,contSalidaDomingo = 0;
+ 
+     var datos = snapshot.val();    
+     
+     for(dato in datos){
+         
+         if(datos[dato].fecha_mes == valueSelectMes){ 
+             
+             switch (datos[dato].fecha_semana) {
+                 case 'Lunes':
+                     if(datos[dato].tipos == 'INGRESO'){
+                         contIngresoLunes = contIngresoLunes + 1;
+                     }
+         
+                     if(datos[dato].tipos == 'SALIDA'){
+                         contSalidaLunes = contSalidaLunes + 1;
+                     }
+         
+                     break;
+                 case 'Martes':
+                     if(datos[dato].tipos == 'INGRESO'){
+                         contIngresoMartes = contIngresoMartes + 1;
+                     }
+         
+                     if(datos[dato].tipos == 'SALIDA'){
+                         contSalidaMartes = contSalidaMartes + 1;
+                     }
+         
+                    
+                     break;
+                 case 'Miercoles':
+                     if(datos[dato].tipos == 'INGRESO'){
+                         contIngresoMiercoles = contIngresoMiercoles + 1;
+                     }
+         
+                     if(datos[dato].tipos == 'SALIDA'){
+                         contSalidaMiercoles = contSalidaMiercoles + 1;
+                     }
+             
+                     break;
+                 case 'Jueves':
+                     if(datos[dato].tipos == 'INGRESO'){
+                         contIngresoJueves = contIngresoJueves + 1;
+                     }
+         
+                     if(datos[dato].tipos == 'SALIDA'){
+                         contSalidaJueves = contSalidaJueves + 1;
+                     }
+                         
+                     break;
+                 case 'Viernes':
+                     if(datos[dato].tipos == 'INGRESO'){
+                         contIngresoViernes = contIngresoViernes + 1;
+                     }
+         
+                     if(datos[dato].tipos == 'SALIDA'){
+                         contSalidaViernes = contSalidaViernes + 1;
+                     }
+         
+                    
+                     break;
+                 case 'Sabado':
+                     if(datos[dato].tipos == 'INGRESO'){
+                         contIngresoSabado = contIngresoSabado + 1;
+                     }
+         
+                     if(datos[dato].tipos == 'SALIDA'){
+                         contSalidaSabado = contSalidaSabado + 1;
+                     }
+                       
+                     break;
+                 case 'Domingo':
+                     if(datos[dato].tipos == 'INGRESO'){
+                         contIngresoDomingo = contIngresoDomingo + 1;
+                     }
+         
+                     if(datos[dato].tipos == 'SALIDA'){
+                         contSalidaDomingo = contSalidaDomingo + 1;
+                     }
+                             
+                     break;               
+             }            
+         }
+ 
+         console.log('INGRESO ' + contIngresoSabado)
+         console.log('SALIDA ' + contSalidaSabado)
+     }
+         
+     graficaEstadisticaMotos(contIngresoLunes,contIngresoMartes,contIngresoMiercoles,contIngresoJueves,contIngresoViernes, contIngresoSabado,contIngresoDomingo,
+         contSalidaLunes,contSalidaMartes,contSalidaMiercoles,contSalidaJueves,contSalidaViernes,contSalidaSabado,contSalidaDomingo)
+     
+ }, function (error) {
+     console.log(error);
+ });
+ 
+ });
 
 
 

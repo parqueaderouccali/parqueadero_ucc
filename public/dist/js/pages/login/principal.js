@@ -143,7 +143,6 @@ $('#guardarNovedadUCC').click(function(){
     }
 })
 
-
 // registra el log del ingreso y salida de motos
 var LogNovedades = function(horaAct,fechaAct,hora,minutos,ampm,dia,mes,ano,novedad,tipo) {
 
@@ -386,14 +385,14 @@ var semana = function (){
     var f=new Date();
     var dias=["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
     var semana = dias[f.getUTCDay()-1];
-    
+    console.log(semana)
     var hours = f.getHours();
     var minutes = f.getMinutes();
     var ampm = hours >= 12 ? 'pm' : 'am';
     
     var strTime = ampm;
 
-    if(semana === "Domingo" || semana == undefined){             
+    if(semana === "Domingo" || semana == undefined || semana == 'Sabado'){             
         $('#conector').html('');
         $('#diaSemana').html('(No Aplica)');                   
     }else if(semana === 'Lunes'){

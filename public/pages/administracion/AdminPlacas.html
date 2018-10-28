@@ -121,8 +121,8 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="active"><a href="../../pages/parqueaderos/carros.html"><i class="fa fa-circle-o"></i> Carros</a></li>
-              <li class="active"><a href="../../pages/parqueaderos/motos.html"><i class="fa fa-circle-o"></i> Motos</a></li>              
+                <li class="active"><a href="../../pages/parqueaderos/carros.html"><i class="fa fa-circle-o"></i> Carros</a></li>
+                <li class="active"><a href="../../pages/parqueaderos/motos.html"><i class="fa fa-circle-o"></i> Motos</a></li>                     
             </ul>
           </li>
        
@@ -138,33 +138,45 @@
               <li><a href="../../pages/administracion/AdminUsuarios.html"><i class="fa fa-circle-o"></i> Usuarios</a></li>
               <li><a href="../../pages/administracion/AdminPlacas.html"><i class="fa fa-circle-o"></i> Pico y Placa</a></li>
               <li><a href="../../pages/administracion/AdminParqueaderosAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternativos</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i> Cambio de Jornada</a></li>            
+              <li><a href="../../pages/administracion/AdminCambioJornada.html"><i class="fa fa-circle-o"></i> Cambio de Jornada</a></li>
             </ul>
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-edit"></i> <span>Estadisticas</span>
+              <i class="fa fa-edit"></i> 
+              <span>Estadísticas</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
-            <ul class="treeview-menu">
-                <li><a href="../../pages/estadisticas/EstMotos.html"><i class="fa fa-circle-o"></i> Parqueadero Motos</a></li>                    
-                <li class="treeview">
-                    <a href="#"><i class="fa fa-circle-o"></i> Parqueadero Carros
+            
+                <ul class="treeview-menu">
+                  <li class="treeview">
+                    <a href="#"><i class="fa fa-circle-o"></i> Parqueadero Motos
                       <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                       </span>
                     </a>
                     <ul class="treeview-menu">
-                      <li><a href="../../../pages/estadisticas/carros/EstCarrosMesesxAno.html"><i class="fa fa-circle-o"></i>Año x Meses</a></li>
-                      <li><a href="../../../pages/estadisticas/carros/EstCarrosMesesxSemana.html"><i class="fa fa-circle-o"></i>Meses x Semana</a></li>
+                      <li><a href="../../../pages/estadisticas/motos/EstMotosMesesxAno.html"><i class="fa fa-circle-o"></i>Año x Meses</a></li>
+                      <li><a href="../../../pages/estadisticas/motos/EstMotosMesesxSemana.html"><i class="fa fa-circle-o"></i>Meses x Semana</a></li>
+                      <li><a href="../../../pages/estadisticas/motos/EstMotosMesesxSemanaLine.html"><i class="fa fa-circle-o"></i>Meses x Semana (Línea)</a></li>                                            
                     </ul>
-                </li>
-                <li><a href="../../pages/estadisticas/EstNovedades.html"><i class="fa fa-circle-o"></i> Novedadaes</a></li>
-                <li><a href="../../pages/estadisticas/EstAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternos</a></li>                
-             
-            </ul> 
+                </li>                    
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-circle-o"></i> Parqueadero Carros
+                          <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                          </span>
+                        </a>
+                        <ul class="treeview-menu">
+                          <li><a href="../../../pages/estadisticas/carros/EstCarrosMesesxAno.html"><i class="fa fa-circle-o"></i>Año x Meses</a></li>
+                          <li><a href="../../../pages/estadisticas/carros/EstCarrosMesesxSemana.html"><i class="fa fa-circle-o"></i>Meses x Semana</a></li>                          
+                        </ul>
+                    </li>
+                    <li><a href="../../pages/estadisticas/EstNovedades.html"><i class="fa fa-circle-o"></i> Novedades</a></li>
+                    <!-- <li><a href="../../pages/estadisticas/EstAlternos.html"><i class="fa fa-circle-o"></i> Parqueaderos Alternos</a></li> -->                               
+                </ul>                                                 
           </li>                           
         </ul>
       </section>
@@ -215,10 +227,10 @@
                               Dia de la Semana
                             </th>
                             <th class="sorting " tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style=" font-size:15px; width: 20%;">
-                              Digito 1
+                              Dígito 1
                             </th>
                             <th class="sorting " tabindex="0" aria-controls="example1" rowspan="1" colspan="1" style=" font-size:15px;  width: 20%;">
-                              Digito 2
+                              Dígito 2
                             </th>
                                
                           </tr>
@@ -279,12 +291,12 @@
               <input id="diaPlaca" class="form-control text-center " type="text" value="" id="" style="font-size: 15px; color:black; font-weight: bold;" disabled >
             </div>
           <br>
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Digito 1:</label>
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Dígito 1:</label>
           <div class="col-sm-12">
             <input id="digito1Placa" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
           </div>
           <br>
-          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Digito 2:</label>
+          <label for="example-text-input" class="col-xs-6 col-form-label form-control-label">Ingrese Dígito 2:</label>
           <div class="col-sm-12">
             <input id="digito2Placa" class="form-control text-center " type="text" value="" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
           </div>
@@ -306,7 +318,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle"><b>Actualizacion y Generacion de secuencia pico y placa</b></h3>
+        <h3 class="modal-title titulo text-center" id="exampleModalLongTitle"><b>Actualización y Generación de secuencia pico y placa</b></h3>
         </button>
       </div>
       <div class="modal-body">
@@ -336,7 +348,7 @@
   </div>
   <div class="col-lg-4">
     <div class="form-group row">
-      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Miercoles</b></h3></label>
+      <label for="example-text-input" class="col-xs-6 col-form-label form-control-label"><h3><b>Miércoles</b></h3></label>
       <div class="col-sm-3">
         <input id="digito1Miercoles" class="form-control text-center " type="text" value="0" id="" style="font-size: 20px; color:brown; font-weight: bold;" >
         <br>
@@ -383,7 +395,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
         <button type="button" class="btn btn-primary" id="EditarPlacas">Editar</button>
-        <button type="button" class="btn btn-danger" id="GenerarPlacas">Generar Automatico</button>
+        <button type="button" class="btn btn-danger" id="GenerarPlacas">Generar Automático</button>
       </div>
 
     </div>
